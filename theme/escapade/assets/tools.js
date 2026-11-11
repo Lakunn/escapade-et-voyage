@@ -139,7 +139,7 @@
     if (st === 'plage') L['Confort'].push('Serviette de plage légère', 'Masque et tuba', 'Sac étanche pour le téléphone');
     if (st === 'ville') L['Confort'].push('Plans hors ligne des villes', 'Petit cadenas pour le sac');
     if (st === 'route') { L['Papiers et argent'].push('Permis de conduire (et permis international si exigé)', 'Carte grise et attestation d\'assurance du véhicule'); L['Confort'].push('Support et câble pour téléphone en voiture', 'Glacière souple'); }
-    if (horsUe) { L['Papiers et argent'].push('Visa ou autorisation électronique si le pays l\'exige', 'Carte européenne d\'assurance maladie : inutile hors UE, vérifiez votre assurance'); L['Électronique'].push('Adaptateur de prise'); }
+    if (horsUe) { L['Papiers et argent'][0] = 'Passeport, valide encore au moins six mois après le retour (exigence fréquente hors UE)'; L['Papiers et argent'].push('Visa ou autorisation électronique si le pays l\'exige', 'Carte européenne d\'assurance maladie : inutile hors UE, vérifiez votre assurance'); L['Électronique'].push('Adaptateur de prise'); }
     else L['Papiers et argent'].push('Carte européenne d\'assurance maladie');
     if (enfants) { L['Papiers et argent'].push('Papiers d\'identité de chaque enfant (et autorisation de sortie du territoire si besoin)'); L['Confort'].push('Doudou, jeux et livres pour le trajet', 'En-cas pour les attentes'); L['Toilette et santé'].push('Thermomètre et médicaments enfants'); }
     if (travail) L['Électronique'].push('Ordinateur et chargeur', 'Multiprise de voyage', 'Partage de connexion ou carte SIM / eSIM locale');
