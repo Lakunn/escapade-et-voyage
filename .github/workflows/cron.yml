@@ -1,0 +1,20 @@
+name: 5 · Tâches planifiées WordPress
+
+# Les articles programmés (status: future) sont publiés par WP-Cron, qui ne se déclenche qu'à la visite
+# d'une page non mise en cache. On l'appelle ici toutes les 30 minutes pour que les publications partent à l'heure.
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+jobs:
+  wp-cron:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Déclencher WP-Cron
+        env:
+          WP_URL: ${{ vars.WP_URL }}
+        run: |
+          if [ -z "$WP_URL" ]; then echo "WP_URL non défini"; exit 0; fi
+          code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 60 "$WP_URL/wp-cron.php?doing_wp_cron=$(date +%s)")
+          echo "wp-cron.php : HTTP $code"

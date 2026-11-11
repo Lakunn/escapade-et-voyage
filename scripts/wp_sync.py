@@ -162,6 +162,17 @@ class Sync:
         }
         if m.get("date"):
             data["date"] = str(m["date"])
+            # Les dates du dépôt sont à l'heure de Paris : on envoie aussi l'heure UTC exacte,
+            # sinon WordPress les lit dans son propre fuseau et peut garder l'article « programmé ».
+            try:
+                from datetime import datetime as _dt
+                from zoneinfo import ZoneInfo as _Z
+                _d = _dt.fromisoformat(str(m["date"]).replace("Z", "+00:00"))
+                if _d.tzinfo is None:
+                    _d = _d.replace(tzinfo=_Z("Europe/Paris"))
+                data["date_gmt"] = _d.astimezone(_Z("UTC")).strftime("%Y-%m-%dT%H:%M:%S")
+            except ValueError:
+                pass
         if doc.kind == "post":
             missing = [c for c in m.get("categories", []) if c not in cat_ids]
             if missing and self.apply:
