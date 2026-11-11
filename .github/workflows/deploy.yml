@@ -1,0 +1,101 @@
+name: 2 · Déploiement
+
+# À chaque push sur main (thème, contenus, config) :
+#   validation → envoi du thème (FTP/SFTP) → synchro des contenus (API REST) → contrôle « zéro 301 ».
+# Sécurité : rien n'est écrit en production tant que la variable de dépôt DEPLOY_ENABLED ≠ "true".
+# Le lancement manuel permet une simulation (dry run) à tout moment.
+on:
+  push:
+    branches: [main]
+    paths: ["theme/**", "content/**", "config/**", "scripts/**"]
+  pull_request:
+    paths: ["theme/**", "content/**", "config/**", "scripts/**"]
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "simulation = aucune écriture ; production = déploie"
+        type: choice
+        options: [simulation, production]
+        default: simulation
+      force:
+        description: "Ré-envoyer tous les contenus, même inchangés"
+        type: boolean
+        default: false
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt
+      - run: python scripts/validate.py
+      - name: Lint PHP du thème
+        run: find theme -name '*.php' -print0 | xargs -0 -n1 php -l
+
+  deploy:
+    needs: validate
+    if: github.event_name != 'pull_request' && vars.WP_URL != ''
+    runs-on: ubuntu-latest
+    environment: production
+    env:
+      WP_URL: ${{ vars.WP_URL }}
+      WP_USER: ${{ secrets.WP_USER }}
+      WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+      LIVE: ${{ vars.DEPLOY_ENABLED == 'true' && (github.event_name == 'push' || inputs.mode == 'production') }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt && sudo apt-get install -y -qq lftp sshpass
+      - run: python scripts/validate.py
+
+      - name: Envoi du thème
+        if: env.LIVE == 'true'
+        env:
+          FTP_PROTOCOL: ${{ vars.FTP_PROTOCOL }}   # sftp ou ftp
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_PORT: ${{ vars.FTP_PORT }}           # Hostinger SFTP : 65002
+          FTP_THEME_DIR: ${{ vars.FTP_THEME_DIR }} # ex. domains/escapade-et-voyage.fr/public_html/wp-content/themes/escapade
+        run: |
+          if [ -z "$FTP_HOST" ]; then echo "Pas d'accès SFTP configuré : thème à installer depuis l'administration WordPress (zip)"; exit 0; fi
+          lftp -u "$FTP_USER","$FTP_PASSWORD" "${FTP_PROTOCOL:-sftp}://$FTP_HOST${FTP_PORT:+:$FTP_PORT}" -e "
+            set sftp:auto-confirm yes; set ssl:verify-certificate yes; set net:max-retries 3;
+            mirror --reverse --delete --verbose --parallel=4 theme/escapade $FTP_THEME_DIR;
+            bye"
+
+      - name: Activation du thème
+        if: env.LIVE == 'true'
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          SSHPASS: ${{ secrets.FTP_PASSWORD }}
+          FTP_PORT: ${{ vars.FTP_PORT }}
+          FTP_THEME_DIR: ${{ vars.FTP_THEME_DIR }}
+        run: |
+          if [ -z "$FTP_HOST" ]; then echo "Pas d'accès SSH : thème à activer depuis l'administration WordPress"; exit 0; fi
+          WP_ROOT="${FTP_THEME_DIR%/wp-content/themes/*}"
+          THEME="$(basename "$FTP_THEME_DIR")"
+          # wp-cli (fourni par Hostinger) : active le thème s'il ne l'est pas, puis régénère les permaliens (llms.txt).
+          sshpass -e ssh -o StrictHostKeyChecking=accept-new -p "${FTP_PORT:-22}" "$FTP_USER@$FTP_HOST" \
+            "cd ~/$WP_ROOT && (wp theme is-active $THEME || wp theme activate $THEME) && wp rewrite structure "/%postname%/" && wp rewrite flush && wp theme list --status=active --field=name"
+
+      - name: Synchro des contenus
+        run: |
+          if [ "$LIVE" = "true" ]; then
+            python scripts/wp_sync.py --apply ${{ inputs.force && '--force' || '' }}
+          else
+            echo "Mode simulation (DEPLOY_ENABLED=${{ vars.DEPLOY_ENABLED }})"
+            python scripts/wp_sync.py
+          fi
+
+      - name: Contrôle zéro 301
+        if: env.LIVE == 'true'
+        run: python scripts/check_urls.py

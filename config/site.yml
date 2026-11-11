@@ -1,0 +1,106 @@
+# Configuration d'escapade-et-voyage.fr — source de vérité.
+# Le déploiement la convertit en theme/escapade/site.json (lu par le thème).
+#
+# RÈGLES D'OR (zéro 301) :
+# - un slug publié ne change jamais (articles, pages, rubriques) ;
+# - les articles sont servis en /slug/ ; les rubriques en /category/<parent>/<slug>/.
+
+site_url: https://escapade-et-voyage.fr
+category_in_url: false
+posts_page_slug: carnet     # la page /carnet/ liste tous les articles
+
+brand:
+  name: Escapade et Voyage
+  tagline: Les incontournables, et ce que les autres manquent
+  wp_blogname: Escapade et Voyage
+  wp_blogdescription: Conseils de voyage entre baroudeur et touriste, adresses de charme abordables et outils pour préparer son séjour
+
+home:
+  seo_title: "Escapade et Voyage : conseils pour voyager autrement"
+  meta_description: "Préparer un voyage entre les incontournables et les coins que les autres manquent : itinéraires, adresses de charme abordables, équipement et outils gratuits."
+  h1: Escapade et Voyage, voyager entre les incontournables et les sentiers moins battus
+  manifesto_title: Notre façon de voyager
+
+author:
+  name: La rédaction d'Escapade et Voyage
+  role: Rédaction indépendante
+  page: /a-propos/
+  bio: "Nos conseils partent du terrain et de sources vérifiées. Les prix, horaires et formalités sont datés : vérifiez-les avant de partir, ils changent souvent."
+  photo: ""
+  links: []
+  knows_about: []
+publisher_type: Organization
+
+# Rubriques (slugs figés dès la première publication).
+categories:
+  - slug: destinations
+    name: Destinations
+    on_home: true
+    tagline: Itinéraires, incontournables et coins secrets.
+    intro: "Par pays et par région : les vrais incontournables, les étapes moins connues qui valent le détour, et comment s'organiser."
+  - slug: hors-des-sentiers-battus
+    name: Hors des sentiers battus
+    on_home: true
+    tagline: Ce que la plupart des visiteurs manquent.
+    intro: "Villages, quartiers, randonnées et adresses à l'écart des foules : pour voir autre chose que les cartes postales, sans renoncer au confort."
+  - slug: voyager-malin
+    name: Voyager malin
+    on_home: true
+    tagline: Budget, transports, hébergements.
+    intro: "Se loger, se déplacer et manger mieux pour moins cher : les alternatives aux options que tout le monde réserve."
+  - slug: preparer-son-voyage
+    name: Préparer son voyage
+    on_home: true
+    tagline: Formalités, santé, organisation.
+    intro: "Papiers, assurance, santé, argent, téléphone : tout ce qui se règle avant le départ, avec les sources officielles."
+  - slug: equipement-voyage
+    name: Équipement
+    on_home: true
+    tagline: Bagages, vêtements, accessoires.
+    intro: "Sacs, valises, vêtements et accessoires de voyage : ce qui sert vraiment, comment choisir, et ce qu'on peut laisser à la maison."
+
+canonical_overrides: {}
+legacy_redirects: []
+
+nav:
+  - { label: Destinations, url: /category/destinations/ }
+  - { label: Hors des sentiers battus, url: /category/hors-des-sentiers-battus/ }
+  - { label: Voyager malin, url: /category/voyager-malin/ }
+  - { label: Préparer, url: /category/preparer-son-voyage/ }
+  - { label: Équipement, url: /category/equipement-voyage/ }
+  - { label: Outils, url: /outils/ }
+
+footer_nav:
+  - { label: Budget de voyage, url: /outils/budget-voyage/ }
+  - { label: Partage des dépenses, url: /outils/partage-depenses-voyage/ }
+  - { label: Décalage horaire, url: /outils/decalage-horaire/ }
+  - { label: Liste de bagages, url: /outils/liste-bagages/ }
+  - { label: Coût d'un trajet en voiture, url: /outils/cout-trajet-voiture/ }
+  - { label: Tous les articles, url: /carnet/ }
+  - { label: À propos, url: /a-propos/ }
+  - { label: Contact, url: /contact/ }
+  - { label: Mentions légales, url: /mentions-legales/ }
+
+footer:
+  about: "Un guide indépendant pour préparer ses voyages : les incontournables qui valent vraiment le coup, et les coins que les autres manquent."
+  legal: "Les prix, horaires et formalités évoluent : vérifiez-les auprès des sources officielles avant de partir."
+
+analytics: false
+
+urgence_categories: []
+urgence:
+  texte: ""
+
+newsletter:
+  action: ""
+  field: EMAIL
+  title: La lettre d'Escapade et Voyage
+  text: ""
+  button: Je m'abonne
+
+default_share_image: ""
+
+per_page:
+  blog: 12
+  archive: 12
+  author: 12
