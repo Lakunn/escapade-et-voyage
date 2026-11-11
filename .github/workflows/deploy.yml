@@ -85,7 +85,7 @@ jobs:
           THEME="$(basename "$FTP_THEME_DIR")"
           # wp-cli (fourni par Hostinger) : active le thème s'il ne l'est pas, puis régénère les permaliens (llms.txt).
           sshpass -e ssh -o StrictHostKeyChecking=accept-new -p "${FTP_PORT:-22}" "$FTP_USER@$FTP_HOST" \
-            "cd ~/$WP_ROOT && (wp theme is-active $THEME || wp theme activate $THEME) && wp rewrite structure "/%postname%/" && wp rewrite flush && wp theme list --status=active --field=name"
+            "cd ~/$WP_ROOT && (wp theme is-active $THEME || wp theme activate $THEME) && wp rewrite structure \"/%postname%/\" && wp rewrite flush && for s in hello-world sample-page page-d-exemple; do id=\$(wp post list --post_type=post,page --name=\$s --format=ids); [ -n \"\$id\" ] && wp post delete \$id --force; done; wp theme list --status=active --field=name"
 
       - name: Synchro des contenus
         run: |

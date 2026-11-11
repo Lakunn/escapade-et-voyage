@@ -332,7 +332,7 @@ h1, h2, h3, .card-title, .brand-name { font-family: var(--serif); font-variation
 .brand-name { font-weight: 800; font-size: 1.6rem; }
 .brand-name::after { content: "."; color: var(--terra); }
 .brand-tag { font-family: var(--sans); letter-spacing: .06em; }
-.site-nav a { font-weight: 600; }
+.primary-nav a:hover { color: var(--terra); }
 .ticker { display: none; }
 
 /* Accueil : bandeau */
@@ -399,3 +399,20 @@ h1, h2, h3, .card-title, .brand-name { font-family: var(--serif); font-variation
 .gc-tool .btn { border-radius: 999px; }
 .site-footer { background: var(--sand); border-top: 0; }
 .site-footer a:hover { color: var(--terra); }
+
+/* Bandeau : étiquettes de bagage à droite */
+.ev-hero-inner { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); column-gap: 3rem; align-items: center; }
+.ev-hero-inner > :not(.ev-hero-tags) { grid-column: 1; }
+.ev-hero-tags { grid-column: 2; grid-row: 1 / span 5; list-style: none; margin: 0; padding: 0; display: grid; gap: 1.1rem; justify-items: end; }
+.ev-hero-tags li { position: relative; width: min(100%, 320px); background: #fffdf9; border-radius: 14px 14px 14px 14px; padding: 1rem 1.2rem 1rem 2.6rem; font-size: .95rem; color: var(--ink-2); box-shadow: 0 16px 34px -24px rgba(27,36,48,.55), 0 0 0 1px rgba(27,36,48,.06); transform: rotate(-2deg); }
+.ev-hero-tags li:nth-child(2) { transform: rotate(1.5deg); margin-right: 2.2rem; }
+.ev-hero-tags li:nth-child(3) { transform: rotate(-1deg); }
+.ev-hero-tags li::before { content: ""; position: absolute; left: 1rem; top: 50%; width: 10px; height: 10px; margin-top: -5px; border-radius: 50%; background: var(--paper); box-shadow: inset 0 0 0 2px var(--terra); }
+.ev-hero-tags span { display: block; font: 800 1.15rem/1.2 var(--serif); color: var(--night); margin-bottom: .15rem; }
+.ev-hero-tags li:nth-child(2)::before { box-shadow: inset 0 0 0 2px var(--lagoon); }
+.ev-hero-tags li:nth-child(3)::before { box-shadow: inset 0 0 0 2px var(--ochre); }
+@media (max-width: 900px) { .ev-hero-inner { grid-template-columns: 1fr; } .ev-hero-tags { grid-column: 1; grid-row: auto; justify-items: start; margin-top: 2.2rem; } .ev-hero-tags li:nth-child(2) { margin-right: 0; margin-left: 1.5rem; } }
+
+/* Navigation sur une ligne */
+.primary-nav a { white-space: nowrap; font-size: .9rem; }
+.primary-nav ul { gap: 1.05rem; }
