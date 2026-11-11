@@ -238,7 +238,9 @@ class Sync:
                         if cover:
                             data["featured_media"] = cover
                         updated = self.wp.post(f"{'pages' if doc.kind == 'page' else 'posts'}/{current['id']}", data)
-                        if updated.get("link") != current.get("link"):
+                        # Un contenu programmé ou en brouillon n'a pas encore d'URL publique (?p=123) :
+                        # sa publication n'est pas un changement d'URL.
+                        if current.get("status") == "publish" and updated.get("link") != current.get("link"):
                             die(f"l'URL de {doc.path.name} a changé ({current.get('link')} → {updated.get('link')}) : arrêt immédiat, à corriger à la main")
                 item_id = current["id"]
             else:
