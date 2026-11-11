@@ -3,7 +3,7 @@ title: À propos d'Escapade et Voyage
 slug: a-propos
 status: publish
 origin: new
-dek: "Un guide indépendant pour voyager entre le touriste et le baroudeur : les incontournables qui valent le détour, et ce que les autres manquent."
+dek: "Un guide indépendant pour voyager entre le touriste et le baroudeur : les grands classiques qui méritent le voyage, et ce que les autres manquent."
 seo_title: "À propos d'Escapade et Voyage"
 meta_description: "Qui écrit Escapade et Voyage, comment nous choisissons nos adresses et vérifions nos informations, et ce que vous pouvez attendre de nos conseils."
 ---

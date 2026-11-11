@@ -21,8 +21,8 @@ Au retour d'un voyage à plusieurs, les comptes tournent vite au casse-tête : l
 
 Une ligne par dépense, avec trois informations séparées par un point-virgule : la personne qui a payé, le montant, et les personnes concernées. Écrivez « tous » si la dépense se partage entre tout le groupe. Pour une dépense qui ne concerne que certains, listez leurs prénoms séparés par des virgules.
 
-Les montants acceptent la virgule ou le point. Les prénoms doivent être écrits de la même façon d'une ligne à l'autre.
+Les montants acceptent la virgule ou le point. Écrivez chaque prénom de la même façon d'une ligne à l'autre.
 
 ## Pourquoi si peu de virements
 
-L'outil ne rembourse pas dépense par dépense. Il calcule d'abord ce que chacun a avancé et ce qu'il devait, puis fait payer le plus gros débiteur au plus gros créancier, jusqu'à ce que tout soit soldé. À quatre ou cinq voyageurs, cela tient en général en trois ou quatre virements.
+L'outil ne rembourse pas dépense par dépense. Il calcule d'abord ce que chacun a avancé et ce qu'il devait, puis fait payer le plus gros débiteur au plus gros créancier, jusqu'à ce que tous les comptes tombent à zéro. À quatre ou cinq voyageurs, cela tient en général en trois ou quatre virements.

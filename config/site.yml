@@ -11,14 +11,14 @@ posts_page_slug: carnet     # la page /carnet/ liste tous les articles
 
 brand:
   name: Escapade et Voyage
-  tagline: Les incontournables, et ce que les autres manquent
+  tagline: Les grands classiques, et ce que les autres manquent
   wp_blogname: Escapade et Voyage
   wp_blogdescription: Conseils de voyage entre baroudeur et touriste, adresses de charme abordables et outils pour préparer son séjour
 
 home:
   seo_title: "Escapade et Voyage : conseils pour voyager autrement"
-  meta_description: "Préparer un voyage entre les incontournables et les coins que les autres manquent : itinéraires, adresses de charme abordables, équipement et outils gratuits."
-  h1: Escapade et Voyage, voyager entre les incontournables et les sentiers moins battus
+  meta_description: "Préparer un voyage entre les grands classiques et les coins que les autres manquent : itinéraires, adresses de charme abordables, équipement et outils gratuits."
+  h1: Escapade et Voyage, voyager entre les grands classiques et les sentiers moins battus
   manifesto_title: Notre façon de voyager
 
 author:
@@ -36,8 +36,8 @@ categories:
   - slug: destinations
     name: Destinations
     on_home: true
-    tagline: Itinéraires, incontournables et coins secrets.
-    intro: "Par pays et par région : les vrais incontournables, les étapes moins connues qui valent le détour, et comment s'organiser."
+    tagline: Itinéraires, grands classiques, étapes peu connues.
+    intro: "Par pays et par région : les sites qui méritent vraiment le déplacement, les étapes moins connues, et comment s'organiser."
   - slug: hors-des-sentiers-battus
     name: Hors des sentiers battus
     on_home: true
@@ -82,7 +82,7 @@ footer_nav:
   - { label: Mentions légales, url: /mentions-legales/ }
 
 footer:
-  about: "Un guide indépendant pour préparer ses voyages : les incontournables qui valent vraiment le coup, et les coins que les autres manquent."
+  about: "Un guide indépendant pour préparer ses voyages : les grands classiques qui valent vraiment le coup, et les coins que les autres manquent."
   legal: "Les prix, horaires et formalités évoluent : vérifiez-les auprès des sources officielles avant de partir."
 
 analytics: false
