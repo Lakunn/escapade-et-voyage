@@ -171,6 +171,8 @@ class Sync:
                 if _d.tzinfo is None:
                     _d = _d.replace(tzinfo=_Z("Europe/Paris"))
                 data["date_gmt"] = _d.astimezone(_Z("UTC")).strftime("%Y-%m-%dT%H:%M:%S")
+                # WordPress ignore date_gmt quand date est fourni : on n'envoie que l'heure UTC.
+                del data["date"]
             except ValueError:
                 pass
         if doc.kind == "post":
