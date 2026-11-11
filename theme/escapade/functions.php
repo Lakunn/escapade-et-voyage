@@ -296,3 +296,45 @@ add_action(
 		}
 	}
 );
+
+/**
+ * Maillage vers les outils : après le texte d'un article, propose au plus deux outils du site
+ * dont le sujet correspond (règles `tool_links` de config/site.yml). Un outil déjà cité dans le texte n'est pas répété.
+ */
+function vr_tool_box() {
+	$rules = (array) vr_config( 'tool_links', array() );
+	if ( ! $rules || ! is_singular( 'post' ) ) {
+		return;
+	}
+	$post    = get_post();
+	$title   = mb_strtolower( get_the_title( $post ) );
+	$content = (string) $post->post_content;
+	$body    = mb_strtolower( mb_substr( wp_strip_all_tags( $content ), 0, 4000 ) );
+	$scored  = array();
+	foreach ( $rules as $i => $rule ) {
+		if ( empty( $rule['match'] ) || empty( $rule['url'] ) || false !== strpos( $content, $rule['url'] ) ) {
+			continue;
+		}
+		$re    = '~' . str_replace( '~', '\~', $rule['match'] ) . '~iu';
+		$score = 3 * (int) preg_match_all( $re, $title ) + (int) preg_match_all( $re, $body );
+		if ( $score >= 2 ) {
+			$scored[ $i ] = $score;
+		}
+	}
+	if ( ! $scored ) {
+		return;
+	}
+	arsort( $scored );
+	$picks = array_slice( array_keys( $scored ), 0, 2 );
+	echo '<aside class="tool-box" aria-label="Outils utiles"><p class="tool-box-title">Pour aller plus loin</p><ul>';
+	foreach ( $picks as $i ) {
+		$r = $rules[ $i ];
+		printf(
+			'<li><a href="%1$s"><strong>%2$s</strong><span>%3$s</span></a></li>',
+			esc_url( home_url( $r['url'] ) ),
+			esc_html( $r['title'] ?? '' ),
+			esc_html( $r['text'] ?? '' )
+		);
+	}
+	echo '</ul></aside>';
+}

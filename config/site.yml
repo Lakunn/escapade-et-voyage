@@ -104,3 +104,11 @@ per_page:
   blog: 12
   archive: 12
   author: 12
+
+# Maillage vers les outils : encadré « Pour aller plus loin » sous les articles qui traitent du sujet (au plus deux).
+tool_links:
+  - { match: "budget|prix|coûte|coût|pas cher|économis|dépenser", title: "Calculateur de budget de voyage", url: /outils/budget-voyage/, text: "Le budget total, par personne et par jour, poste par poste." }
+  - { match: "entre amis|en groupe|à plusieurs|partag", title: "Partage des dépenses", url: /outils/partage-depenses-voyage/, text: "Qui doit combien à qui, avec le moins de virements possible." }
+  - { match: "décalage|jet lag|fuseau|long-courrier|vol de nuit", title: "Décalage horaire et jet lag", url: /outils/decalage-horaire/, text: "L'écart exact à la date du départ, et comment récupérer." }
+  - { match: "valise|bagages?|sac à dos|cabine|que mettre", title: "Liste de bagages", url: /outils/liste-bagages/, text: "Une liste à cocher selon la durée, le climat et votre façon de voyager." }
+  - { match: "voiture|road trip|péages?|autoroute|location de voiture", title: "Coût d'un trajet en voiture", url: /outils/cout-trajet-voiture/, text: "Carburant, péages, coût par personne, et comparaison avec le train." }

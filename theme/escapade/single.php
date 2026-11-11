@@ -53,6 +53,7 @@ while ( have_posts() ) :
 			<div class="prose">
 				<?php the_content(); ?>
 			</div>
+			<?php vr_tool_box(); ?>
 			<?php get_template_part( 'template-parts/author-box' ); ?>
 		</div>
 		<?php if ( $vr_has_toc ) : ?>

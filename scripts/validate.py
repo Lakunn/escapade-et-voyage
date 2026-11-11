@@ -22,7 +22,7 @@ REQUIRED = ["title", "slug"]
 
 def build_site_json(cfg: dict) -> None:
     keys = ["brand", "home", "author", "categories", "nav", "footer_nav", "footer", "newsletter", "default_share_image",
-            "per_page", "analytics", "publisher_type", "urgence", "urgence_categories"]
+            "per_page", "analytics", "publisher_type", "urgence", "urgence_categories", "tool_links"]
     out = {k: cfg.get(k) for k in keys}
     if out["author"] and out["author"].get("links") is None:
         out["author"]["links"] = []
