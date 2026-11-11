@@ -14,6 +14,21 @@ import csv
 import os
 import sys
 from concurrent.futures import ThreadPoolExecutor
+
+
+def _in_future(value) -> bool:
+    """Vrai si la date du contenu (heure de Paris si non précisée) est postérieure à maintenant."""
+    if not value:
+        return False
+    from datetime import datetime, timezone
+    from zoneinfo import ZoneInfo
+    try:
+        d = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+    except ValueError:
+        return False
+    if d.tzinfo is None:
+        d = d.replace(tzinfo=ZoneInfo("Europe/Paris"))
+    return d > datetime.now(timezone.utc)
 from pathlib import Path
 
 import requests
@@ -76,6 +91,8 @@ def main() -> None:
         if d.slug in skip:
             continue
         if d.meta.get("status", "publish") == "publish" and not d.meta.get("front_page"):
+            if _in_future(d.meta.get("date")):
+                continue  # date de publication à venir : WordPress la publiera à l'heure dite
             if d.meta.get("url"):
                 continue  # contenu importé : son URL réelle est déjà dans urls.csv
             targets.setdefault(norm_url(base + doc_path(d)), "noindex-ok" if d.meta.get("noindex") else "new")
