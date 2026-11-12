@@ -22,16 +22,16 @@ $vr_lead = new WP_Query(
 <div class="ev-hero">
 	<div class="wrap ev-hero-inner">
 		<p class="ev-eyebrow"><?php echo esc_html( vr_config( 'brand.name' ) ); ?></p>
-		<p class="ev-hero-title">Les grands classiques,<br><em>et ce que les autres manquent.</em></p>
-		<p class="ev-hero-text">Des voyages entre le touriste et le baroudeur : les sites qui valent vraiment le détour, les coins à l'écart de la foule, et des adresses où l'on paie le juste prix.</p>
+		<p class="ev-hero-title">On &amp; off<br><em>the road trips.</em></p>
+		<p class="ev-hero-text">Pour ceux qui veulent voyager, pas juste partir. Les sites qui valent vraiment le détour, les routes que les cars ne prennent pas, et des adresses où l'on paie le juste prix.</p>
 		<p class="ev-hero-actions"><a class="btn" href="/category/destinations/">Trouver une destination</a> <a class="btn btn-ghost" href="/outils/">Préparer mon voyage</a></p>
-		<ul class="ev-hero-tags" aria-label="Ce que vous trouverez ici">
-			<li><span>Les classiques</span>triés, avec le bon moment pour y aller</li>
-			<li><span>Les détours</span>à vingt minutes de la foule</li>
-			<li><span>Le juste prix</span>où dormir et manger comme les habitants</li>
-		</ul>
+		<div class="ev-signs" aria-hidden="true">
+			<span class="ev-sign ev-sign-on"><b>On the road</b>Les grands classiques, au bon moment</span>
+			<span class="ev-sign ev-sign-off"><b>Off the road</b>Ce que les autres manquent</span>
+			<span class="ev-sign ev-sign-km"><b>Km 0</b>Le juste prix</span>
+		</div>
 	</div>
-	<svg class="ev-hero-lines" viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true"><path d="M0 220 C 200 160, 340 280, 560 210 S 900 120, 1200 190" /><path d="M0 250 C 220 200, 380 300, 600 240 S 920 160, 1200 225" /><path d="M0 280 C 240 240, 420 320, 640 270 S 940 200, 1200 260" /></svg>
+	<svg class="ev-hero-lines" viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true"><path d="M0 220 C 200 160, 340 280, 560 210 S 900 120, 1200 190" /><path d="M0 250 C 220 200, 380 300, 600 240 S 920 160, 1200 225" stroke-dasharray="14 12" /><path d="M0 280 C 240 240, 420 320, 640 270 S 940 200, 1200 260" /></svg>
 </div>
 <div class="wrap">
 	<h1 class="screen-reader-text"><?php echo esc_html( vr_config( 'home.h1', vr_config( 'brand.name' ) ) ); ?></h1>

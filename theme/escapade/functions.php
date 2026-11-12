@@ -338,3 +338,47 @@ function vr_tool_box() {
 	}
 	echo '</ul></aside>';
 }
+
+/**
+ * Pages « hub » : une page qui a des pages enfants (ex. /outils/) affiche un en-tête centré
+ * (titre puis chapô) et une grille de cartes vers chaque page enfant, avant son propre texte.
+ */
+function vr_hub_children() {
+	if ( ! is_page() ) {
+		return array();
+	}
+	return get_pages(
+		array(
+			'parent'      => get_the_ID(),
+			'sort_column' => 'menu_order,post_title',
+			'post_status' => 'publish',
+		)
+	);
+}
+
+function vr_hub_cards( $children ) {
+	if ( ! $children ) {
+		return;
+	}
+	echo '<nav class="hub-cards" aria-label="' . esc_attr( get_the_title() ) . '">';
+	foreach ( $children as $i => $child ) {
+		printf(
+			'<a class="hub-card hub-card-%4$d" href="%1$s"><span class="hub-card-title">%2$s</span><span class="hub-card-text">%3$s</span><span class="hub-card-cta" aria-hidden="true">Ouvrir l\'outil →</span></a>',
+			esc_url( get_permalink( $child ) ),
+			esc_html( get_the_title( $child ) ),
+			esc_html( wp_trim_words( $child->post_excerpt, 28, '…' ) ),
+			( $i % 6 ) + 1
+		);
+	}
+	echo '</nav>';
+}
+
+add_filter(
+	'body_class',
+	function ( $classes ) {
+		if ( vr_hub_children() ) {
+			$classes[] = 'is-hub';
+		}
+		return $classes;
+	}
+);

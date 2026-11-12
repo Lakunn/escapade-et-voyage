@@ -5,7 +5,8 @@
 get_header();
 while ( have_posts() ) :
 	the_post();
-	$vr_has_toc   = vr_toc_h2_count() >= 3;
+	$vr_hub       = vr_hub_children();
+	$vr_has_toc   = ! $vr_hub && vr_toc_h2_count() >= 3;
 	$vr_essentiel = vr_essentiel();
 	?>
 <article <?php post_class( 'wrap' ); ?>>
@@ -23,6 +24,7 @@ while ( have_posts() ) :
 		</div>
 		<?php endif; ?>
 	</header>
+	<?php vr_hub_cards( $vr_hub ); ?>
 	<div class="article-layout<?php echo $vr_has_toc ? '' : ' no-toc'; ?>">
 		<div>
 			<?php if ( $vr_essentiel ) : ?>

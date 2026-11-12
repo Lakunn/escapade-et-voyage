@@ -11,14 +11,14 @@ posts_page_slug: carnet     # la page /carnet/ liste tous les articles
 
 brand:
   name: Escapade et Voyage
-  tagline: Les grands classiques, et ce que les autres manquent
+  tagline: On & off the road trips. Pour ceux qui veulent voyager, pas juste partir
   wp_blogname: Escapade et Voyage
   wp_blogdescription: Conseils de voyage entre baroudeur et touriste, adresses de charme abordables et outils pour préparer son séjour
 
 home:
   seo_title: "Escapade et Voyage : conseils pour voyager autrement"
   meta_description: "Préparer un voyage entre les grands classiques et les coins que les autres manquent : itinéraires, adresses de charme abordables, équipement et outils gratuits."
-  h1: Escapade et Voyage, voyager entre les grands classiques et les sentiers moins battus
+  h1: "Escapade et Voyage : on & off the road trips, pour ceux qui veulent voyager, pas juste partir"
   manifesto_title: Notre façon de voyager
 
 author:
