@@ -72,7 +72,7 @@
       + '<p>Votre voyage tombe en <strong>' + nomSaison + '</strong>.' + (dest.pays === 'FR' ? '' : ' Les prix y sont en moyenne ' + comp + ' (Banque mondiale, ' + dest.annee + ').') + '</p>'
       + '<div class="ev-budget-grid">' + cartes + '</div>' + art
       + '<p class="gc-note">Estimation hors billets pour rejoindre la destination. Moyennes nationales : les capitales et les stations très touristiques coûtent plus cher, les campagnes moins. '
-      + 'Méthode : des budgets journaliers de référence en France, ajustés au niveau des prix du pays (Banque mondiale, indicateur PA.NUS.PPPC.RF), à la saison et à votre façon de voyager. Base mise à jour le ' + esc(B.maj.split('-').reverse().join('/')) + '.</p>';
+      + 'Méthode : des budgets journaliers de référence en France, ajustés au niveau des prix du pays (Banque mondiale, parité de pouvoir d\'achat rapportée au taux de change), à la saison et à votre façon de voyager. Base mise à jour le ' + esc(B.maj.split('-').reverse().join('/')) + '.</p>';
   }
   function budget(form, box) {
     if (BUDGET) return renderBudget(BUDGET, form, box);

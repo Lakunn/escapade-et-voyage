@@ -2,8 +2,8 @@
 
 Sources combinées :
 1. config/budget.yml : modèle de dépenses, coefficients, destinations et saisons ;
-2. Banque mondiale, indicateur PA.NUS.PPPC.RF (niveau des prix : rapport entre parité de pouvoir
-   d'achat et taux de change), dernière valeur disponible par pays ;
+2. Banque mondiale : niveau des prix = parité de pouvoir d'achat (PA.NUS.PPP) / taux de change
+   officiel (PA.NUS.FCRF), dernière année disponible par pays ;
 3. nos articles : un article qui déclare `budget: {pays: TH, petit: 35, moyen: 70, gros: 180}`
    (euros par adulte et par jour, relevés sur place) remplace l'estimation pour ce pays.
 
@@ -24,23 +24,33 @@ from common import all_docs, doc_path  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "theme" / "escapade" / "assets" / "budget-data.json"
-WB = "https://api.worldbank.org/v2/country/all/indicator/PA.NUS.PPPC.RF?format=json&per_page=20000&date=2018:2026"
+WB = "https://api.worldbank.org/v2/country/all/indicator/{code}?format=json&per_page=20000&date=2018:2026"
+# Niveau des prix = facteur de conversion PPA (PA.NUS.PPP, unités locales par dollar international)
+#                   / taux de change officiel (PA.NUS.FCRF, unités locales par dollar US).
 
 
-def fetch_price_levels() -> dict:
-    r = requests.get(WB, timeout=60, headers={"User-Agent": "escapade-et-voyage/1.0"})
+def _series(code: str) -> dict:
+    r = requests.get(WB.format(code=code), timeout=60, headers={"User-Agent": "escapade-et-voyage/1.0"})
     r.raise_for_status()
     payload = r.json()
     if not isinstance(payload, list) or len(payload) < 2 or not payload[1]:
-        sys.exit(f"Réponse inattendue de la Banque mondiale : {str(payload)[:300]}")
-    out = {}
+        sys.exit(f"Réponse inattendue de la Banque mondiale pour {code} : {str(payload)[:300]}")
+    out: dict = {}
     for row in payload[1]:
         iso2 = (row.get("country") or {}).get("id")
-        if not iso2 or len(iso2) != 2 or row.get("value") is None:
-            continue
-        year = int(row["date"])
-        if iso2 not in out or year > out[iso2]["annee"]:  # dernière année renseignée
-            out[iso2] = {"pli": round(float(row["value"]), 4), "annee": year}
+        if iso2 and len(iso2) == 2 and row.get("value") is not None:
+            out.setdefault(iso2, {})[int(row["date"])] = float(row["value"])
+    return out
+
+
+def fetch_price_levels() -> dict:
+    ppp, fx = _series("PA.NUS.PPP"), _series("PA.NUS.FCRF")
+    out = {}
+    for iso2, years in ppp.items():
+        common = sorted(set(years) & set(fx.get(iso2, {})))
+        if common and fx[iso2][common[-1]]:
+            y = common[-1]  # dernière année où les deux séries sont renseignées
+            out[iso2] = {"pli": round(years[y] / fx[iso2][y], 4), "annee": y}
     return out
 
 
@@ -80,7 +90,7 @@ def main() -> None:
 
     data = {
         "maj": date.today().isoformat(),
-        "source": "Banque mondiale, PA.NUS.PPPC.RF (niveau des prix, PIB)",
+        "source": "Banque mondiale, PA.NUS.PPP / PA.NUS.FCRF (niveau des prix)",
         "annee_france": levels["FR"]["annee"],
         "modele": cfg["modele"], "elasticite": cfg["elasticite"], "coefficients": cfg["coefficients"],
         "destinations": sorted(destinations, key=lambda x: x["nom"]),
