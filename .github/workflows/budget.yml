@@ -1,0 +1,42 @@
+name: 6 · Base du calculateur de budget
+
+# Met à jour theme/escapade/assets/budget-data.json (niveau des prix Banque mondiale + config/budget.yml
+# + budgets relevés dans les articles), puis relance le déploiement pour publier la nouvelle base.
+on:
+  schedule:
+    - cron: "41 4 3 * *"
+  push:
+    branches: [main]
+    paths:
+      - config/budget.yml
+      - scripts/budget_data.py
+      - content/posts/**
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  budget:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Construire la base
+        run: python scripts/budget_data.py
+      - name: Commit et déploiement
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "vr-media-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add theme/escapade/assets/budget-data.json
+          git diff --cached --quiet && echo "Base inchangée" && exit 0
+          git commit -m "Base du calculateur de budget ($(date -u +%F))"
+          git pull --rebase origin main && git push
+          gh workflow run deploy.yml -f mode=production

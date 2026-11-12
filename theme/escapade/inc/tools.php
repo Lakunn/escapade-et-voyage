@@ -50,29 +50,29 @@ function gc_text( $name, $attrs = '' ) {
 	return '<input id="{id}" type="text" name="' . esc_attr( $name ) . '" ' . $attrs . '>';
 }
 
-/* Budget de voyage ------------------------------------------------------- */
+/* Budget de voyage par destination (données) ----------------------------- */
 add_shortcode(
 	'ev_budget',
 	function () {
-		$f  = '<div class="gc-grid">';
-		$f .= gc_field( 'jours', 'Durée du voyage (jours)', gc_number( 'jours', 'min="1" max="365" step="1" placeholder="ex. 10"' ) );
-		$f .= gc_field( 'voyageurs', 'Nombre de voyageurs', gc_number( 'voyageurs', 'min="1" max="30" step="1" placeholder="ex. 2"' ) );
-		$f .= '</div><p class="gc-hint">Montants en euros pour tout le groupe. Laissez vide ce qui ne vous concerne pas.</p><div class="gc-grid">';
-		$rows = array(
-			'transport' => array( 'Billets aller-retour (avion, train…)', 'once' ),
-			'assurance' => array( 'Assurance, visa, vaccins', 'once' ),
-			'logement'  => array( 'Hébergement (par nuit)', 'night' ),
-			'repas'     => array( 'Repas et boissons (par jour)', 'day' ),
-			'local'     => array( 'Transports sur place (par jour)', 'day' ),
-			'activites' => array( 'Visites et activités (total)', 'once' ),
-			'divers'    => array( 'Souvenirs, imprévus (total)', 'once' ),
-		);
-		foreach ( $rows as $key => $row ) {
-			$f .= gc_field( $key, $row[0], gc_number( $key, 'min="0" step="1" data-period="' . esc_attr( $row[1] ) . '" placeholder="0"' ) );
+		$file = get_template_directory() . '/assets/budget-data.json';
+		$data = file_exists( $file ) ? json_decode( (string) file_get_contents( $file ), true ) : null;
+		if ( empty( $data['destinations'] ) ) {
+			return '<p class="gc-note">Le calculateur se met à jour, revenez dans quelques minutes.</p>';
 		}
-		$f .= '</div>' . gc_field( 'marge', 'Marge de sécurité', gc_select( 'marge', array( '10' => '10 % (conseillé)', '0' => 'Aucune', '5' => '5 %', '15' => '15 %', '20' => '20 % (pays à prix variables)' ) ) );
-		$f .= '<button class="btn" type="submit">Calculer le budget</button>';
-		return gc_tool_wrap( 'budget', 'Budget de voyage : total, par personne et par jour', $f );
+		$opts = '<option value="">Choisissez une destination</option>';
+		foreach ( $data['destinations'] as $d ) {
+			$opts .= '<option value="' . esc_attr( $d['pays'] ) . '">' . esc_html( $d['nom'] ) . '</option>';
+		}
+		$f  = '<div class="gc-grid">';
+		$f .= gc_field( 'dest', 'Destination', '<select id="{id}" name="dest" required>' . $opts . '</select>' );
+		$f .= gc_field( 'saison', 'Saison du voyage', gc_select( 'saison', array( 'printemps' => 'Printemps (mars à mai)', 'ete' => 'Été (juin à août)', 'automne' => 'Automne (septembre à novembre)', 'hiver' => 'Hiver (décembre à février)' ) ) );
+		$f .= gc_field( 'jours', 'Durée sur place (jours)', gc_number( 'jours', 'min="1" max="120" step="1" value="10"' ) );
+		$f .= gc_field( 'adultes', 'Adultes', gc_number( 'adultes', 'min="1" max="12" step="1" value="2"' ) );
+		$f .= gc_field( 'enfants', 'Enfants de moins de 12 ans', gc_number( 'enfants', 'min="0" max="10" step="1" value="0"' ) );
+		$f .= gc_field( 'style', 'Façon de voyager', gc_select( 'style', array( 'mixte' => 'Un peu des deux', 'battus' => 'Surtout les grands classiques', 'hors' => 'Surtout hors des sentiers battus' ) ) );
+		$f .= '</div><button class="btn" type="submit">Estimer mon budget</button>';
+		$url = get_template_directory_uri() . '/assets/budget-data.json?v=' . rawurlencode( (string) ( $data['maj'] ?? '' ) );
+		return str_replace( '<div class="gc-tool"', '<div class="gc-tool" data-src="' . esc_url( $url ) . '"', gc_tool_wrap( 'budget', 'Combien coûte votre voyage ? Trois budgets selon votre destination', $f ) );
 	}
 );
 

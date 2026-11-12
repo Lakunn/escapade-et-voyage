@@ -1,0 +1,92 @@
+# Données du calculateur de budget (/outils/budget-voyage/).
+# scripts/budget_data.py combine ce fichier, le niveau des prix de chaque pays (Banque mondiale)
+# et les budgets relevés dans nos articles, puis écrit theme/escapade/assets/budget-data.json.
+#
+# Tous les montants sont en euros, par adulte et par jour, hors billets pour rejoindre la destination.
+
+# Point de départ : budgets journaliers en France, hypothèses de la rédaction, logement compté
+# pour deux adultes par chambre. Ils sont ensuite ajustés au niveau des prix de chaque pays.
+modele:
+  petit:  { logement: 30,  repas: 22, transports: 7,  activites: 8,  divers: 5 }
+  moyen:  { logement: 60,  repas: 40, transports: 12, activites: 20, divers: 10 }
+  gros:   { logement: 140, repas: 80, transports: 30, activites: 45, divers: 25 }
+  libelles:
+    petit: "Auberges, chambres chez l'habitant, marchés et cantines, transports publics."
+    moyen: "Hôtels simples ou maisons d'hôtes, restaurants de quartier, quelques visites guidées."
+    gros: "Beaux hôtels, bonnes tables, chauffeurs ou location de voiture, activités privées."
+
+# Sensibilité de chaque poste au niveau des prix du pays (1 = suit entièrement l'écart de prix).
+# Les activités et le haut de gamme suivent moins : prix « touristes » et hôtellerie internationale.
+elasticite:
+  logement: 0.9
+  repas: 1.0
+  transports: 1.0
+  activites: 0.75
+  divers: 1.0
+  gros_logement: 0.75
+
+# Coefficients appliqués selon les choix du voyageur.
+coefficients:
+  saison:
+    haute:   { logement: 1.30, activites: 1.05 }
+    moyenne: {}
+    basse:   { logement: 0.80, activites: 0.95 }
+  style:
+    battus: { logement: 1.10, repas: 1.10, activites: 1.25 }
+    mixte:  {}
+    hors:   { logement: 0.85, repas: 0.85, activites: 0.75, transports: 1.25 }
+  # Un enfant de moins de 12 ans, en part d'un adulte.
+  enfant: { logement: 0.35, repas: 0.6, transports: 0.5, activites: 0.5, divers: 0.5 }
+  # Un adulte seul paie la chambre entière.
+  solo_logement: 1.6
+
+# Destinations proposées. Saisons : mois de haute et de basse saison touristique (repères généraux,
+# à nuancer selon la région du pays). Les autres mois comptent en saison moyenne.
+destinations:
+  - { nom: France, pays: FR, haute: [7, 8], basse: [1, 2, 3, 11] }
+  - { nom: Espagne, pays: ES, haute: [7, 8], basse: [1, 2, 11, 12] }
+  - { nom: Portugal, pays: PT, haute: [7, 8], basse: [1, 2, 11, 12] }
+  - { nom: Italie, pays: IT, haute: [7, 8], basse: [1, 2, 11] }
+  - { nom: Grèce, pays: GR, haute: [7, 8], basse: [1, 2, 3, 11, 12] }
+  - { nom: Croatie, pays: HR, haute: [7, 8], basse: [1, 2, 3, 11, 12] }
+  - { nom: Royaume-Uni, pays: GB, haute: [7, 8], basse: [1, 2, 11] }
+  - { nom: Irlande, pays: IE, haute: [7, 8], basse: [1, 2, 11, 12] }
+  - { nom: Islande, pays: IS, haute: [6, 7, 8], basse: [1, 2, 11] }
+  - { nom: Norvège, pays: "NO", haute: [6, 7, 8], basse: [1, 2, 11] }
+  - { nom: Allemagne, pays: DE, haute: [7, 8, 12], basse: [1, 2, 3, 11] }
+  - { nom: Pays-Bas, pays: NL, haute: [4, 7, 8], basse: [1, 2, 11] }
+  - { nom: Pologne, pays: PL, haute: [7, 8], basse: [1, 2, 11] }
+  - { nom: République tchèque, pays: CZ, haute: [6, 7, 8, 12], basse: [1, 2, 11] }
+  - { nom: Hongrie, pays: HU, haute: [7, 8], basse: [1, 2, 11] }
+  - { nom: Turquie, pays: TR, haute: [6, 7, 8], basse: [1, 2, 11, 12] }
+  - { nom: Maroc, pays: MA, haute: [3, 4, 10, 12], basse: [1, 7, 8] }
+  - { nom: Tunisie, pays: TN, haute: [7, 8], basse: [1, 2, 11, 12] }
+  - { nom: Égypte, pays: EG, haute: [11, 12, 1, 2, 3], basse: [6, 7, 8] }
+  - { nom: Jordanie, pays: JO, haute: [3, 4, 10, 11], basse: [1, 7, 8, 12] }
+  - { nom: Émirats arabes unis, pays: AE, haute: [11, 12, 1, 2, 3], basse: [6, 7, 8] }
+  - { nom: Sénégal, pays: SN, haute: [12, 1, 2, 3], basse: [7, 8, 9] }
+  - { nom: Kenya, pays: KE, haute: [7, 8, 9, 1, 2], basse: [4, 5, 11] }
+  - { nom: Tanzanie, pays: TZ, haute: [7, 8, 9, 1, 2], basse: [4, 5] }
+  - { nom: Madagascar, pays: MG, haute: [7, 8, 10], basse: [1, 2, 3] }
+  - { nom: Afrique du Sud, pays: ZA, haute: [12, 1], basse: [5, 6] }
+  - { nom: Thaïlande, pays: TH, haute: [11, 12, 1, 2], basse: [5, 6, 7, 8, 9] }
+  - { nom: Vietnam, pays: VN, haute: [12, 1, 2, 3], basse: [6, 7, 8, 9] }
+  - { nom: Cambodge, pays: KH, haute: [11, 12, 1, 2], basse: [6, 7, 8, 9] }
+  - { nom: Indonésie (Bali), pays: ID, haute: [7, 8, 12], basse: [1, 2, 3, 11] }
+  - { nom: Philippines, pays: PH, haute: [12, 1, 2, 3, 4], basse: [7, 8, 9] }
+  - { nom: Sri Lanka, pays: LK, haute: [12, 1, 2, 3], basse: [5, 6] }
+  - { nom: Inde, pays: IN, haute: [11, 12, 1, 2], basse: [5, 6, 7, 8] }
+  - { nom: Népal, pays: NP, haute: [10, 11, 3, 4], basse: [6, 7, 8] }
+  - { nom: Japon, pays: JP, haute: [3, 4, 10, 11], basse: [1, 2, 6] }
+  - { nom: Corée du Sud, pays: KR, haute: [4, 5, 10], basse: [1, 2, 7] }
+  - { nom: Chine, pays: CN, haute: [5, 7, 8, 10], basse: [1, 2, 11] }
+  - { nom: États-Unis, pays: US, haute: [6, 7, 8, 12], basse: [1, 2, 11] }
+  - { nom: Canada, pays: CA, haute: [6, 7, 8, 9], basse: [1, 2, 11] }
+  - { nom: Mexique, pays: MX, haute: [12, 1, 2, 3, 4], basse: [6, 9, 10] }
+  - { nom: Costa Rica, pays: CR, haute: [12, 1, 2, 3, 4], basse: [5, 9, 10] }
+  - { nom: Pérou, pays: PE, haute: [6, 7, 8], basse: [1, 2, 3] }
+  - { nom: Colombie, pays: CO, haute: [12, 1, 7], basse: [4, 5, 10] }
+  - { nom: Brésil, pays: BR, haute: [12, 1, 2, 7], basse: [4, 5, 6, 8] }
+  - { nom: Chili, pays: CL, haute: [12, 1, 2], basse: [6, 7] }
+  - { nom: Australie, pays: AU, haute: [12, 1, 2], basse: [6, 7, 8] }
+  - { nom: Nouvelle-Zélande, pays: NZ, haute: [12, 1, 2], basse: [6, 7, 8] }

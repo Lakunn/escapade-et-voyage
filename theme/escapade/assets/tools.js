@@ -13,28 +13,73 @@
   function error(box, msg) { box.innerHTML = '<p class="gc-error">' + esc(msg) + '</p>'; }
 
   /* ---------------------------------------------------------------- Budget */
-  function budget(form, box) {
-    var jours = num(form, 'jours'), n = num(form, 'voyageurs') || 1;
-    if (!jours || jours < 1) return error(box, 'Indiquez la durée du voyage en jours.');
-    var nuits = Math.max(jours - 1, 1), postes = [], total = 0;
-    Array.prototype.forEach.call(form.querySelectorAll('input[data-period]'), function (el) {
-      var v = parse(el.value) || 0, p = el.getAttribute('data-period');
-      var t = p === 'night' ? v * nuits : p === 'day' ? v * jours : v;
-      if (t) { postes.push([el.closest('.gc-field').querySelector('label').textContent.replace(/\s*\(.*\)$/, ''), t]); total += t; }
+  // Base : theme/escapade/assets/budget-data.json (niveau des prix Banque mondiale + modèle + articles).
+  var BUDGET = null;
+  var POSTES = { logement: 'Hébergement', repas: 'Repas', transports: 'Transports sur place', activites: 'Visites et activités', divers: 'Divers' };
+  var SAISONS = { printemps: [3, 4, 5], ete: [6, 7, 8], automne: [9, 10, 11], hiver: [12, 1, 2] };
+  function round5(n) { return Math.max(5, Math.round(n / 5) * 5); }
+  function saisonDe(dest, cle) {
+    var m = SAISONS[cle], h = m.filter(function (x) { return dest.haute.indexOf(x) > -1; }).length, b = m.filter(function (x) { return dest.basse.indexOf(x) > -1; }).length;
+    return h >= 2 ? 'haute' : b >= 2 ? 'basse' : 'moyenne';
+  }
+  function niveau(B, dest, opts, palier) {
+    var base = B.modele[palier], el = B.elasticite, co = B.coefficients, r = dest.ratio;
+    var sa = co.saison[opts.saison] || {}, st = co.style[opts.style] || {}, enf = co.enfant;
+    var parAdulte = {}, groupe = {};
+    Object.keys(POSTES).forEach(function (k) {
+      var e = (k === 'logement' && palier === 'gros') ? el.gros_logement : el[k];
+      var v = base[k] * Math.pow(r, e) * (sa[k] || 1) * (st[k] || 1);
+      parAdulte[k] = v;
+      var adultes = opts.adultes * v;
+      if (k === 'logement' && opts.adultes === 1) adultes = v * co.solo_logement;
+      groupe[k] = (adultes + opts.enfants * v * (enf[k] || 1)) * opts.jours;
     });
-    if (!total) return error(box, 'Saisissez au moins un montant.');
-    var marge = (parseInt(form.elements.marge.value, 10) || 0) / 100, avec = total * (1 + marge);
-    postes.sort(function (a, b) { return b[1] - a[1]; });
-    var rows = postes.map(function (p) {
-      return '<tr><td>' + esc(p[0]) + '</td><td>' + eur(p[1]) + '</td><td>' + fmt(100 * p[1] / total) + ' %</td></tr>';
+    var jourAdulte = Object.keys(parAdulte).reduce(function (s, k) { return s + parAdulte[k]; }, 0);
+    // Un budget relevé dans un de nos articles remplace l'estimation, en gardant la répartition par poste.
+    var art = dest.article, source = 'modele';
+    if (art && art[palier]) {
+      var f = art[palier] / jourAdulte;
+      Object.keys(groupe).forEach(function (k) { groupe[k] *= f; });
+      jourAdulte = art[palier]; source = 'article';
+    }
+    var total = Object.keys(groupe).reduce(function (s, k) { return s + groupe[k]; }, 0);
+    return { jour: jourAdulte, total: total, postes: groupe, source: source };
+  }
+  function renderBudget(B, form, box) {
+    var iso = form.elements.dest.value;
+    var dest = B.destinations.filter(function (d) { return d.pays === iso; })[0];
+    if (!dest) return error(box, 'Choisissez une destination.');
+    var opts = {
+      jours: Math.max(1, Math.round(num(form, 'jours') || 10)), adultes: Math.max(1, Math.round(num(form, 'adultes') || 1)),
+      enfants: Math.max(0, Math.round(num(form, 'enfants') || 0)), style: form.elements.style.value,
+      saison: saisonDe(dest, form.elements.saison.value)
+    };
+    var nomSaison = { haute: 'haute saison', moyenne: 'saison intermédiaire', basse: 'basse saison' }[opts.saison];
+    var qui = opts.adultes + ' adulte' + (opts.adultes > 1 ? 's' : '') + (opts.enfants ? ' et ' + opts.enfants + ' enfant' + (opts.enfants > 1 ? 's' : '') : '');
+    var cartes = ['petit', 'moyen', 'gros'].map(function (p) {
+      var n = niveau(B, dest, opts, p);
+      var lignes = Object.keys(POSTES).map(function (k) { return '<tr><td>' + POSTES[k] + '</td><td>' + eur(round5(n.postes[k])) + '</td></tr>'; }).join('');
+      return '<div class="ev-budget-card ev-budget-' + p + '"><p class="ev-budget-tier">' + { petit: 'Petit budget', moyen: 'Budget moyen', gros: 'Grand confort' }[p] + '</p>'
+        + '<p class="ev-budget-total">' + eur(round5(n.total)) + '</p>'
+        + '<p class="ev-budget-day">soit environ ' + eur(round5(n.jour)) + ' par adulte et par jour</p>'
+        + '<p class="ev-budget-desc">' + esc(B.modele.libelles[p]) + '</p>'
+        + '<details><summary>Détail par poste</summary><table class="gc-table"><tbody>' + lignes + '</tbody></table></details>'
+        + (n.source === 'article' ? '<p class="ev-budget-src">Montant relevé dans notre article</p>' : '') + '</div>';
     }).join('');
-    var sur = (total - (postes.filter(function (p) { return /Billets|Assurance/.test(p[0]); }).reduce(function (s, p) { return s + p[1]; }, 0))) / jours / n;
-    box.innerHTML = '<p class="gc-big">' + eur(avec) + ' au total' + (marge ? ', marge de ' + fmt(marge * 100) + ' % comprise' : '') + '</p>'
-      + '<p class="gc-big">' + eur(avec / n) + ' par personne, soit ' + eur(avec / n / jours) + ' par jour</p>'
-      + '<p>Sur place, hors billets et assurance : <strong>' + eur(sur) + ' par personne et par jour</strong>. C\'est le chiffre à comparer d\'une destination à l\'autre.</p>'
-      + '<table class="gc-table"><thead><tr><th>Poste</th><th>Montant</th><th>Part</th></tr></thead><tbody>' + rows + '</tbody></table>'
-      + '<p class="gc-note">Hébergement compté sur ' + nuits + ' nuit' + (nuits > 1 ? 's' : '') + ', repas et transports sur ' + jours + ' jours. '
-      + 'Le premier poste est souvent celui où l\'on gagne le plus : logement chez l\'habitant, auberge, ou étape un peu à l\'écart des quartiers touristiques.</p>';
+    var r = dest.ratio, comp = r >= 0.95 && r <= 1.05 ? 'proches de ceux de la France' : (r < 1 ? 'environ ' + fmt(Math.round((1 - r) * 100)) + ' % moins élevés qu\'en France' : 'environ ' + fmt(Math.round((r - 1) * 100)) + ' % plus élevés qu\'en France');
+    var art = dest.article ? '<p>Nos montants pour ce pays viennent de notre article <a href="' + esc(dest.article.url) + '">' + esc(dest.article.titre) + '</a>' + (dest.article.date ? ', relevés en ' + esc(dest.article.date.slice(0, 7)) : '') + '.</p>' : '';
+    box.innerHTML = '<p class="gc-big">' + esc(dest.nom) + ', ' + opts.jours + ' jours, ' + qui + '</p>'
+      + '<p>Votre voyage tombe en <strong>' + nomSaison + '</strong>.' + (dest.pays === 'FR' ? '' : ' Les prix y sont en moyenne ' + comp + ' (Banque mondiale, ' + dest.annee + ').') + '</p>'
+      + '<div class="ev-budget-grid">' + cartes + '</div>' + art
+      + '<p class="gc-note">Estimation hors billets pour rejoindre la destination. Moyennes nationales : les capitales et les stations très touristiques coûtent plus cher, les campagnes moins. '
+      + 'Méthode : des budgets journaliers de référence en France, ajustés au niveau des prix du pays (Banque mondiale, indicateur PA.NUS.PPPC.RF), à la saison et à votre façon de voyager. Base mise à jour le ' + esc(B.maj.split('-').reverse().join('/')) + '.</p>';
+  }
+  function budget(form, box) {
+    if (BUDGET) return renderBudget(BUDGET, form, box);
+    var src = form.closest('.gc-tool').getAttribute('data-src');
+    box.innerHTML = '<p class="gc-note">Chargement des données…</p>';
+    fetch(src).then(function (r) { return r.json(); }).then(function (d) { BUDGET = d; renderBudget(d, form, box); })
+      .catch(function () { error(box, 'Impossible de charger les données. Réessayez dans un instant.'); });
   }
 
   /* -------------------------------------------------------------- Dépenses */

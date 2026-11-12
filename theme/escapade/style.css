@@ -425,3 +425,17 @@ h1, h2, h3, .card-title, .brand-name { font-family: var(--serif); font-variation
 .tool-box a:hover { border-color: var(--accent); }
 .tool-box strong { display: block; color: var(--ink); }
 .tool-box span { display: block; font-size: .92rem; color: var(--ink-2); margin-top: .15rem; }
+
+/* Calculateur de budget : trois cartes */
+.ev-budget-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.2rem 0; }
+.ev-budget-card { border-radius: 18px; padding: 1.2rem 1.2rem 1rem; background: #fff; border: 1px solid var(--rule); border-top: 6px solid var(--lagoon); }
+.ev-budget-moyen { border-top-color: var(--ochre); }
+.ev-budget-gros { border-top-color: var(--terra); }
+.ev-budget-tier { font: 700 .78rem/1 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 0 0 .6rem; }
+.ev-budget-total { font: 800 2rem/1 var(--serif); color: var(--night); margin: 0 0 .35rem; }
+.ev-budget-day { font-weight: 600; margin: 0 0 .7rem; }
+.ev-budget-desc { font-size: .9rem; color: var(--ink-2); margin: 0 0 .7rem; }
+.ev-budget-card details summary { cursor: pointer; font-size: .88rem; font-weight: 600; color: var(--lagoon); }
+.ev-budget-card .gc-table { margin: .5rem 0 0; font-size: .86rem; }
+.ev-budget-src { font-size: .8rem; color: var(--terra); font-weight: 700; margin: .6rem 0 0; }
+@media (max-width: 760px) { .ev-budget-grid { grid-template-columns: 1fr; } }
