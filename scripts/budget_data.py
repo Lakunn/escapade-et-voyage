@@ -24,18 +24,23 @@ from common import all_docs, doc_path  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "theme" / "escapade" / "assets" / "budget-data.json"
-WB = "https://api.worldbank.org/v2/country/all/indicator/PA.NUS.PPPC.RF?format=json&per_page=20000&mrnev=1"
+WB = "https://api.worldbank.org/v2/country/all/indicator/PA.NUS.PPPC.RF?format=json&per_page=20000&date=2018:2026"
 
 
 def fetch_price_levels() -> dict:
     r = requests.get(WB, timeout=60, headers={"User-Agent": "escapade-et-voyage/1.0"})
     r.raise_for_status()
-    rows = r.json()[1] or []
+    payload = r.json()
+    if not isinstance(payload, list) or len(payload) < 2 or not payload[1]:
+        sys.exit(f"Réponse inattendue de la Banque mondiale : {str(payload)[:300]}")
     out = {}
-    for row in rows:
+    for row in payload[1]:
         iso2 = (row.get("country") or {}).get("id")
-        if iso2 and row.get("value") is not None and len(iso2) == 2:
-            out[iso2] = {"pli": round(float(row["value"]), 4), "annee": int(row["date"])}
+        if not iso2 or len(iso2) != 2 or row.get("value") is None:
+            continue
+        year = int(row["date"])
+        if iso2 not in out or year > out[iso2]["annee"]:  # dernière année renseignée
+            out[iso2] = {"pli": round(float(row["value"]), 4), "annee": year}
     return out
 
 
