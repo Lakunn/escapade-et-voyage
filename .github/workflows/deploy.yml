@@ -96,6 +96,22 @@ jobs:
             python scripts/wp_sync.py
           fi
 
+      - name: Purge du cache de pages
+        if: env.LIVE == 'true'
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          SSHPASS: ${{ secrets.FTP_PASSWORD }}
+          FTP_PORT: ${{ vars.FTP_PORT }}
+          FTP_THEME_DIR: ${{ vars.FTP_THEME_DIR }}
+        run: |
+          # LiteSpeed Cache (Hostinger) garde les anciennes versions des pages : sans purge, visiteurs et robots
+          # voient le contenu d'avant la synchro jusqu'à expiration du cache.
+          if [ -z "$FTP_HOST" ]; then echo "Pas d'accès SSH : purge à faire depuis l'administration"; exit 0; fi
+          WP_ROOT="${FTP_THEME_DIR%/wp-content/themes/*}"
+          sshpass -e ssh -o StrictHostKeyChecking=accept-new -p "${FTP_PORT:-22}" "$FTP_USER@$FTP_HOST"             "cd ~/$WP_ROOT && (wp litespeed-purge all 2>/dev/null || wp cache flush) && echo purge faite"
+          sleep 5
+
       - name: Contrôle zéro 301
         if: env.LIVE == 'true'
         run: python scripts/check_urls.py
