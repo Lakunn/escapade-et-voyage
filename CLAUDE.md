@@ -18,7 +18,7 @@ Ce dépôt pilote le site WordPress escapade-et-voyage.fr (conseils de voyage en
 
 ## Écriture
 
-Suivre le skill `guide-canin-contenu` (cycle commun : idéation, fact-checking, brief, rédaction, maillage, humanisation).
+Suivre le skill **`escapade-contenu`** (données SERP et UGC par mot-clé, fact-checking, brief SEO sémantique, rédaction humanisée, maillage) et sa grille `algoproof.md` (`.claude/skills/escapade-contenu/`).
 
 ## Avant de pousser
 

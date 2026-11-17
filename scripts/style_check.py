@@ -6,8 +6,9 @@ Usage :
   python scripts/style_check.py --strict …       # code de sortie 1 s'il reste des alertes bloquantes
 
 Bloquant : tirets cadratins / demi-cadratins utilisés comme ponctuation, formules interdites,
-emojis, typographie française (espace avant : ; ! ?).
-Signalé : voix passive, phrases trop longues, gras excessif, énumérations en trois,
+emojis, typographie française (espace avant : ; ! ?), introduction et conclusion types.
+Signalé : voix passive, phrases trop longues, gras excessif, énumérations en trois, vocabulaire IA fréquent,
+transitions mécaniques, intertitres sur un seul moule,
 questions rhétoriques en série, adverbes en -ment en excès.
 """
 from __future__ import annotations
@@ -30,7 +31,25 @@ BANNED = [
     "sans plus attendre", "vous l'aurez compris", "en somme", "le saviez-vous", "tout d'abord,",
     "décortiquer", "arsenal", "naviguer dans", "levier incontournable", "pierre angulaire",
     "boîte à outils", "en définitive", "nul doute que", "il est indéniable",
+    # Ajouts du 17/11/2026 (grille algoproof, .claude/skills/*/algoproof.md § 3)
+    "en constante évolution", "paysage numérique", "il est primordial de", "tout ce qu'il faut savoir",
+    "tout ce que vous devez savoir", "guide complet", "guide ultime", "découvrons", "laissez-vous séduire",
+    "laissez-vous tenter", "embarquez pour", "joyau", "écrin de", "trésor caché", "trésors cachés",
+    "à couper le souffle", "vue imprenable", "véritable paradis", "havre de paix", "expérience inoubliable",
+    "niché au cœur", "nichée au cœur", "niché entre", "nichée entre", "mélange unique", "riche patrimoine",
+    "riche histoire", "à ne pas manquer", "un must", "faire du sens", "adresser un problème", "au final,",
+    "dans cet article, découvrez", "dans ce guide, nous",
 ]
+# Vocabulaire passe-partout des textes générés : acceptable à petite dose, signalé au-delà de 4 pour 1 000 mots.
+SUSPECT = [
+    "offre ", "offrent ", "permet de", "permettent de", "souligne", "témoigne", "favoriser", "garantir",
+    "explorer", "découvrir", "expérience", "univers", "richesse", "authentique", "idéal pour", "parfait pour",
+    "crucial", "essentiel", "optimal", "fascinant", "captivant", "inoubliable", "époustouflant", "sublime",
+    "véritable", "dynamique", "harmonie", "en termes de", "dans le cadre de", "de manière significative",
+]
+INTRO_CLICHE = re.compile(r"^(vous rêvez|imaginez|envie de|bienvenue|vous êtes-vous déjà|qui n'a jamais|"
+                          r"vous souhaitez|vous cherchez|que ce soit)", re.I)
+TRANSITIONS = ("de plus", "en outre", "par ailleurs", "ainsi", "enfin", "en effet", "cependant", "néanmoins")
 EMOJI = re.compile("[\U0001F300-\U0001FAFF☀-➿⭐✅❌]")
 DASH = re.compile(r"\s[—–]\s|[—]")  # tiret cadratin partout, demi-cadratin entouré d'espaces
 PASSIVE = re.compile(
@@ -87,6 +106,26 @@ def check(path: Path) -> tuple[list[str], list[str]]:
     for m in SPACE_BEFORE.finditer(full):
         ctx = full[max(0, m.start() - 20): m.end() + 5].replace("\n", " ")
         block.append(f"typographie : espace manquante avant « {m.group(1)} » dans « {ctx.strip()} »")
+
+    paras = [l.strip() for l in re.split(r"\n\s*\n", raw) if l.strip() and not l.strip().startswith(("#", "|", "-", "*", "<", "!", "[", ">"))
+             and not re.match(r"^\d+\.", l.strip())]
+    if paras and INTRO_CLICHE.match(strip_markdown(paras[0])):
+        block.append(f"introduction type IA : « {strip_markdown(paras[0])[:60]}… » → commencer par la réponse")
+    for h in re.findall(r"^#{2,3}\s+(.+)$", raw, flags=re.M):
+        if h.strip().lower().rstrip(" :") in ("introduction", "conclusion", "en conclusion", "pour conclure", "le mot de la fin"):
+            block.append(f"intertitre « {h.strip()} » : finir sur une action concrète ou la FAQ")
+    words_n = max(1, len(text.split()))
+    sus = {w.strip(): low.count(w) for w in SUSPECT if low.count(w)}
+    if sum(sus.values()) / words_n * 1000 > 4:
+        top = ", ".join(f"{w} ×{n}" for w, n in sorted(sus.items(), key=lambda x: -x[1])[:8])
+        notes.append(f"vocabulaire IA fréquent ({sum(sus.values())} pour {words_n} mots) : {top}")
+    starts = [strip_markdown(pp).lower() for pp in paras]
+    trans = sum(1 for pp in starts if pp.startswith(TRANSITIONS))
+    if len(starts) >= 6 and trans / len(starts) > 0.25:
+        notes.append(f"transitions mécaniques en tête de paragraphe ({trans} sur {len(starts)}) : de plus, en outre, ainsi…")
+    h2 = re.findall(r"^##\s+(.+)$", raw, flags=re.M)
+    if len(h2) >= 4 and sum(1 for h in h2 if " : " in h) / len(h2) > 0.75:
+        notes.append("intertitres tous sur le même moule « X : Y » : varier")
 
     passives = [m.group(0) for m in PASSIVE.finditer(" ".join(sentences(text))) if m.group(2).lower() not in NOT_PARTICIPLE]
     sents = sentences(text)
