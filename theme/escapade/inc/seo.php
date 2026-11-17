@@ -224,3 +224,18 @@ add_filter(
 	},
 	999
 );
+
+/* IndexNow : fichier de clé /<clé>.txt (clé = md5 de « indexnow:<domaine> », la même que scripts/wp_sync.py). */
+add_action(
+	'parse_request',
+	function () {
+		$path = trim( (string) wp_parse_url( $_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH ), '/' );
+		$key  = md5( 'indexnow:' . wp_parse_url( home_url(), PHP_URL_HOST ) );
+		if ( $path === $key . '.txt' ) {
+			header( 'Content-Type: text/plain; charset=utf-8' );
+			echo $key; // phpcs:ignore
+			exit;
+		}
+	},
+	0
+);

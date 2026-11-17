@@ -40,6 +40,7 @@ class Sync:
     def __init__(self, apply: bool, force: bool) -> None:
         self.apply, self.force = apply, force
         self.wp = WP(auth=True)
+        self.published: list[str] = []  # URL publiées ou modifiées, signalées à IndexNow
         self.cfg = load_config()
         self.changes = 0
 
@@ -240,6 +241,8 @@ class Sync:
                         updated = self.wp.post(f"{'pages' if doc.kind == 'page' else 'posts'}/{current['id']}", data)
                         # Un contenu programmé ou en brouillon n'a pas encore d'URL publique (?p=123) :
                         # sa publication n'est pas un changement d'URL.
+                        if updated.get("status") == "publish" and updated.get("link"):
+                            self.published.append(updated["link"])
                         if current.get("status") == "publish" and updated.get("link") != current.get("link"):
                             die(f"l'URL de {doc.path.name} a changé ({current.get('link')} → {updated.get('link')}) : arrêt immédiat, à corriger à la main")
                 item_id = current["id"]
@@ -255,6 +258,8 @@ class Sync:
                     if created["slug"] != doc.slug:
                         die(f"WordPress a attribué le slug « {created['slug']} » au lieu de « {doc.slug} » (slug déjà pris ?)")
                     item_id = created["id"]
+                    if created.get("status") == "publish" and created.get("link"):
+                        self.published.append(created["link"])
                     page_ids[doc.slug] = item_id
                     repo_ids.add(item_id)
             if doc.meta.get("front_page"):
@@ -265,6 +270,29 @@ class Sync:
         self.sync_settings(front_id, posts_id)
         self.report_orphans(repo_ids)
         print(f"\n{self.changes} changement(s) {'appliqué(s)' if self.apply else 'à appliquer'}.")
+        self.indexnow()
+
+    def indexnow(self) -> None:
+        """Signale les URL publiées ou modifiées à IndexNow (Bing, Yandex, Seznam, Naver ; Google ne l'utilise pas).
+        La clé se déduit du domaine ; le thème sert le fichier /<clé>.txt qui la prouve."""
+        if not self.apply or not self.published:
+            return
+        import hashlib
+        from urllib.parse import urlparse
+
+        import requests
+
+        from common import site_url
+
+        host = urlparse(site_url()).netloc
+        key = hashlib.md5(f"indexnow:{host}".encode()).hexdigest()
+        body = {"host": host, "key": key, "keyLocation": f"https://{host}/{key}.txt",
+                "urlList": sorted(set(self.published))[:10000]}
+        try:
+            r = requests.post("https://api.indexnow.org/indexnow", json=body, timeout=30)
+            print(f"IndexNow : {len(body['urlList'])} URL signalée(s), réponse HTTP {r.status_code}")
+        except requests.RequestException as exc:
+            warn(f"IndexNow injoignable ({exc}) : les moteurs passeront par le sitemap")
 
     def sync_settings(self, front_id: int | None, posts_id: int | None) -> None:
         brand = self.cfg.get("brand", {})
