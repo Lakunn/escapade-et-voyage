@@ -58,6 +58,7 @@ require VR_DIR . '/inc/llms.php';
 require VR_DIR . '/inc/consent.php';
 require VR_DIR . '/inc/media.php';
 require VR_DIR . '/inc/tools.php';
+require VR_DIR . '/inc/tool-landing.php';
 
 /* ---------------------------------------------------------------------------
  * Setup
@@ -93,6 +94,8 @@ add_action(
 			'vr_source_hash'      => 'string',
 			'vr_canonical'        => 'string',
 			'vr_noindex'          => 'boolean',
+			'vr_tool_steps'       => 'string',
+			'vr_tool_chips'       => 'string',
 		);
 		foreach ( array( 'post', 'page' ) as $type ) {
 			foreach ( $fields as $key => $kind ) {

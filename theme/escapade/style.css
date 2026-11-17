@@ -479,3 +479,62 @@ h1, h2, h3, .card-title, .brand-name { font-family: var(--serif); font-variation
 .ev-sign-km b { color: #c62828; font-size: 1.15rem; }
 .ev-sign-on::after, .ev-sign-off::after { content: ""; position: absolute; left: 50%; bottom: -26px; width: 8px; height: 23px; margin-left: -4px; background: #8a9099; border-radius: 0 0 3px 3px; z-index: -1; }
 @media (max-width: 900px) { .ev-signs { grid-column: 1; grid-row: auto; justify-items: start; margin-top: 2.2rem; } .ev-sign-off, .ev-sign-km { margin-right: 0; margin-left: 1.5rem; } }
+
+/* ------------------------------------------------------------------------
+ * Pages d'outil façon landing (inc/tool-landing.php) : promesse + outil visibles sans défiler
+ * ---------------------------------------------------------------------- */
+.tool-page { padding-top: 1.6rem; }
+.tool-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  grid-template-areas: "pitch tool" "steps tool";
+  grid-template-rows: auto 1fr;
+  column-gap: clamp(1.5rem, 4vw, 3.5rem);
+  row-gap: 1.4rem;
+  align-items: start;
+  padding: clamp(1rem, 3vw, 2rem) 0 2.5rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 2.5rem;
+}
+.tool-hero__pitch { grid-area: pitch; }
+.tool-hero__tool { grid-area: tool; position: sticky; top: 1rem; }
+.tool-hero__steps { grid-area: steps; }
+.tool-hero__kicker {
+  display: inline-flex; align-items: center; gap: .45rem;
+  padding: .35rem .65rem; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent);
+}
+.tool-hero__kicker::before { content: ""; width: .45rem; height: .45rem; border-radius: 50%; background: var(--accent); }
+.tool-hero h1 { font-size: clamp(1.9rem, 3.4vw, 2.85rem); margin: .8rem 0 .7rem; }
+.tool-hero__promise { font-size: clamp(1.02rem, 1.4vw, 1.15rem); line-height: 1.55; color: var(--ink-2); margin: 0 0 1.1rem; max-width: 36rem; }
+.tool-hero__chips { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .45rem; }
+.tool-hero__chips li {
+  font: 600 .72rem/1 var(--mono); letter-spacing: .04em; text-transform: uppercase;
+  padding: .5rem .7rem; border: 1px solid var(--rule); border-radius: 999px; background: var(--paper-2); color: var(--ink-2);
+}
+.tool-hero__chips li::before { content: "✓ "; color: var(--accent); }
+.tool-hero__steps { list-style: none; padding: 0; margin: 0; display: grid; gap: .7rem; counter-reset: none; }
+.tool-hero__steps li { display: grid; grid-template-columns: 2rem 1fr; gap: .75rem; align-items: center; font-size: .97rem; line-height: 1.4; color: var(--ink-2); }
+.tool-hero__n {
+  display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 10px;
+  font: 700 .85rem/1 var(--mono); color: var(--accent-ink); background: var(--accent);
+}
+.tool-hero__tool .gc-tool { margin: 0; box-shadow: 0 1px 0 var(--rule), 0 24px 48px -30px rgba(0,0,0,.35); }
+.tool-hero__tool .gc-tool-title { font-size: 1.05rem; }
+.tool-page .tool-body { max-width: 760px; }
+.tool-page .tool-body .essentiel { margin-top: 0; }
+
+@media (max-width: 900px) {
+  .tool-hero {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "pitch" "tool" "steps";
+    grid-template-rows: auto;
+  }
+  .tool-hero__tool { position: static; }
+  .tool-hero h1 { font-size: 1.75rem; margin: .6rem 0 .5rem; }
+  .tool-hero__promise { font-size: 1rem; margin-bottom: .8rem; }
+  .tool-hero__chips li { font-size: .66rem; padding: .42rem .6rem; }
+}
+@media print {
+  .tool-hero__pitch, .tool-hero__steps { display: none !important; }
+}

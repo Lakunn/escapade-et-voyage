@@ -157,6 +157,8 @@ class Sync:
                 "vr_meta_description": m.get("meta_description", ""),
                 "vr_essentiel": essentiel(doc),
                 "vr_noindex": bool(m.get("noindex", False)),
+                "vr_tool_steps": "\n".join(str(x) for x in (m.get("tool_steps") or [])),
+                "vr_tool_chips": "\n".join(str(x) for x in (m.get("tool_chips") or [])),
                 "vr_source_hash": doc.source_hash(extra=self.canonical(doc)),
                 "vr_canonical": self.canonical(doc),
             },

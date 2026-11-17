@@ -5,6 +5,14 @@ parent: outils
 status: publish
 origin: new
 dek: "Distance, consommation, prix du carburant ou de l'électricité et péages : l'outil calcule le coût du trajet, la part de chaque passager, et le compare au train."
+tool_steps:
+  - "Entrez la distance et votre consommation"
+  - "Ajoutez carburant, péages et passagers"
+  - "Voyez le coût par personne et le match avec le train"
+tool_chips:
+  - "Gratuit"
+  - "Essence, diesel, électrique"
+  - "Résultat immédiat"
 seo_title: "Coût d'un trajet en voiture : le calculateur"
 meta_description: "Calculez le coût d'un trajet en voiture (carburant ou recharge, péages), par personne, et comparez-le au prix du train ou de l'avion. Gratuit."
 essentiel:

@@ -5,6 +5,14 @@ parent: outils
 status: publish
 origin: new
 dek: "Notez qui a payé quoi pendant le voyage : l'outil calcule la part de chacun et la liste la plus courte de remboursements pour solder les comptes."
+tool_steps:
+  - "Ajoutez les voyageurs"
+  - "Notez qui a payé quoi"
+  - "Obtenez le moins de virements possible"
+tool_chips:
+  - "Gratuit"
+  - "Sans inscription"
+  - "Rien n'est enregistré"
 seo_title: "Partage des dépenses entre amis : le calculateur"
 meta_description: "Partagez les dépenses d'un voyage entre amis : qui a payé quoi, la part de chacun et le minimum de virements pour solder les comptes. Gratuit."
 essentiel:

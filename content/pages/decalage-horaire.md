@@ -5,6 +5,14 @@ parent: outils
 status: publish
 origin: new
 dek: "Choisissez votre départ, votre destination et la date : l'outil donne le décalage exact, heure d'été comprise, et un plan simple pour limiter le jet lag."
+tool_steps:
+  - "Choisissez votre ville de départ"
+  - "Choisissez la destination et la date"
+  - "Obtenez le décalage et le plan anti-jet lag"
+tool_chips:
+  - "Gratuit"
+  - "Heure d'été comprise"
+  - "Résultat immédiat"
 seo_title: "Décalage horaire et jet lag : le calculateur"
 meta_description: "Calculez le décalage horaire avec votre destination à la date du voyage, heure d'été comprise, et préparez la récupération du jet lag."
 essentiel:

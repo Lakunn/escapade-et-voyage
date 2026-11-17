@@ -5,6 +5,14 @@ parent: outils
 status: publish
 origin: new
 dek: "Choisissez une destination, la saison, la durée, qui part et votre façon de voyager : l'outil donne trois budgets, du petit budget au grand confort, poste par poste."
+tool_steps:
+  - "Choisissez la destination et la saison"
+  - "Indiquez la durée, qui part, votre style"
+  - "Comparez trois budgets, poste par poste"
+tool_chips:
+  - "Gratuit"
+  - "Sans inscription"
+  - "Prix Banque mondiale"
 seo_title: "Budget de voyage par destination : le calculateur"
 meta_description: "Combien coûte un voyage en Thaïlande, au Japon ou au Portugal ? Trois budgets selon la saison, la durée, les enfants et votre façon de voyager. Gratuit."
 essentiel:

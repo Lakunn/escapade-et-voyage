@@ -5,6 +5,14 @@ parent: outils
 status: publish
 origin: new
 dek: "Durée, climat, façon de voyager, type de bagage : l'outil génère une liste à cocher et à imprimer, sans l'inutile qui alourdit la valise."
+tool_steps:
+  - "Indiquez la durée et le climat"
+  - "Choisissez votre style et votre bagage"
+  - "Cochez, imprimez, bouclez la valise"
+tool_chips:
+  - "Gratuit"
+  - "Sans inscription"
+  - "À imprimer"
 seo_title: "Liste de bagages à cocher : le générateur gratuit"
 meta_description: "Générez une liste de bagages selon la durée, le climat, votre façon de voyager et votre bagage, à cocher et à imprimer. Gratuit et sans inscription."
 essentiel:

@@ -8,6 +8,28 @@ while ( have_posts() ) :
 	$vr_hub       = vr_hub_children();
 	$vr_has_toc   = ! $vr_hub && vr_toc_h2_count() >= 3;
 	$vr_essentiel = vr_essentiel();
+	$vr_tool      = vr_tool_shortcode();
+	if ( $vr_tool ) :
+		?>
+<article <?php post_class( 'wrap tool-page' ); ?>>
+	<?php vr_tool_hero( $vr_tool ); ?>
+	<div class="tool-body">
+		<?php if ( $vr_essentiel ) : ?>
+			<section class="essentiel" aria-labelledby="essentiel-title">
+				<h2 id="essentiel-title">L'essentiel</h2>
+				<ul>
+					<?php foreach ( $vr_essentiel as $vr_point ) : ?>
+						<li><?php echo wp_kses( $vr_point, array( 'strong' => array(), 'em' => array(), 'sup' => array(), 'sub' => array(), 'a' => array( 'href' => array() ) ) ); ?></li>
+					<?php endforeach; ?>
+				</ul>
+			</section>
+		<?php endif; ?>
+		<div class="prose"><?php echo vr_tool_rest_content( $vr_tool ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
+	</div>
+</article>
+		<?php
+		continue;
+	endif;
 	?>
 <article <?php post_class( 'wrap' ); ?>>
 	<header class="page-head">
