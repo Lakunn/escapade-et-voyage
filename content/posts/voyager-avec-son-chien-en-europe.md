@@ -62,6 +62,20 @@ Le Royaume-Uni demande les mêmes papiers, plus le vermifuge pour les chiens, et
 
 Et n'oubliez pas les humains : chaque voyageur doit avoir son [autorisation de voyage ETA](/eta-royaume-uni/).
 
+## En voiture, en train ou en avion : ce qui change
+
+Les papiers sont les mêmes quel que soit le moyen de transport. Ce sont les conditions de voyage qui changent, et elles dépendent du transporteur, pas de la loi : vérifiez-les au moment de réserver.
+
+**En voiture**, c'est le plus simple, et souvent le seul moyen raisonnable pour un grand chien. Le chien doit être attaché (harnais relié à la ceinture) ou dans une caisse ou derrière une grille dans le coffre : un chien libre dans l'habitacle est dangereux en cas de freinage. Prévoyez une pause toutes les deux heures environ, de l'eau, et ne le laissez jamais seul dans une voiture garée au soleil, même vitres entrouvertes.
+
+**En train**, chaque compagnie a ses règles. En France comme chez la plupart des voisins, les petits chiens voyagent dans un sac ou un panier, les grands en laisse et muselés, avec un billet dans les deux cas. Pour un trajet international, lisez les conditions de chaque compagnie du parcours. Rappel : l'Eurostar n'accepte pas les animaux.
+
+**En avion**, c'est le plus contraignant. La plupart des compagnies acceptent en cabine les petits chiens, dans un sac souple placé sous le siège, avec un plafond de poids qui inclut le sac (souvent autour de 8 kg chez les grandes compagnies européennes). Au-delà, c'est la soute ou le refus. Plusieurs compagnies refusent la soute aux chiens à museau court (bouledogues, carlins), plus fragiles respiratoirement. Le nombre d'animaux par vol est limité : réservez la place du chien en même temps que la vôtre.
+
+## Sur place : laisse, muselière et lieux autorisés
+
+Les papiers vous font passer la frontière ; ils ne disent rien des règles locales. Plusieurs pays et beaucoup de villes imposent la laisse dans les espaces publics, parfois la muselière dans les transports en commun, et interdisent les chiens sur certaines plages en saison. Renseignez-vous auprès de l'office de tourisme de votre destination, et gardez une muselière dans le sac, même si votre chien n'en porte jamais : c'est souvent elle qu'on vous demande à l'entrée d'un bus ou d'un bateau.
+
 ## Combien d'animaux, et les chiens catégorisés
 
 Vous pouvez voyager avec **5 animaux au maximum** par personne. Au-delà, seulement pour un concours, une exposition ou une manifestation sportive, après avoir contacté la direction départementale de la protection des populations (DDPP).
@@ -93,6 +107,14 @@ La [liste de bagages](/outils/liste-bagages/) vous aide à ne rien oublier, et l
 ### Un chiot de 2 mois peut-il voyager en Europe ?
 
 En règle générale, non : il ne peut pas être vacciné contre la rage avant 12 semaines, et le vaccin ne compte que 21 jours plus tard. La République tchèque prévoit une exception pour les jeunes chiots non vaccinés, sous conditions.
+
+### Le passeport européen est-il obligatoire pour aller dans un pays de l'Union ?
+
+Oui. Pour franchir une frontière avec un chien, un chat ou un furet, le passeport européen est obligatoire, avec la puce et le vaccin antirabique qui y sont inscrits.
+
+### Quel chien peut voyager en cabine ?
+
+Un petit chien qui tient, avec son sac de transport, sous la limite de poids de la compagnie, souvent autour de 8 kg. Chaque compagnie fixe ses propres règles : vérifiez-les avant de réserver.
 
 ### Le vermifuge est-il obligatoire pour un chat ?
 
