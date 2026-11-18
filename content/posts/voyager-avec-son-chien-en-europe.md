@@ -5,6 +5,8 @@ status: future
 date: '2026-11-23T09:00:00'
 origin: new
 categories: [preparer-son-voyage]
+keyword: "voyager en europe avec son chien"
+keywords_secondaires: ["voyager avec son chat en europe", "passeport européen chien"]
 seo_title: "Voyager en Europe avec son chien ou son chat : formalités"
 meta_description: "Puce, passeport européen, vaccin antirage 21 jours avant : les règles pour partir en Europe avec un chien ou un chat, et les 5 pays qui exigent un vermifuge."
 dek: "Pour emmener un chien ou un chat dans un autre pays européen, il faut trois choses : une puce, un passeport européen et un vaccin antirabique fait au moins 21 jours avant le départ. Le calendrier se prépare donc un mois à l'avance. Et cinq destinations, dont le Royaume-Uni et l'Irlande, demandent en plus un vermifuge donné par le vétérinaire dans les cinq jours avant l'arrivée."

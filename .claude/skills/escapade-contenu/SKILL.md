@@ -7,15 +7,29 @@ description: "Créer ou réécrire un contenu pour escapade-et-voyage.fr : idée
 
 Site de conseils de voyage « on & off the road » : les **vrais incontournables** et les coins **hors des sentiers battus**, à prix abordable. Lire d'abord `CLAUDE.md` (ligne éditoriale, interdits) et la grille commune [`algoproof.md`](algoproof.md) : ce skill l'applique au voyage.
 
-Cycle en sept étapes, **dans l'ordre**. On ne rédige pas avant que Valentin ait validé le brief.
+Cycle en huit étapes, **dans l'ordre**, précédé de la carte des mots-clés. Valentin ne veut pas être sollicité à chaque étape : on choisit les sujets d'après la carte, on rédige, on contrôle, et on lui présente le lot terminé avant le push (le push publie).
 
-## 1. Idée et vérification de l'existant
+## 0. Carte des mots-clés et calendrier (une fois par mois)
 
-1. Sources d'idées : suggestions et « Autres questions » Google, UGC (étape 2), saisonnalité (vacances scolaires, ponts, saison sèche d'une destination), outils du site à alimenter (budget, trajet voiture, décalage horaire, bagages, partage des dépenses).
-2. Chercher dans `content/` et `urls.csv` un contenu qui couvre la même intention : si oui, **mettre à jour** plutôt que créer.
-3. Livrer 5 à 10 idées en tableau : sujet, requête principale, intention, rubrique (`destinations`, `hors-des-sentiers-battus`, `voyager-malin`, `preparer-son-voyage`, `equipement-voyage`), gain d'information envisagé, priorité. Un sujet sans gain d'information possible est écarté.
+Les sujets ne se choisissent pas à l'intuition : ils viennent de `config/keywords.yml`, produit par
 
-Attendre le choix de Valentin.
+```bash
+PYTHONIOENCODING=utf-8 ../marketing-intelligence/.venv/Scripts/python.exe scripts/keyword_map.py --par-semaine 4 --semaines 10
+```
+
+- Découverte gratuite : les graines de `config/keyword_seeds.yml` (larges : « voyage », « week end », « quand partir », « voyage en famille »…) sont déclinées par les suggestions Google (+ a…z, mots interrogatifs, mois), puis les destinations repérées sont déclinées à leur tour (que faire, itinéraire, budget, hors des sentiers battus). Une requête suggérée tôt et sur plusieurs déclinaisons est très tapée : c'est l'indice de **demande** tant qu'on n'a pas de volumes (clé DataForSEO absente de l'outil ; dès qu'elle y est, le script prend les volumes réels).
+- SERP des meilleures requêtes (`serp_max`, 80 par défaut ; SerpAPI gratuit = 250 par mois **partagées avec les autres sites**, cache 14 jours) : « Autres questions » (PAA), recherches associées, **faisabilité** = part du top 10 tenue par des sites faibles (hors des 150 000 premiers domaines Tranco), des forums ou des plateformes, malus si des sites officiels tiennent le top 5 ou si une AI Overview s'affiche.
+- Regroupement : même SERP (4 URL communes sur 10), même mois (« où partir en avril », « vacances pas cher avril », « voyage en avril en famille » = un article), même sujet sans les mots d'habillage = **un seul article**. Les requêtes du groupe deviennent `keywords_secondaires`, les PAA deviennent H2 ou FAQ.
+- Calendrier : 3 à 4 articles par semaine, sujets saisonniers placés 3 à 10 semaines avant leur mois, un même gabarit (« quand partir… », « road trip… ») au plus une fois par semaine pour ne pas produire en série (`algoproof.md` § 3.5).
+- Le bruit se règle dans `config/keyword_seeds.yml` (`exclure_mots`) : prévisions météo, marques, titres d'œuvres, villes bretonnes remontées par le biais d'adresse IP de Google Suggest.
+- Lecture humaine : `keywords/calendrier.md`. Les PAA qui ouvrent d'autres sujets (`idees_paa`) nourrissent la carte suivante.
+
+## 1. Choix du sujet et vérification de l'existant
+
+1. Prendre le prochain sujet du `calendrier` de `config/keywords.yml` (ou un sujet d'actualité de `veille/AAAA-MM-JJ.md` quand il rend un article faux ou ouvre un vrai besoin).
+2. Chercher dans `content/` et `urls.csv` un contenu qui couvre la même intention : si oui, **mettre à jour** plutôt que créer. `validate.py` bloque deux articles sur la même requête.
+3. Vérifier qu'aucun autre site de Valentin ne vise la même requête (animaux : guidecanin.fr) ; sinon, angle voyage strict et lien vers l'autre site.
+4. Un sujet sans gain d'information possible est sauté et marqué dans le compte rendu.
 
 ## 2. Données : SERP + UGC par mot-clé
 
@@ -80,7 +94,7 @@ Gains d'information typiques au voyage : itinéraire jour par jour avec temps de
 
 ## 5. Rédaction très humanisée
 
-Format `content/posts/<slug>.md`, front matter : `title`, `slug`, `status: draft`, `date`, `origin: new`, `categories`, `dek`, `seo_title` (30 à 65 car.), `meta_description` (110 à 160 car.), `essentiel` (3 à 4 points), `sources`, `cover` et `cover_alt` si photo, `budget` si relevé sur place.
+Format `content/posts/<slug>.md`, front matter : `title`, `slug`, `status: draft`, `date`, `origin: new`, `categories`, `keyword` (requête principale de la carte), `keywords_secondaires` (requêtes du groupe), `dek`, `seo_title` (30 à 65 car.), `meta_description` (110 à 160 car.), `essentiel` (3 à 4 points), `sources`, `cover` et `cover_alt` si photo, `budget` si relevé sur place.
 
 Voix d'Escapade et Voyage :
 
@@ -110,5 +124,13 @@ Test du nom propre (`algoproof.md` § 3.3) : remplacez « Islande » par « Norv
 1. Contrôle final de `algoproof.md` § 4, point par point.
 2. `python scripts/style_check.py --strict content/posts/<slug>.md` : zéro alerte bloquante ; traiter les alertes « vocabulaire IA », « transitions » et « moule ».
 3. `python scripts/validate.py` sans erreur.
-4. `status: publish` (ou `future` avec une date) seulement après validation du texte par Valentin. Le push sur `main` publie : le demander avant.
-5. Rendre : URL, tableau des sources, gain d'information retenu, liens ajoutés, alertes de style restantes.
+4. `status: future` avec la date du calendrier. Le push sur `main` publie : présenter le lot à Valentin et pousser après son accord.
+5. Rendre : URL, requête et score de la carte, tableau des sources, gain d'information retenu, liens ajoutés, alertes de style restantes.
+6. Relancer `scripts/keyword_map.py` : le sujet passe en `programme` dans la carte.
+
+## 8. Suivi après publication
+
+- **J+7** : URL indexée ? (Search Console, inspection d'URL ; sinon IndexNow est déjà parti au déploiement).
+- **J+30** : requêtes réelles et position. Une requête en position 8 à 30 absente du texte → H2 ou FAQ à ajouter ; une requête qui relève d'une autre intention → idée pour la carte.
+- **J+90** : rien en top 30 → réécrire selon le top 10 du moment, ou fusionner avec un article proche par `canonical_overrides`.
+- Chaque lundi, lire `veille/AAAA-MM-JJ.md` (workflow « 7 · Veille ») : une formalité, une taxe ou une règle qui change → mise à jour datée de l'article concerné avant tout nouvel article.

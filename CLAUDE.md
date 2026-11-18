@@ -18,6 +18,8 @@ Ce dépôt pilote le site WordPress escapade-et-voyage.fr (conseils de voyage en
 
 ## Écriture
 
+Les sujets viennent de la carte des mots-clés (`config/keywords.yml`, calendrier lisible dans `keywords/calendrier.md`), régénérée chaque mois par `scripts/keyword_map.py` ; l'actualité qui rend un article faux arrive chaque lundi dans `veille/`.
+
 Suivre le skill **`escapade-contenu`** (données SERP et UGC par mot-clé, fact-checking, brief SEO sémantique, rédaction humanisée, maillage) et sa grille `algoproof.md` (`.claude/skills/escapade-contenu/`).
 
 ## Avant de pousser

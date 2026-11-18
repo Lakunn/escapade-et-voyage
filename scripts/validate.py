@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import csv
 import json
+import re
 import sys
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -141,6 +142,29 @@ def main() -> None:
                 warn(f"{d.path.name} : meta_description de {len(md)} caractères (idéal 110–160)")
             if d.kind == "post" and not d.meta.get("essentiel"):
                 warn(f"{d.path.name} : pas de bloc « essentiel » (recommandé pour le GEO)")
+
+    # Requête principale (front matter `keyword`) : relie l'article à config/keywords.yml et à la Search Console.
+    # Deux contenus sur la même requête se cannibalisent : erreur, sauf si l'un est consolidé par canonical_overrides.
+    import unicodedata
+
+    def kw_norm(k: str) -> str:
+        k = unicodedata.normalize("NFKD", str(k).lower()).encode("ascii", "ignore").decode()
+        return " ".join(sorted(re.sub(r"[^a-z0-9]+", " ", k).split()))
+
+    consolidated = set((cfg.get("canonical_overrides") or {}).keys())
+    owners: dict[str, str] = {}
+    for d in docs:
+        if d.kind != "post" or d.meta.get("origin") == "import" or d.slug in consolidated:
+            continue
+        if not d.meta.get("keyword"):
+            warn(f"{d.path.name} : pas de champ « keyword » (requête principale, voir config/keywords.yml)")
+            continue
+        for k in [d.meta["keyword"]] + list(d.meta.get("keywords_secondaires") or []):
+            n = kw_norm(k)
+            if n in owners and owners[n] != d.slug:
+                print(f"✗ {d.path.name} : la requête « {k} » est déjà ciblée par {owners[n]} (cannibalisation)")
+                errors += 1
+            owners.setdefault(n, d.slug)
 
     for slug, target in (cfg.get("canonical_overrides") or {}).items():
         if target.strip("/") not in slugs:

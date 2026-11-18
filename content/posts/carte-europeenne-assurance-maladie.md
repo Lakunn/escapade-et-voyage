@@ -5,6 +5,8 @@ status: future
 date: '2026-11-22T09:00:00'
 origin: new
 categories: [preparer-son-voyage]
+keyword: "carte européenne d'assurance maladie"
+keywords_secondaires: ["ceam", "demande carte européenne d'assurance maladie"]
 seo_title: "Carte européenne d'assurance maladie (CEAM) : mode d'emploi"
 meta_description: "La CEAM est gratuite, valable 2 ans, à demander 20 jours avant le départ. Pays couverts, certificat provisoire, ce qu'elle ne prend pas en charge et remboursement."
 dek: "La carte européenne d'assurance maladie vous fait soigner dans le public d'un pays européen aux mêmes conditions que les habitants. Elle est gratuite, individuelle, valable deux ans, et se commande sur ameli au moins 20 jours avant le départ. Elle ne couvre ni le secteur privé ni le rapatriement : c'est là que les mauvaises surprises arrivent."

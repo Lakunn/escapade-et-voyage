@@ -5,6 +5,8 @@ status: future
 date: '2026-11-20T09:00:00'
 origin: new
 categories: [preparer-son-voyage]
+keyword: "eta royaume uni"
+keywords_secondaires: ["eta uk", "autorisation de voyage royaume uni"]
 seo_title: "ETA Royaume-Uni : prix, délai, démarche pour les Français"
 meta_description: "Depuis avril 2025, les Français ont besoin d'une ETA pour entrer au Royaume-Uni : 20 £ depuis le 8 avril 2026, valable 2 ans. Démarche, délais, pièges."
 dek: "Pour entrer au Royaume-Uni, un Français a besoin d'un passeport et d'une autorisation électronique, l'ETA, y compris pour un enfant. Elle coûte 20 £ (environ 23 €) depuis le 8 avril 2026, se demande sur l'application officielle ou sur gov.uk, et vaut 2 ans. Demandez-la au moins trois jours avant le départ."

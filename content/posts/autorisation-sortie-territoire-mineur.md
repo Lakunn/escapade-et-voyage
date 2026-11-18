@@ -5,6 +5,8 @@ status: future
 date: '2026-11-25T09:00:00'
 origin: new
 categories: [preparer-son-voyage]
+keyword: "autorisation de sortie du territoire"
+keywords_secondaires: ["ast mineur", "autorisation de sortie du territoire formulaire"]
 seo_title: "Autorisation de sortie du territoire (AST) : le mode d'emploi"
 meta_description: "Votre enfant part sans vous : l'AST se remplit en ligne, sans passer en mairie, et vaut 1 an au plus. Quand elle est obligatoire, les pièces à joindre, les pièges."
 dek: "Un mineur qui quitte la France sans l'un de ses parents doit avoir une autorisation de sortie du territoire (AST). Elle se remplit en ligne ou à la main, sans aucun déplacement, et vaut au plus un an. L'enfant voyage avec l'AST signée, sa propre carte d'identité ou son passeport, et la photocopie de la pièce d'identité du parent qui a signé."

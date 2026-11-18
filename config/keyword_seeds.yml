@@ -1,0 +1,151 @@
+# Graines de la carte des mots-clés (scripts/keyword_map.py).
+# Chaque graine est déclinée par les suggestions Google (graine seule, + a…z, + mots interrogatifs, + mois),
+# puis les meilleures requêtes passent en SERP pour récupérer les « Autres questions » et juger la concurrence.
+# Ajouter une graine ici puis relancer : suggestions gratuites, SERP en cache 14 jours.
+
+graines:
+  - voyage
+  - escapade
+  - week end
+  - endroits les plus
+  - quand visiter
+  - quand partir
+  - où partir
+  - voyage en famille
+  - voyage entre amis
+  - road trip
+  - vacances pas cher
+  - destination
+  - hors des sentiers battus
+
+# Déclinaisons ajoutées à chaque graine (en plus de a…z).
+declinaisons: [où, quand, comment, quel, quelle, combien, pas cher, en janvier, en février, en mars, en avril, en mai,
+               en juin, en juillet, en août, en septembre, en octobre, en novembre, en décembre, en europe, en france]
+
+# Requêtes écartées (mot entier, accents ignorés) : prévisions météo, navigationnelles, marques, hors ligne éditoriale.
+exclure_mots:
+  - météo
+  - meteo
+  - prévision
+  - previsions
+  - température
+  - booking
+  - airbnb
+  - ryanair
+  - easyjet
+  - vueling
+  - transavia
+  - air france
+  - sncf
+  - ouigo
+  - flixbus
+  - blablacar
+  - expedia
+  - lastminute
+  - opodo
+  - tui
+  - club med
+  - leclerc
+  - carrefour
+  - lidl
+  - auchan
+  - e leclerc
+  - decathlon
+  - amazon
+  - cdiscount
+  - vente privée
+  - showroomprive
+  - groupon
+  - smartbox
+  - wonderbox
+  - film
+  - série
+  - chanson
+  - paroles
+  - livre
+  - roman
+  - jeu
+  - restaurant
+  - menu
+  - traiteur
+  - hôtel
+  - spa
+  - massage
+  - escape game
+  - coiffure
+  - peugeot
+  - renault
+  - immobilier
+  - emploi
+  - recrutement
+  - mutuelle
+  - foot
+  - match
+  - scolaire
+  - lycée
+  - collège
+  - ce1
+  - ce2
+  - cm1
+  - cm2
+  - maternelle
+  - anglais
+  - espagnol
+  - traduction
+  - synonyme
+  - définition
+  - conjugaison
+  - dans le temps
+  - astral
+  - quiz
+  - tarot
+
+  # bruit relevé au premier passage (titres d'œuvres, intentions d'événement local, homonymes)
+  - finale
+  - fatale
+  - verticale
+  - glaz
+  - desk
+  - pirate
+  - privé
+  - tatouage
+  - navigation
+  - écrit
+  - bd
+  - tournent
+  - bloodlines
+  - def
+  - commentaire
+  - aujourd'hui
+  - ce week-end
+  - ce week end
+  - ce dimanche
+  - ce samedi
+  - ce soir
+  - demain
+  - gratuit
+  - dangereux
+  - quel jour
+  - patrimoine
+  - aéroport
+  - moto
+  - concert
+  - marché de noël
+  - x
+  - genre
+  - weeknd
+  - émission
+  # biais local : Google Suggest suit l'adresse IP (Bretagne) ; ces villes ne remontent que pour cette raison
+  - rennes
+  - telgruc
+  - quimper
+  - vannes
+  - lorient
+  - brest
+
+# Second niveau : chaque destination repérée (« quand partir au Japon », « voyage Vietnam ») est déclinée ainsi.
+declinaisons_destination: ["que faire {d}", "que voir {d}", "itinéraire {d}", "road trip {d}", "budget voyage {d}", "{d} hors des sentiers battus"]
+destinations_max: 40
+
+volume_min: 50   # utilisé seulement si des volumes sont disponibles (clé DataForSEO dans l'outil)
+serp_max: 80     # SERP payées (SerpAPI gratuit : 250 par mois, partagées avec les autres sites)

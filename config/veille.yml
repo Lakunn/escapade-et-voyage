@@ -1,0 +1,38 @@
+# Veille d'escapade-et-voyage.fr : flux lus chaque lundi par scripts/veille.py (workflow « 7 · Veille »).
+# But : repérer ce qui rend un article faux (formalités, prix, règles) et les sujets d'actualité qui méritent un
+# article ou une mise à jour. filter: false = tout garder (recherche déjà ciblée) ; sinon seuls les éléments qui
+# contiennent un des mots-clés ci-dessous sont gardés.
+
+keywords: [voyage, voyageurs, vacances, touristes, tourisme, passeport, visa, esta, etias, eta, frontière, aéroport,
+           compagnie aérienne, vol, low cost, train, interrail, bagage, grève, ceam, autorisation de sortie,
+           indemnisation, retard, annulation, taxe de séjour, surtourisme, quotas]
+exclude: [immobilier, bourse]
+
+feeds:
+  # Formalités : ce qui change pour entrer dans un pays (articles ETA, CEAM, AST à mettre à jour)
+  - name: "Actualités : formalités d'entrée (ETIAS, EES, ETA, ESTA, visas)"
+    url: "https://news.google.com/rss/search?q=(ETIAS+OR+%22entry+exit+system%22+OR+%22EES%22+OR+ESTA+OR+%22ETA+Royaume-Uni%22)+voyageurs&hl=fr&gl=FR&ceid=FR:fr"
+    filter: false
+  - name: "Actualités : passeport, carte d'identité, autorisation de sortie du territoire"
+    url: "https://news.google.com/rss/search?q=(passeport+OR+%22carte+d%27identit%C3%A9%22+OR+%22sortie+du+territoire%22)+d%C3%A9lai+OR+voyage&hl=fr&gl=FR&ceid=FR:fr"
+    filter: false
+  # Transports : grèves, droits des passagers, nouvelles lignes (articles retard avion, voyager malin)
+  - name: "Actualités : grèves dans les transports"
+    url: "https://news.google.com/rss/search?q=gr%C3%A8ve+(a%C3%A9roport+OR+%22contr%C3%B4leurs+a%C3%A9riens%22+OR+SNCF+OR+compagnie)+pr%C3%A9avis&hl=fr&gl=FR&ceid=FR:fr"
+    filter: false
+  - name: "Actualités : droits des passagers aériens"
+    url: "https://news.google.com/rss/search?q=(%22droits+des+passagers%22+OR+%22r%C3%A8glement+261%22+OR+indemnisation+retard+vol)&hl=fr&gl=FR&ceid=FR:fr"
+    filter: false
+  - name: "Actualités : nouvelles lignes et bagage cabine"
+    url: "https://news.google.com/rss/search?q=(%22nouvelle+ligne%22+OR+%22nouvelles+lignes%22+OR+%22bagage+cabine%22)+(a%C3%A9rien+OR+train+de+nuit+OR+low+cost)&hl=fr&gl=FR&ceid=FR:fr"
+    filter: false
+  # Destinations : règles locales qui changent un séjour (taxe, quotas, réservations obligatoires)
+  - name: "Actualités : taxes touristiques, quotas et réservations obligatoires"
+    url: "https://news.google.com/rss/search?q=(%22taxe+touristique%22+OR+%22taxe+de+s%C3%A9jour%22+OR+surtourisme+OR+quota+touristes+OR+%22r%C3%A9servation+obligatoire%22)&hl=fr&gl=FR&ceid=FR:fr"
+    filter: false
+  # Sources officielles
+  - name: "Service-public.fr (actualités)"
+    url: "https://www.service-public.fr/abonnements/rss/actu-actu-part.rss"
+  - name: "Commission européenne : voyager dans l'UE"
+    url: "https://news.google.com/rss/search?q=site:europa.eu+(travel+OR+voyageurs+OR+passengers)&hl=fr&gl=FR&ceid=FR:fr"
+    filter: false

@@ -5,6 +5,8 @@ status: future
 date: '2026-11-27T09:00:00'
 origin: new
 categories: [voyager-malin]
+keyword: "indemnisation retard avion"
+keywords_secondaires: ["vol retardé indemnisation", "retard avion remboursement"]
 seo_title: "Indemnisation retard avion : 250, 400 ou 600 €, la démarche"
 meta_description: "Plus de 3 heures de retard à l'arrivée : 250 à 600 € selon la distance. Vols concernés, exceptions, lettre à la compagnie, médiation obligatoire depuis 2026."
 dek: "Si votre vol arrive avec trois heures de retard ou plus, la compagnie vous doit en principe 250, 400 ou 600 € selon la distance, en plus de l'assistance sur place. La réclamation se fait par écrit auprès de la compagnie, gratuitement. Sans réponse en deux mois, la médiation du tourisme et du voyage est obligatoire avant tout procès depuis février 2026. Vous avez cinq ans pour agir."
