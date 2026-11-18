@@ -172,7 +172,13 @@ mots_habillage: [ou, pas, partir, aller, voyage, voyager, vacance, destination, 
 
 langue: fr
 pays: FR
-par_semaine: 4
+par_semaine: 2   # ralenti le 18/11/2026 : seulement des sujets où l'on apporte du vécu (UGC crédité, données propres)
+# Destinations à couvrir à fond (★ dans le calendrier) : saison, budget, itinéraire, hors des sentiers battus, en famille…
+# Choisies le 18/11/2026 : plusieurs requêtes mesurées chacune, faisabilité correcte, saisons complémentaires
+# (Réunion l'hiver, Japon printemps et automne, Écosse l'été).
+focus:
+  bonus: 1.6
+  motifs: ['\bjapon\b', '\breunion\b', '\becosse\b']
 semaines: 10
 serp_max: 40     # SERP par mois (SerpAPI gratuit : 250 par mois pour les 4 sites ; DataForSEO dès que la clé est là)
 facteur_bing: 20 # recherches Google ≈ 20 × recherches Bing en France, recalculé dès 5 requêtes mesurées avec Surfer

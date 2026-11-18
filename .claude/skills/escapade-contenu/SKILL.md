@@ -16,7 +16,7 @@ Cycle en huit étapes, **dans l'ordre**, précédé de la carte des mots-clés. 
 - **Actualité** : `veille/AAAA-MM-JJ.md` et `veille/plan.md` (workflow de veille, `scripts/veille.py` identique dans les 4 dépôts, flux dans `config/veille.yml`). Une règle, un prix ou une formalité qui change : mise à jour datée de l'article concerné avant tout nouvel article.
 - Renseigner `keyword` (requête principale de la carte) et `keywords_secondaires` dans le front matter de chaque nouvel article : la carte suivante le marque alors `programme` ou `publie`.
 - Récapitulatif chaque lundi par e-mail (n8n, `growww-site/deploy/n8n/`).
-- Spécifique à escapade : graines larges (« voyage », « week end », « quand partir », « voyage en famille »…), second niveau par destination, regroupement des « où partir en <mois> », sujets saisonniers placés 3 à 10 semaines avant leur mois, 4 articles par semaine. Biais d'adresse IP de Google Suggest en local (villes bretonnes exclues) ; dans GitHub Actions les suggestions viennent de serveurs hors de France avec `gl=fr`.
+- Spécifique à escapade : graines larges (« voyage », « week end », « quand partir », « voyage en famille »…), second niveau par destination, regroupement des « où partir en <mois> », sujets saisonniers placés 3 à 10 semaines avant leur mois, **2 articles par semaine** (ralenti le 18/11/2026 : on ne publie que si l'article apporte du vécu crédité, § 2 bis). **Destinations prioritaires** marquées ★ dans le calendrier (`focus` dans `config/keyword_seeds.yml` : Japon, La Réunion, Écosse) : on les couvre à fond (saison, budget, itinéraire, hors des sentiers battus, en famille) et chaque nouvel article d'une destination prioritaire lie les autres articles de la même destination. Biais d'adresse IP de Google Suggest en local (villes bretonnes exclues) ; dans GitHub Actions les suggestions viennent de serveurs hors de France avec `gl=fr`.
 
 ## 1. Choix du sujet et vérification de l'existant
 
@@ -49,7 +49,27 @@ Exploiter le relevé ainsi :
 | Questions sans réponse claire dans les commentaires | H2 ou FAQ |
 | Mots des voyageurs (« van aménagé », « 4x4 obligatoire ? ») | Vocabulaire des intertitres et des ancres |
 
-Règles UGC : jamais de pseudonyme ni de citation nominative d'un internaute ; un témoignage n'est pas une source, c'est une piste à vérifier ; on écrit « des voyageurs signalent… » seulement si plusieurs le disent, avec la date du relevé.
+Règles UGC : un témoignage n'est pas une source pour un prix, un horaire ou une formalité, c'est une piste à vérifier (§ 3). En revanche, c'est la source du **vécu**, et il est alors cité nommément (§ 2 bis).
+
+## 2 bis. Le vécu : témoignages des réseaux sociaux, crédités
+
+Escapade n'invente aucune expérience et la rédaction n'a pas tout parcouru : le vécu vient des voyageurs qui l'ont publié, **cités avec le nom du compte ou de la personne et un lien vers la publication**. C'est le gain d'information que le top 10 n'a pas, et c'est honnête envers le lecteur et l'auteur.
+
+Où chercher (par destination, en français puis en anglais) : commentaires YouTube du relevé (auteur et lien direct `&lc=` fournis par `ugc_collect`), vidéos et descriptions YouTube, TikTok et Instagram (recherche du lieu ou du hashtag dans le Chrome de Valentin), Reddit (`site:reddit.com`), blogs de voyageurs, forums (Routard, Tripadvisor), avis Google Maps d'un lieu précis.
+
+Ce qu'on retient : un détail qu'on ne trouve qu'en y étant allé (temps réel d'une randonnée, bus qui ne passe plus, prix payé, foule à telle heure, erreur commise, coin trouvé par hasard), **daté**. Pas les avis vagues (« magnifique, à faire absolument »).
+
+Comment on cite :
+
+- Formule : « Le 12 mars 2026, @compte (TikTok) raconte avoir mis 4 h 30 pour… » ou « Sur r/JapanTravel, u/pseudo signale en octobre 2025 que… », avec **le lien vers la publication** sur le nom du compte. Nom de chaîne, de compte, ou nom de la personne si elle publie sous son nom (créateur, blogueur) ; jamais de nom réel deviné derrière un pseudonyme.
+- Citation **courte** (une phrase, moins de 25 mots) entre guillemets, traduite si elle est en anglais (« traduit par nos soins ») ; le reste en paraphrase. Jamais de texte ou de transcription recopié en bloc.
+- Comptes publics uniquement, publications publiques. Rien qui expose une personne (enfants identifiables, adresse, données de santé, propos dont l'auteur pourrait pâtir) : dans ce cas, paraphrase sans nom.
+- Une vidéo YouTube peut être intégrée (URL seule sur sa ligne). Une photo ou une vidéo TikTok/Instagram ne se télécharge jamais : lien seulement, sauf accord écrit de l'auteur.
+- Un témoignage illustre, il ne prouve pas : un prix ou une règle cités par un voyageur sont recoupés (§ 3) et la différence signalée (« en 2024 ; le tarif officiel est passé à… en 2026 »).
+- Viser **3 à 6 témoignages crédités** par article, de sources différentes, dont au moins un qui nuance ou contredit l'avis majoritaire.
+- Front matter `temoignages` : liste `{auteur, plateforme, url, date}` pour pouvoir les revérifier à la mise à jour (un lien mort se remplace ou se retire).
+
+Un article sans aucun témoignage crédité ni donnée propre ne se publie pas : on choisit un autre sujet du calendrier.
 
 ## 3. Fact-checking
 
@@ -73,6 +93,7 @@ SERP : formats du top 10, blocs, ce que dit l'AI Overview et qui elle cite :
 Entités attendues (lieux, routes, transports, prestataires, saisons, formalités) :
 Sous-questions retenues (SERP, suggestions, UGC) → H2/H3 :
 Ce que le top 10 dit déjà (à ne pas répéter longuement) :
+Témoignages crédités retenus (auteur, plateforme, lien, date, ce qu'ils apportent) :
 GAIN D'INFORMATION (au moins un, nommé) :
 Avis tranché de la rédaction (ce qu'on recommande, ce qu'on déconseille) :
 Incontournables retenus / coins hors des sentiers battus retenus (vérifiés) :
@@ -88,11 +109,11 @@ Gains d'information typiques au voyage : itinéraire jour par jour avec temps de
 
 ## 5. Rédaction très humanisée
 
-Format `content/posts/<slug>.md`, front matter : `title`, `slug`, `status: draft`, `date`, `origin: new`, `categories`, `keyword` (requête principale de la carte), `keywords_secondaires` (requêtes du groupe), `dek`, `seo_title` (30 à 65 car.), `meta_description` (110 à 160 car.), `essentiel` (3 à 4 points), `sources`, `cover` et `cover_alt` si photo, `budget` si relevé sur place.
+Format `content/posts/<slug>.md`, front matter : `title`, `slug`, `status: draft`, `date`, `origin: new`, `categories`, `keyword` (requête principale de la carte), `keywords_secondaires` (requêtes du groupe), `dek`, `seo_title` (30 à 65 car.), `meta_description` (110 à 160 car.), `essentiel` (3 à 4 points), `sources`, `temoignages` (§ 2 bis), `cover` et `cover_alt` si photo, `budget` si relevé sur place.
 
 Voix d'Escapade et Voyage :
 
-- **Vouvoiement**, signature collective. Le « nous » de la rédaction est permis pour un avis (« nous déconseillons… »), jamais pour une expérience inventée. Une expérience vécue n'apparaît que si Valentin l'a fournie.
+- **Vouvoiement**, signature collective. Le « nous » de la rédaction est permis pour un avis (« nous déconseillons… »), jamais pour une expérience inventée. Une expérience vécue n'apparaît que si Valentin l'a fournie ou si elle est citée d'un voyageur nommé, avec lien (§ 2 bis).
 - **Concret avant tout** : noms de lieux, routes, lignes de bus, horaires, prix, durées. Un paragraphe sans un seul détail vérifiable est à réécrire.
 - **Un avis par section** : ce qui vaut le détour, ce qui ne le vaut pas, à quelle heure y aller, ce qu'on peut sauter. Le lecteur vient chercher un tri, pas un catalogue.
 - **Incontournables honnêtes** : dire quand un lieu célèbre mérite la foule et comment l'éviter (heure, entrée secondaire, saison), et quand il ne la mérite pas.

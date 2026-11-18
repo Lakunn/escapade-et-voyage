@@ -569,6 +569,13 @@ def main() -> None:
         effective = a["volume"] + 0.3 * sum(a["variantes"].values())
         # log² : 12 000 recherches pèsent ~3 fois plus que 200 (un log simple ne donnait que 1,6 fois)
         a["score"] = round(math.log10(effective + 10) ** 2 / 2 * a["faisabilite"] * FIT[a["rubrique"]], 2)
+    # Destinations ou thèmes prioritaires (config `focus`) : on couvre quelques sujets à fond plutôt que tout en surface
+    focus = cfg.get("focus") or {}
+    motifs = [re.compile(m, re.I) for m in focus.get("motifs") or []]
+    for a in articles:
+        if motifs and any(m.search(norm(a["requete"])) or m.search(a["requete"]) for m in motifs):
+            a["focus"] = True
+            a["score"] = round(a["score"] * float(focus.get("bonus", 1.6)), 2)
     articles.sort(key=lambda a: -a["score"])
     known = {dedupe_key(a["requete"]) for a in articles} | {dedupe_key(s) for a in articles for s in a["secondaires"]}
     idees_paa = sorted({q for a in articles for q in a["questions"] if dedupe_key(q) not in known})
@@ -640,7 +647,7 @@ def main() -> None:
     for a in calendar:
         d = date.fromisoformat(a["date_prevue"])
         s = ", ".join(MOIS_AFF[m - 1] for m in a["saison"]) or "toute l'année"
-        L.append(f"| {jours[d.weekday()]} {d.strftime('%d/%m')} | {a['requete']} | {vol(a)} | {a['rubrique']} | {a['score']} | "
+        L.append(f"| {jours[d.weekday()]} {d.strftime('%d/%m')} | {'★ ' if a.get('focus') else ''}{a['requete']} | {vol(a)} | {a['rubrique']} | {a['score']} | "
                  f"{a['faisabilite']} | {s} | {' · '.join(a['questions'][:3])} |")
     L += ["", "## Tous les articles possibles", "", "| Requête | Volume/mois | Rubrique | Score | Faisab. | Top 3 | Statut |",
           "|---|---|---|---|---|---|---|"]

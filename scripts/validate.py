@@ -166,6 +166,18 @@ def main() -> None:
                 errors += 1
             owners.setdefault(n, d.slug)
 
+    # Vécu crédité (skill § 2 bis) : un article de destination sans témoignage nommé n'a pas de gain d'information propre.
+    vecu = {"destinations", "hors-des-sentiers-battus"}
+    for d in docs:
+        if d.kind != "post" or d.meta.get("origin") != "new" or not vecu & set(d.meta.get("categories") or []):
+            continue
+        tem = [t for t in d.meta.get("temoignages") or [] if isinstance(t, dict) and t.get("auteur") and t.get("url")]
+        if not tem:
+            print(f"✗ {d.path.name} : aucun témoignage crédité (front matter `temoignages` : auteur, plateforme, url, date)")
+            errors += 1
+        elif len(tem) < 3:
+            warn(f"{d.path.name} : {len(tem)} témoignage(s) crédité(s), viser 3 à 6")
+
     for slug, target in (cfg.get("canonical_overrides") or {}).items():
         if target.strip("/") not in slugs:
             print(f"✗ canonical_overrides : la cible {target} de « {slug} » n'existe pas dans le dépôt")
