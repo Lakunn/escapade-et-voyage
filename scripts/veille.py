@@ -100,7 +100,9 @@ def main() -> None:
             if it["date"] and it["date"] < since:
                 continue
             text = f"{it['title']} {it['summary']}".lower()
-            if feed.get("filter", True) and keywords and not any(k in text for k in keywords):
+            # `keywords` propres au flux (flux anglais, sources très larges) : remplacent la liste globale.
+            fkw = [k.lower() for k in feed.get("keywords") or []] or keywords
+            if feed.get("filter", True) and fkw and not any(k in text for k in fkw):
                 continue
             if any(k in text for k in exclude):
                 continue

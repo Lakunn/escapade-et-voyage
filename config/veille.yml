@@ -6,7 +6,7 @@
 keywords: [voyage, voyageurs, vacances, touristes, tourisme, passeport, visa, esta, etias, eta, frontière, aéroport,
            compagnie aérienne, vol, low cost, train, interrail, bagage, grève, ceam, autorisation de sortie,
            indemnisation, retard, annulation, taxe de séjour, surtourisme, quotas]
-exclude: [immobilier, bourse]
+exclude: [immobilier, bourse, "titre de séjour", naturalisation, "intégration républicaine", tlscontact, "étrangers en france", "asylum", "asile"]
 
 feeds:
   # Formalités : ce qui change pour entrer dans un pays (articles ETA, CEAM, AST à mettre à jour)
@@ -30,9 +30,35 @@ feeds:
   - name: "Actualités : taxes touristiques, quotas et réservations obligatoires"
     url: "https://news.google.com/rss/search?q=(%22taxe+touristique%22+OR+%22taxe+de+s%C3%A9jour%22+OR+surtourisme+OR+quota+touristes+OR+%22r%C3%A9servation+obligatoire%22)&hl=fr&gl=FR&ceid=FR:fr"
     filter: false
-  # Sources officielles
-  - name: "Service-public.fr (actualités)"
-    url: "https://www.service-public.fr/abonnements/rss/actu-actu-part.rss"
-  - name: "Commission européenne : voyager dans l'UE"
-    url: "https://news.google.com/rss/search?q=site:europa.eu+(travel+OR+voyageurs+OR+passengers)&hl=fr&gl=FR&ceid=FR:fr"
+  # Sources officielles avec flux RSS (testées le 18/11/2026)
+  - name: "Royaume-Uni : ETA (gov.uk, pages mises à jour)"
+    url: "https://www.gov.uk/search/all.atom?keywords=electronic+travel+authorisation&order=updated-newest"
+    keywords: ["electronic travel authorisation", "eta ", "(eta)", "visit the uk", "visitor visa"]
+  - name: "Royaume-Uni : UK Visas and Immigration"
+    url: "https://www.gov.uk/government/organisations/uk-visas-and-immigration.atom"
+    keywords: ["electronic travel authorisation", "eta ", "(eta)", "visitor", "visit visa", "european", "french", "france", "border"]
+  - name: "États-Unis : CBP (ESTA, entrée sur le territoire)"
+    url: "https://www.cbp.gov/rss/newsroom/media-releases"
+    keywords: ["esta ", "(esta)", "visa waiver", "travel authorization", "international travelers", "travelers entering", "social media"]
+  - name: "Union européenne : DG Migration et affaires intérieures (EES, ETIAS, Schengen)"
+    url: "https://home-affairs.ec.europa.eu/node/2/rss_en"
+    keywords: ["etias", "entry/exit", "entry-exit", "(ees)", "visa-free travel", "travel authorisation", "schengen area", "schengen borders code"]
+  - name: "Douane française (voyageurs, franchises)"
+    url: "https://www.douane.gouv.fr/rss.xml"
+    keywords: [voyageur, franchise, bagage, vacances, "retour de voyage", "achats à l'étranger"]
+  - name: "SchengenVisaInfo (actualité des visas, média spécialisé)"
+    url: "https://www.schengenvisainfo.com/news/feed/"
+    keywords: ["etias", "entry/exit", "(ees)", "french citizens", "french travellers", "uk eta", "esta "]
+  # Sources officielles sans flux ou qui bloquent les robots (403) : lues via Google Actualités filtré sur leur domaine
+  - name: "Service-public.fr (via Google Actualités)"
+    url: "https://news.google.com/rss/search?q=site:service-public.gouv.fr+(voyage+OR+passeport+OR+%22carte+d%27identit%C3%A9%22+OR+visa+OR+vacances)&hl=fr&gl=FR&ceid=FR:fr"
+    keywords: [voyage, passeport, "carte d'identité", vacances, "sortie du territoire", ceam, "permis international", "à l'étranger", visa, "union européenne"]
+  - name: "France Diplomatie, conseils aux voyageurs (via Google Actualités)"
+    url: "https://news.google.com/rss/search?q=site:diplomatie.gouv.fr+%22conseils+aux+voyageurs%22&hl=fr&gl=FR&ceid=FR:fr"
+    keywords: ["conseils aux voyageurs", "dernière minute", "- sécurité |", déconseillé, "formalités d'entrée", "entrée et séjour"]
+  - name: "Ministère de l'Intérieur : passeport, frontières (via Google Actualités)"
+    url: "https://news.google.com/rss/search?q=site:interieur.gouv.fr+(passeport+OR+%22carte+d%27identit%C3%A9%22+OR+fronti%C3%A8res+OR+EES)&hl=fr&gl=FR&ceid=FR:fr"
+    keywords: [passeport, "carte d'identité", "frontières extérieures", "entrée/sortie", "entry/exit", etias]
+  - name: "Travel to Europe, site officiel EES / ETIAS (via Google Actualités)"
+    url: "https://news.google.com/rss/search?q=site:travel-europe.europa.eu&hl=fr&gl=FR&ceid=FR:fr"
     filter: false
