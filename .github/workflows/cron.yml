@@ -1,10 +1,9 @@
 name: 5 · Tâches planifiées WordPress
 
 # Les articles programmés (status: future) sont publiés par WP-Cron, qui ne se déclenche qu'à la visite
-# d'une page non mise en cache. On l'appelle ici toutes les 30 minutes pour que les publications partent à l'heure.
+# d'une page non mise en cache. Depuis le 18/11/2026, c'est n8n (VPS) qui l'appelle toutes les 15 minutes pour les
+# 4 sites (growww-site/deploy/n8n/publications-programmees.json) : ce workflow ne sert plus qu'en secours, à la main.
 on:
-  schedule:
-    - cron: "*/30 * * * *"
   workflow_dispatch:
 
 jobs:
