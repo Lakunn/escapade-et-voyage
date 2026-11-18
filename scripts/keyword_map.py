@@ -410,6 +410,24 @@ def main() -> None:
             "secondaires": [c["keyword"] for c in cl[1:]] + satellites[id(cl)][:10],
             "questions": paa[:8], "associees": head.get("associees", [])[:8], "statut": statut, "slug": slug,
         })
+    # Volumes réels relevés avec Keyword Surfer (config/volumes.yml) : ils remplacent l'indice de demande, la
+    # formulation la plus recherchée devient la requête de l'article, et une requête sous 50 recherches est écartée.
+    vol_file = REPO / "config" / "volumes.yml"
+    vols = (yaml.safe_load(vol_file.read_text(encoding="utf-8")) or {}).get("articles", {}) if vol_file.exists() else {}
+    for a in articles:
+        v = vols.get(a["requete"])
+        a["cle"] = a["requete"]
+        if not v:
+            a["volume_source"] = "à relever"
+            continue
+        a["requete"], a["volume"], a["volume_source"] = v["requete"], v["volume"], "Keyword Surfer"
+        a["variantes"] = v.get("variantes") or {}
+        if not v["volume"]:
+            a["statut"], a["score"] = "ecarte", 0.0
+            continue
+        effective = v["volume"] + 0.3 * sum(a["variantes"].values())
+        # log² : 12 000 recherches pèsent ~3 fois plus que 200 (un log simple ne donnait que 1,6 fois)
+        a["score"] = round(math.log10(effective + 10) ** 2 / 2 * a["faisabilite"] * FIT[a["rubrique"]], 2)
     articles.sort(key=lambda a: -a["score"])
 
     # PAA qui ouvrent un sujet absent de la carte : idées pour les prochaines cartes
@@ -454,29 +472,34 @@ def main() -> None:
               "# Ne pas éditer à la main : relancer le script (statut et slug viennent du champ `keyword` des articles).\n")
     data = {"genere_le": today, "methode": "suggestions Google + PAA ; demande = indice Suggest" +
             ("" if any(a.get("volume") for a in articles) else " (pas de volume réel)"),
-            "calendrier": [{"date": a["date_prevue"], "requete": a["requete"], "rubrique": a["rubrique"]} for a in calendar],
+            "calendrier": [{"date": a["date_prevue"], "requete": a["requete"], "volume": a.get("volume"), "rubrique": a["rubrique"]}
+                           for a in calendar],
             "articles": articles, "idees_paa": idees_paa[:150],
             "reserve": [{"requete": c["keyword"], "demande": round(c["demande"], 1), "rubrique": c["rubrique"]}
                         for c in ranked if not c.get("urls")][:400]}
     OUT_YML.write_text(header + yaml.safe_dump(data, allow_unicode=True, sort_keys=False, width=140), encoding="utf-8")
 
+    def vol(a):
+        return "à relever" if a.get("volume") is None else f"{a['volume']:,}".replace(",", " ")
+
     jours = ["lun.", "mar.", "mer.", "jeu.", "ven.", "sam.", "dim."]
     L = [f"# Calendrier éditorial — généré le {today}", "",
          f"{len(cand)} requêtes découvertes, {len(serps)} SERP relevées, {len(articles)} articles possibles, "
          f"{len(calendar)} placés ({args.par_semaine} par semaine).", "",
-         "Demande = indice Google Suggest (une requête suggérée tôt et sur plusieurs déclinaisons est très tapée). "
+         "Volume = recherches mensuelles Google France relevées avec Keyword Surfer (config/volumes.yml) ; à défaut, "
+         "demande = indice Google Suggest (une requête suggérée tôt et sur plusieurs déclinaisons est très tapée). "
          "Faisabilité = part du top 10 (top 5 compté double) tenue par des sites faibles (hors des 150 000 premiers domaines Tranco), des forums ou des plateformes, avec un malus pour les "
          "sites officiels en top 5 et l'AI Overview. Score = demande × faisabilité × adéquation à la ligne éditoriale.", "",
-         "## Calendrier", "", "| Date | Requête principale | Rubrique | Score | Faisab. | Saison | Questions à couvrir |",
-         "|---|---|---|---|---|---|---|"]
+         "## Calendrier", "", "| Date | Requête principale | Volume/mois | Rubrique | Score | Faisab. | Saison | Questions à couvrir |",
+         "|---|---|---|---|---|---|---|---|"]
     for a in calendar:
         d = date.fromisoformat(a["date_prevue"])
         s = ", ".join(MOIS_AFF[m - 1] for m in a["saison"]) or "toute l'année"
-        L.append(f"| {jours[d.weekday()]} {d.strftime('%d/%m')} | {a['requete']} | {a['rubrique']} | {a['score']} | "
+        L.append(f"| {jours[d.weekday()]} {d.strftime('%d/%m')} | {a['requete']} | {vol(a)} | {a['rubrique']} | {a['score']} | "
                  f"{a['faisabilite']} | {s} | {' · '.join(a['questions'][:3])} |")
-    L += ["", "## Tous les articles possibles", "", "| Requête | Rubrique | Score | Faisab. | Top 3 | Statut |", "|---|---|---|---|---|---|"]
+    L += ["", "## Tous les articles possibles", "", "| Requête | Volume/mois | Rubrique | Score | Faisab. | Top 3 | Statut |", "|---|---|---|---|---|---|---|"]
     for a in articles:
-        L.append(f"| {a['requete']} | {a['rubrique']} | {a['score']} | {a['faisabilite']} | {', '.join(a['top3'] or [])} | "
+        L.append(f"| {a['requete']} | {vol(a)} | {a['rubrique']} | {a['score']} | {a['faisabilite']} | {', '.join(a['top3'] or [])} | "
                  f"{a['statut']}{' (' + a['slug'] + ')' if a['slug'] else ''} |")
     L += ["", "## Questions « Autres questions » qui ouvrent d'autres sujets", ""] + [f"- {q}" for q in idees_paa[:60]]
     OUT_MD.parent.mkdir(exist_ok=True)

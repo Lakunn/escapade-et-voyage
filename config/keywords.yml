@@ -1,171 +1,265 @@
 # Carte des mots-clés d'escapade-et-voyage.fr, générée par scripts/keyword_map.py le 2026-11-18.
 # Ne pas éditer à la main : relancer le script (statut et slug viennent du champ `keyword` des articles).
 genere_le: '2026-11-18'
-methode: suggestions Google + PAA ; demande = indice Suggest (pas de volume réel)
+methode: suggestions Google + PAA ; demande = indice Suggest
 calendrier:
 - date: '2026-11-30'
-  requete: partir en février au soleil
+  requete: où partir en février au soleil
+  volume: 14800
   rubrique: destinations
 - date: '2026-12-02'
-  requete: ou partir janvier soleil
+  requete: week-end en amoureux en Bretagne
+  volume: 4400
   rubrique: destinations
 - date: '2026-12-04'
-  requete: voyage entre amis europe
+  requete: que faire au Costa Rica
+  volume: 1300
   rubrique: destinations
 - date: '2026-12-05'
-  requete: voyage en europe en famille
+  requete: visite New York
+  volume: 2900
   rubrique: destinations
 - date: '2026-12-07'
-  requete: vacances pas cher france
-  rubrique: voyager-malin
+  requete: voyager seule
+  volume: 2400
+  rubrique: destinations
 - date: '2026-12-09'
-  requete: endroits les plus visités en france
+  requete: où partir en janvier au soleil
+  volume: 5400
   rubrique: destinations
 - date: '2026-12-11'
-  requete: road trip bretagne
+  requete: voyage en famille en Thaïlande
+  volume: 1600
   rubrique: destinations
 - date: '2026-12-12'
-  requete: quand partir vietnam
+  requete: que faire au Sri Lanka
+  volume: 1900
   rubrique: destinations
 - date: '2026-12-14'
-  requete: week end amoureux bretagne
+  requete: pays les plus chauds du monde
+  volume: 1900
   rubrique: destinations
 - date: '2026-12-16'
-  requete: voyage en famille thailande
+  requete: road trip Écosse
+  volume: 2900
   rubrique: destinations
 - date: '2026-12-18'
-  requete: endroits les plus beaux du monde
+  requete: quand partir à l'île Maurice
+  volume: 12100
   rubrique: destinations
 - date: '2026-12-19'
-  requete: road trip italie
-  rubrique: destinations
+  requete: vacances pas cher en France
+  volume: 2900
+  rubrique: voyager-malin
 - date: '2026-12-21'
-  requete: voyage en mars
+  requete: où partir en mars
+  volume: 8100
   rubrique: destinations
 - date: '2026-12-23'
-  requete: quand partir thailande
+  requete: sites les plus visités en France
+  volume: 720
   rubrique: destinations
 - date: '2026-12-25'
-  requete: japon hors des sentiers battu
-  rubrique: hors-des-sentiers-battus
+  requete: road trip Italie
+  volume: 480
+  rubrique: destinations
 - date: '2026-12-26'
-  requete: endroits les plus beaux de france
+  requete: plus beaux endroits de France
+  volume: 880
   rubrique: destinations
 - date: '2026-12-28'
-  requete: road trip quebec
-  rubrique: destinations
+  requete: Japon hors des sentiers battus
+  volume: 210
+  rubrique: hors-des-sentiers-battus
 - date: '2026-12-30'
-  requete: destination pas cher europe
-  rubrique: voyager-malin
+  requete: quand partir à la Réunion
+  volume: 8100
+  rubrique: destinations
 - date: '2027-01-01'
-  requete: quand partir reunion
+  requete: voyage entre amis
+  volume: 260
   rubrique: destinations
 - date: '2027-01-02'
-  requete: que voir costa rica
+  requete: road trip Québec
+  volume: 720
   rubrique: destinations
 - date: '2027-01-04'
-  requete: endroits les plus chauds du monde
+  requete: plus beaux endroits du monde
+  volume: 720
   rubrique: destinations
 - date: '2027-01-06'
-  requete: road trip quel pays
+  requete: quand partir aux Seychelles
+  volume: 9900
   rubrique: destinations
 - date: '2027-01-08'
-  requete: que faire new york
+  requete: quand partir en Thaïlande
+  volume: 14800
   rubrique: destinations
 - date: '2027-01-09'
-  requete: quand partir ile maurice
+  requete: voyage en europe en famille
+  volume: 480
   rubrique: destinations
 - date: '2027-01-11'
-  requete: voyage entre amis vietnam
+  requete: road trip Réunion
+  volume: 480
   rubrique: destinations
 - date: '2027-01-13'
-  requete: endroits les plus frais en france
+  requete: quand partir au Vietnam
+  volume: 9900
   rubrique: destinations
 - date: '2027-01-15'
-  requete: road trip reunion
+  requete: quand partir au Japon
+  volume: 6600
   rubrique: destinations
 - date: '2027-01-16'
-  requete: que voir sri lanka
+  requete: quand partir en Écosse
+  volume: 1300
   rubrique: destinations
 - date: '2027-01-18'
-  requete: quand visiter japon
+  requete: voyage en famille japon
+  volume: null
   rubrique: destinations
 - date: '2027-01-20'
-  requete: que visiter seychelles
+  requete: road trip Bretagne
+  volume: 260
   rubrique: destinations
 - date: '2027-01-22'
-  requete: voyage en avril en famille
+  requete: où partir en avril
+  volume: 12100
   rubrique: destinations
 - date: '2027-01-23'
-  requete: week end paques 2027
+  requete: voyage comment
+  volume: null
   rubrique: destinations
 - date: '2027-01-25'
-  requete: road trip ecosse
+  requete: que visiter canada
+  volume: null
   rubrique: destinations
 - date: '2027-01-27'
-  requete: quand visiter ecosse
+  requete: que voir grece
+  volume: null
   rubrique: destinations
 - date: '2027-01-29'
-  requete: hors des sentiers battus sri lanka
-  rubrique: hors-des-sentiers-battus
+  requete: road trip Grèce
+  volume: 210
+  rubrique: destinations
 - date: '2027-01-30'
-  requete: voyage quand on est seul
+  requete: quand partir philippines
+  volume: null
   rubrique: destinations
 - date: '2027-02-01'
-  requete: vacances entre amis france
+  requete: endroits les plus visités au monde
+  volume: null
   rubrique: destinations
 - date: '2027-02-03'
-  requete: road trip grece
+  requete: voyage entre amis à l'étranger
+  volume: null
   rubrique: destinations
 - date: '2027-02-05'
-  requete: quand partir philippines
-  rubrique: destinations
+  requete: marseille hors des sentiers battus
+  volume: null
+  rubrique: hors-des-sentiers-battus
 - date: '2027-02-06'
-  requete: voyage en famille japon
+  requete: road trip kirghizistan
+  volume: null
   rubrique: destinations
 articles:
-- requete: voyage en avril en famille
+- requete: quand partir à l'île Maurice
   rubrique: destinations
-  score: 4.56
-  demande: 14.1
-  volume: null
-  faisabilite: 0.32
-  saison:
-  - 4
-  - 5
+  score: 4.08
+  demande: 2.3
+  volume: 12100
+  faisabilite: 0.49
+  saison: []
   tranco_median_top10: 1120
   resultats_faibles_top10: 3
   officiels_top5: 0
   ai_overview: true
   top3:
-  - youtube.com
-  - splendia.com
-  - blogs4travellers.fr
-  secondaires:
-  - quand partir en avril mai
-  - vacances pas cher en avril
-  - escapade en avril
-  - ou partir ou soleil en avril
-  - destination pas cher en avril
-  - quel voyage en famille en avril
+  - voyage-ile-maurice.info
+  - facebook.com
+  - mairie72.fr
+  secondaires: []
   questions:
-  - Où partir en avril pour une semaine ?
-  - Quelles sont les plus belles destinations pour voyager en famille ?
-  - Où partir pour 500 euros tout compris ?
-  - Où fait-il chaud en France en avril ?
-  - Quelle saison pour le mois de mai ?
-  - Quelles sont les prévisions météo pour le mois d'avril ?
-  - Où aller au soleil fin avril début mai ?
-  - Quel est le mois du printemps ?
+  - Est-ce que ça vaut le coup d'aller à l'Île Maurice ?
+  - Quel temps fait-il à l'Île Maurice en octobre ?
+  - Il fait beau à l'Île Maurice en août ?
+  - Quel est le mois le moins cher pour aller à l'Île Maurice ?
   associees: []
   statut: idee
   slug: null
-  date_prevue: '2027-01-22'
-- requete: voyage entre amis europe
+  cle: quand partir ile maurice
+  volume_source: Keyword Surfer
+  variantes: {}
+  date_prevue: '2026-12-18'
+- requete: quand partir à la Réunion
   rubrique: destinations
-  score: 4.53
-  demande: 11.1
-  volume: null
+  score: 3.99
+  demande: 2.3
+  volume: 8100
+  faisabilite: 0.52
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 3
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - chateau-dravert.com
+  - splendia.com
+  - whentotravel.com
+  secondaires:
+  - quand partir pas cher a la reunion
+  - quand partir ile de la réunion
+  - quand partir reunion maurice
+  questions:
+  - Quand fait-il partir à La Réunion ?
+  - Quelle est la meilleure saison pour partir à La Réunion ?
+  - Quel budget pour 15 jours à La Réunion ?
+  - Est-il possible de visiter La Réunion en mars ?
+  associees: []
+  statut: idee
+  slug: null
+  cle: quand partir reunion
+  volume_source: Keyword Surfer
+  variantes:
+    quand partir à l'île de la Réunion: 480
+  date_prevue: '2026-12-30'
+- requete: quand partir aux Seychelles
+  rubrique: destinations
+  score: 3.76
+  demande: 1.8
+  volume: 9900
+  faisabilite: 0.46
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 3
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - annuaire-dofollow.com
+  - annuairevoyage.net
+  - lautreafrique.info
+  secondaires: []
+  questions:
+  - Quelle est la meilleure période pour se rendre aux Seychelles ?
+  - Quelles sont les 3 îles principales des Seychelles ?
+  - Que peut-on faire à Victoria, aux Seychelles ?
+  - Quels sont les risques aux Seychelles ?
+  associees: []
+  statut: idee
+  slug: null
+  cle: que visiter seychelles
+  volume_source: Keyword Surfer
+  variantes:
+    que faire aux Seychelles: 2400
+    quand aller aux Seychelles: 1300
+    que visiter aux Seychelles: 140
+  date_prevue: '2027-01-06'
+- requete: quand partir en Thaïlande
+  rubrique: destinations
+  score: 3.66
+  demande: 3.4
+  volume: 14800
   faisabilite: 0.41
   saison: []
   tranco_median_top10: 1120
@@ -173,76 +267,44 @@ articles:
   officiels_top5: 0
   ai_overview: true
   top3:
-  - fr.lastminute.com
-  - vacancesbleues-voyages.fr
-  - flightgift.com
+  - partir.com
+  - routes-de-thailande.com
+  - lonelyplanet.fr
   secondaires:
-  - voyage entre amis pas cher
-  - voyage entre pote ou aller
-  - voyage entre amis destination
+  - quand partir en thailande septembre
+  - quand partir en thailande juillet
+  - quand partir en thailande janvier
+  - quand partir en thailande octobre
+  - quand partir en thaïlande pas cher
+  - quand partir en thailande en novembre
+  - quand partir en thailande chiang mai
   questions:
-  - Quelle est la meilleure destination pour partir entre amis ?
-  - Où puis-je faire un voyage pas cher entre amis ?
-  - Où partir en vacances entre amis ?
-  - Quelles sont les 10 destinations à éviter en 2026 ?
-  - Où aller en vacances avec un petit budget ?
-  - Où puis-je trouver un voyage tout inclus vraiment pas cher ?
-  - Quels sont les 10 pays à visiter absolument ?
-  - Où puis-je partir en vacances entre amis à moindre coût ?
+  - Quelle est la période la mieux pour aller en Thaïlande ?
+  - Quel mois ne pas partir en Thaïlande ?
+  - Quel est le mois de pluie en Thaïlande ?
+  - Quel est le mois le moins cher pour aller en Thaïlande ?
   associees:
-  - Destination vacances entre amis pas cher
-  - Destination vacances entre amis pas cher en france
-  - Ou partir en vacances entre amis pour faire la fête
-  - Destination vacances entre amis France
-  - Voyage entre amis film
-  - Week-end entre amis Europe
-  - Ou partir en week-end entre amis en France
-  - Idées de voyages entre amis
+  - Quand partir en Thaïlande pas cher
+  - Quand partir en Thaïlande Bangkok
+  - Quand partir en Thaïlande Koh Samui
+  - Quand partir Thaïlande Phuket
+  - Quelle saison en Thaïlande en ce moment
+  - Quand partir en Thaïlande du Sud
+  - Thaïlande saison des pluies
+  - Quand partir Thaïlande nord
   statut: idee
   slug: null
-  date_prevue: '2026-12-04'
-- requete: voyage en europe en famille
+  cle: quand partir thailande
+  volume_source: Keyword Surfer
+  variantes:
+    saison des pluies Thaïlande: 6600
+    quand partir en Thaïlande pas cher: 390
+  date_prevue: '2027-01-08'
+- requete: où partir en février au soleil
   rubrique: destinations
-  score: 4.4
-  demande: 14.5
-  volume: null
-  faisabilite: 0.3
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 2
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - mesconseilsvoyage.com
-  - parent-conseil.com
-  - msn.com
-  secondaires:
-  - voyage en famille pas cher
-  - voyage en famille quelle destination
-  - voyage en famille tout compris
-  - voyage en famille quel pays
-  - voyage en europe pas cher en famille
-  - voyage en famille hors europe
-  - meilleur voyage en famille en europe
-  - voyage en famille europe ete
-  questions:
-  - Quel pays visiter avec un enfant de 3 ans ?
-  - Est-ce que je peux voyager avec mon enfant sans autorisation de son père ?
-  - Quelles sont les 10 villes européennes les plus agréables à visiter ?
-  - Quelle ville européenne est idéale à visiter en 3 jours ?
-  - Comment avoir les 200 € pour les vacances ?
-  - Quel est le pays idéal pour voyager avec des enfants ?
-  - Quels sont les 10 pays à visiter absolument ?
-  - Où partir cet été sans se ruiner ?
-  associees: []
-  statut: idee
-  slug: null
-  date_prevue: '2026-12-05'
-- requete: partir en février au soleil
-  rubrique: destinations
-  score: 4.26
+  score: 3.61
   demande: 10.6
-  volume: null
+  volume: 14800
   faisabilite: 0.4
   saison:
   - 1
@@ -276,129 +338,21 @@ articles:
   associees: []
   statut: idee
   slug: null
+  cle: partir en février au soleil
+  volume_source: Keyword Surfer
+  variantes:
+    où partir en février au soleil pas cher: 2900
+    où partir en février en europe: 1900
+    où aller au soleil en février: 1600
+    vacances soleil février: 1300
+    où partir en février au soleil en famille: 1000
+    pays chaud en février europe: 880
   date_prevue: '2026-11-30'
-- requete: ou partir janvier soleil
+- requete: où partir en mars
   rubrique: destinations
-  score: 3.48
-  demande: 9.2
-  volume: null
-  faisabilite: 0.38
-  saison:
-  - 1
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 3
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - vacancesconcept.fr
-  - redion.be
-  - nomadiamag.com
-  secondaires:
-  - vacances pas cher janvier
-  - destination janvier
-  - quand partir en janvier au soleil
-  - ou partir en famille en janvier au soleil
-  - où partir en janvier au soleil pas cher
-  questions:
-  - Où partir en janvier 2026 au soleil pas cher ?
-  - Où passer l'hiver au chaud sans se ruiner ?
-  - Où est-il conseillé de voyager en janvier ?
-  - Quelles îles font chaud ?
-  - Où partir en vacances en janvier pour avoir chaud ?
-  - Où partir en voyage avec un petit budget ?
-  - Quel pays où il fait chaud en janvier ?
-  - Où aller se baigner en janvier ?
-  associees:
-  - Ou passer 3 mois d'hiver au soleil
-  - Ou passer 3 mois d'hiver au soleil pas cher
-  - Pays chaud en hiver pas cher
-  - Google flight
-  - TUI
-  - Skyscanner
-  - De quoi passer l hiver au chaud mots fléchés
-  - Voyage Privé
-  statut: idee
-  slug: null
-  date_prevue: '2026-12-02'
-- requete: vacances pas cher france
-  rubrique: voyager-malin
-  score: 2.39
-  demande: 6.6
-  volume: null
-  faisabilite: 0.41
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 2
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - voyageonsmoinschere.fr
-  - lefigaro.fr
-  - vacancesconcept.fr
-  secondaires:
-  - quand partir france
-  - vacances pas cher en france tout compris
-  - vacances pas cher en france aout
-  - vacances pas cher france septembre
-  - vacances en famille france pas cher
-  - destination vacances entre amis pas cher en france
-  - vacances en famille en france pas cher tout compris
-  - vacances pas cher en france bord de mer
-  - vacances pas cher en france montagne
-  - vacances pas cher hors france
-  - vacances pas cher haut de france
-  questions:
-  - Où passer les vacances d'été pas cher ?
-  - Où aller en France endroit paradisiaque ?
-  - Où puis-je trouver des séjours pas chers en dernière minute ?
-  - Où partir pour 500 euros tout compris ?
-  - Quel est le meilleur mois pour visiter Paris ?
-  - Quelle est la température moyenne de saison en France ?
-  - Quelle est la région de France avec le meilleur climat ?
-  - Quel est le type de climat de la France ?
-  associees: []
-  statut: idee
-  slug: null
-  date_prevue: '2026-12-07'
-- requete: endroits les plus visités en france
-  rubrique: destinations
-  score: 2.29
-  demande: 4.7
-  volume: null
-  faisabilite: 0.49
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 3
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - globe-trotting.com
-  - monbeaupays.fr
-  - leventalafrancaise.com
-  secondaires:
-  - quels sont les endroits les plus visités en france
-  questions:
-  - Quels sont les 10 départements les plus visités en France ?
-  - Quels sont les 50 sites touristiques les plus visités en France ?
-  - Quels sont les 10 endroits à voir absolument dans sa vie ?
-  - Quelles sont les 5 villes les plus visitées en France ?
-  associees:
-  - Les 20 sites touristiques les plus visités en France
-  - Top 10 des sites touristiques les plus visités en France
-  - Quels sont les 5 sites les plus visités en France
-  - Les sites touristiques les plus visités en France 2025
-  - Les 100 monuments les plus visités en France
-  - Sites les plus visités en France hors Paris
-  - Monument le plus visité en France Mont-Saint-Michel
-  - Lieu le plus visité du monde
-  statut: idee
-  slug: null
-  date_prevue: '2026-12-09'
-- requete: voyage en mars
-  rubrique: destinations
-  score: 2.16
+  score: 3.23
   demande: 5.5
-  volume: null
+  volume: 8100
   faisabilite: 0.4
   saison:
   - 3
@@ -442,118 +396,20 @@ articles:
   - Ou partir en mars pas cher
   statut: idee
   slug: null
+  cle: voyage en mars
+  volume_source: Keyword Surfer
+  variantes:
+    où partir en mars au soleil: 3600
+    où partir en mars au soleil pas cher: 1600
+    vacances en mars: 1300
+    voyage en mars: 880
+    voyage en mars au soleil: 390
   date_prevue: '2026-12-21'
-- requete: road trip bretagne
+- requete: quand partir au Vietnam
   rubrique: destinations
-  score: 1.96
-  demande: 4.0
-  volume: null
-  faisabilite: 0.49
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 3
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - bretagne-reisen.de
-  - pinterest.com
-  - fr.pinterest.com
-  secondaires:
-  - road trip bretagne 4 jours
-  - road trip bretagne nord
-  - road trip bretagne 3 jours
-  - road trip bretagne 7 jours
-  - road trip bretagne mont saint michel
-  - road trip bretagne sud
-  - road trip bretagne 2 jours
-  - road trip bretagne avec enfant
-  - road trip van bretagne 7 jours
-  - road trip bretagne 15 jours
-  questions:
-  - Quelle est la plus jolie partie de la Bretagne ?
-  - Quel est le plus beau road trip en moto ?
-  - Quel est le meilleur itinéraire pour découvrir la Bretagne en 10 jours ?
-  - Où faire un road trip en camping-car ?
-  associees:
-  - Roadtrip Bretagne camper
-  - 7-daagse rondreis Bretagne ANWB
-  - Rondreis Bretagne 10 dagen
-  - Bretagne route
-  - Rondreis bretagne 8 dagen
-  - Weer Bretagne 14 dagen
-  - Rondreis Bretagne met caravan
-  - Bretagne kaart
-  statut: idee
-  slug: null
-  date_prevue: '2026-12-11'
-- requete: endroits les plus beaux du monde
-  rubrique: destinations
-  score: 1.95
-  demande: 4.8
-  volume: null
-  faisabilite: 0.41
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 2
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - pinterest.com
-  - forbes.fr
-  - easyvoyage.com
-  secondaires:
-  - quels sont les endroits les plus beaux du monde
-  - les plus beaux endroits du monde pas cher
-  - les plus beaux endroits naturels du monde
-  questions:
-  - Quels sont les 10 pays les plus beaux du monde ?
-  - Quels sont les plus beaux du monde ?
-  associees: []
-  statut: idee
-  slug: null
-  date_prevue: '2026-12-18'
-- requete: endroits les plus beaux de france
-  rubrique: destinations
-  score: 1.65
-  demande: 4.2
-  volume: null
-  faisabilite: 0.39
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 2
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - terdav.com
-  - grandangle.fr
-  - generationvoyage.fr
-  secondaires:
-  - les plus beaux endroits ou se baigner en france
-  - les plus beaux endroits naturels de france
-  - quels sont les endroits les plus beaux de france
-  - les plus beaux endroits nord de la france
-  questions:
-  - Quels sont les 10 plus beaux endroits de France ?
-  - Où aller en France endroit paradisiaque ?
-  - Quels sont les 10 endroits à voir absolument dans sa vie ?
-  - Quel est l'endroit le plus beau de la France ?
-  associees:
-  - Beau endroit en France avec la mer
-  - Les plus beaux coins de France pour les vacances
-  - Les plus beaux paysages naturels de France
-  - Les plus beaux endroits de France carte
-  - 100 lieux à visiter en France
-  - Les plus beaux endroits secrets de France
-  - Les 1000 plus beaux sites touristiques de France
-  - Les 20 plus beaux endroits du monde
-  statut: idee
-  slug: null
-  date_prevue: '2026-12-26'
-- requete: quand partir vietnam
-  rubrique: destinations
-  score: 1.58
+  score: 2.97
   demande: 4.3
-  volume: null
+  volume: 9900
   faisabilite: 0.37
   saison: []
   tranco_median_top10: 1120
@@ -577,52 +433,49 @@ articles:
   associees: []
   statut: idee
   slug: null
-  date_prevue: '2026-12-12'
-- requete: quand partir thailande
+  cle: quand partir vietnam
+  volume_source: Keyword Surfer
+  variantes:
+    quand partir au nord du Vietnam: 320
+    quand partir au Vietnam et au Cambodge: 170
+    quand partir au sud du Vietnam: 140
+  date_prevue: '2027-01-13'
+- requete: quand partir au Japon
   rubrique: destinations
-  score: 1.39
-  demande: 3.4
-  volume: null
-  faisabilite: 0.41
+  score: 2.88
+  demande: 2.9
+  volume: 6600
+  faisabilite: 0.38
   saison: []
   tranco_median_top10: 1120
   resultats_faibles_top10: 2
   officiels_top5: 0
   ai_overview: true
   top3:
-  - partir.com
-  - routes-de-thailande.com
-  - lonelyplanet.fr
-  secondaires:
-  - quand partir en thailande septembre
-  - quand partir en thailande juillet
-  - quand partir en thailande janvier
-  - quand partir en thailande octobre
-  - quand partir en thaïlande pas cher
-  - quand partir en thailande en novembre
-  - quand partir en thailande chiang mai
+  - shantitravel.com
+  - kanpai.fr
+  - petitfute.com
+  secondaires: []
   questions:
-  - Quelle est la période la mieux pour aller en Thaïlande ?
-  - Quel mois ne pas partir en Thaïlande ?
-  - Quel est le mois de pluie en Thaïlande ?
-  - Quel est le mois le moins cher pour aller en Thaïlande ?
-  associees:
-  - Quand partir en Thaïlande pas cher
-  - Quand partir en Thaïlande Bangkok
-  - Quand partir en Thaïlande Koh Samui
-  - Quand partir Thaïlande Phuket
-  - Quelle saison en Thaïlande en ce moment
-  - Quand partir en Thaïlande du Sud
-  - Thaïlande saison des pluies
-  - Quand partir Thaïlande nord
+  - Quel budget prévoir pour 15 jours au Japon ?
+  - Quel temps fait-il au Japon en mai ?
+  - Quel temps fait-il au Japon en octobre ?
+  - Quelle est la saison des pluies au Japon ?
+  associees: []
   statut: idee
   slug: null
-  date_prevue: '2026-12-23'
-- requete: week end amoureux bretagne
+  cle: quand visiter japon
+  volume_source: Keyword Surfer
+  variantes:
+    quand aller au Japon: 1900
+    climat Japon: 1600
+    quand visiter le Japon: 480
+  date_prevue: '2027-01-15'
+- requete: week-end en amoureux en Bretagne
   rubrique: destinations
-  score: 1.38
+  score: 2.86
   demande: 3.2
-  volume: null
+  volume: 4400
   faisabilite: 0.43
   saison: []
   tranco_median_top10: 1120
@@ -643,563 +496,59 @@ articles:
   associees: []
   statut: idee
   slug: null
-  date_prevue: '2026-12-14'
-- requete: road trip italie
+  cle: week end amoureux bretagne
+  volume_source: Keyword Surfer
+  variantes: {}
+  date_prevue: '2026-12-02'
+- requete: où partir en avril
   rubrique: destinations
-  score: 1.32
-  demande: 2.7
-  volume: null
-  faisabilite: 0.49
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 3
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - kimaroundtheworld.nl
-  - cherifaistesvalises.com
-  - autotours.fr
-  secondaires:
-  - road trip marseille italie
-  - road trip nord italie
-  - road trip italie 1 semaine
-  - road trip italie en juillet
-  - road trip italie en octobre
-  - road trip italie 2 semaines
-  - road trip italie 15 jours
-  - road trip italie hors des sentiers battus
-  - road trip pas cher italie
-  - road trip italie 3 semaines
-  questions:
-  - Où aller en Italie pour 2 jours ?
-  - Quelles sont les choses à ne pas faire en Italie ?
-  - Quelle est la meilleure route pour aller en Italie ?
-  - Quel est le meilleur circuit pour visiter l'Italie ?
-  associees:
-  - Roadtrip Italië 2 weken
-  - Roadtrip Italië 14 dagen
-  - Roadtrip Italië 3 weken
-  - Roadtrip Italië route
-  - Roadtrip naar Italië
-  - Roadtrip naar Italië vanuit Nederland
-  - Roadtrip Italië 10 dagen
-  - Kosten roadtrip italie
-  statut: idee
-  slug: null
-  date_prevue: '2026-12-19'
-- requete: endroits les plus chauds du monde
-  rubrique: destinations
-  score: 1.3
-  demande: 3.2
-  volume: null
-  faisabilite: 0.41
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 2
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - moz.life
-  - alternativeairlines.com
-  - in.pinterest.com
-  secondaires: []
-  questions:
-  - Quel est l'endroit le plus chaud du monde ?
-  - Quels sont les 10 pays les plus chauds du monde ?
-  - Quels sont les 20 pays les plus chauds du monde ?
-  - Quelles sont les villes les plus chaudes du monde ?
-  associees: []
-  statut: idee
-  slug: null
-  date_prevue: '2027-01-04'
-- requete: destination pas cher europe
-  rubrique: voyager-malin
-  score: 1.3
-  demande: 3.5
-  volume: null
-  faisabilite: 0.41
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 2
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - magazine.meteocity.com
-  - fr.pinterest.com
-  - voyage-horizons.fr
-  secondaires:
-  - destination pas cher en août hors europe
-  - destination pas cher week end europe
-  - destination pas cher en juillet europe
-  - destination hors europe pas cher
-  - destination pas cher en mars europe
-  - destination pas cher en juin europe
-  - destination pas cher en octobre europe
-  - destination pas cher en decembre europe
-  questions:
-  - Quelles sont les destinations les moins chères pour voyager hors Europe ?
-  - Où partir pour 500 euros tout compris ?
-  - Où passer 3 jours en Europe ?
-  - Où puis-je faire un voyage moins cher en Europe ?
-  associees: []
-  statut: idee
-  slug: null
-  date_prevue: '2026-12-30'
-- requete: endroits les plus frais en france
-  rubrique: destinations
-  score: 1.23
-  demande: 4.0
-  volume: null
-  faisabilite: 0.31
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 1
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - parismatch.com
-  - justacote.com
-  - envie-de-vacances.fr
-  secondaires: []
-  questions:
-  - Quelles sont les 3 villes les plus chaudes de France ?
-  - Où passer l'été au frais en France ?
-  - Quelle est la ville la plus sèche de France ?
-  - Quelles sont les 10 villes les plus froides de France ?
-  associees: []
-  statut: idee
-  slug: null
-  date_prevue: '2027-01-13'
-- requete: quand partir reunion
-  rubrique: destinations
-  score: 1.22
-  demande: 2.3
-  volume: null
-  faisabilite: 0.52
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 3
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - chateau-dravert.com
-  - splendia.com
-  - whentotravel.com
-  secondaires:
-  - quand partir pas cher a la reunion
-  - quand partir ile de la réunion
-  - quand partir reunion maurice
-  questions:
-  - Quand fait-il partir à La Réunion ?
-  - Quelle est la meilleure saison pour partir à La Réunion ?
-  - Quel budget pour 15 jours à La Réunion ?
-  - Est-il possible de visiter La Réunion en mars ?
-  associees: []
-  statut: idee
-  slug: null
-  date_prevue: '2027-01-01'
-- requete: voyage en famille thailande
-  rubrique: destinations
-  score: 1.19
-  demande: 2.6
-  volume: null
-  faisabilite: 0.46
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 3
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - travel-price.fr
-  - voyage-royal.fr
-  - hanoivoyage.com
-  secondaires:
-  - budget voyage thailande en famille
-  questions:
-  - Est-ce qu'un français peut vivre en Thaïlande ?
-  - Combien coûte un voyage en Thaïlande ?
-  - Où est-il déconseillé d'aller en Thaïlande ?
-  - Est-ce que ça vaut le coup d'aller à Phuket ?
-  associees: []
-  statut: idee
-  slug: null
-  date_prevue: '2026-12-16'
-- requete: quand partir ile maurice
-  rubrique: destinations
-  score: 1.13
-  demande: 2.3
-  volume: null
-  faisabilite: 0.49
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 3
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - voyage-ile-maurice.info
-  - facebook.com
-  - mairie72.fr
-  secondaires: []
-  questions:
-  - Est-ce que ça vaut le coup d'aller à l'Île Maurice ?
-  - Quel temps fait-il à l'Île Maurice en octobre ?
-  - Il fait beau à l'Île Maurice en août ?
-  - Quel est le mois le moins cher pour aller à l'Île Maurice ?
-  associees: []
-  statut: idee
-  slug: null
-  date_prevue: '2027-01-09'
-- requete: quand visiter japon
-  rubrique: destinations
-  score: 1.09
-  demande: 2.9
-  volume: null
-  faisabilite: 0.38
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 2
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - shantitravel.com
-  - kanpai.fr
-  - petitfute.com
-  secondaires: []
-  questions:
-  - Quel budget prévoir pour 15 jours au Japon ?
-  - Quel temps fait-il au Japon en mai ?
-  - Quel temps fait-il au Japon en octobre ?
-  - Quelle est la saison des pluies au Japon ?
-  associees: []
-  statut: idee
-  slug: null
-  date_prevue: '2027-01-18'
-- requete: japon hors des sentiers battu
-  rubrique: hors-des-sentiers-battus
-  score: 1.07
-  demande: 2.3
-  volume: null
-  faisabilite: 0.46
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 3
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - shantitravel.com
-  - 1001expeditions.fr
-  - fr.quora.com
-  secondaires:
-  - itineraire hors des sentiers battus japon
-  - japon hors des sentiers battus blog
-  - voyage hors des sentiers battus japon
-  - guide japon hors des sentiers battus
-  - clio japon hors des sentiers battus
-  - blog voyage japon hors des sentiers battus
-  questions:
-  - Quelles sont les choses à ne pas faire au Japon ?
-  - Quelle est la plus belle partie du Japon ?
-  - Où se situe le Japon par rapport à la France ?
-  - Quel budget prévoir pour 10 jours au Japon ?
-  associees: []
-  statut: idee
-  slug: null
-  date_prevue: '2026-12-25'
-- requete: week end paques 2027
-  rubrique: destinations
-  score: 1.07
-  demande: 2.3
-  volume: null
-  faisabilite: 0.46
+  score: 2.82
+  demande: 14.1
+  volume: 12100
+  faisabilite: 0.32
   saison:
   - 4
+  - 5
   tranco_median_top10: 1120
   resultats_faibles_top10: 3
   officiels_top5: 0
   ai_overview: true
   top3:
-  - icalendrier.fr
-  - vacances-scolaires-education.fr
-  - calendrier.best
+  - youtube.com
+  - splendia.com
+  - blogs4travellers.fr
   secondaires:
-  - ou partir week end de paques
-  - week end de paques quand
-  questions: []
-  associees:
-  - Calendrier 2026 2027 gratuit
-  - Calendrier scolaire 2026 2027 Excel
-  - Calendrier 2026 2027 à imprimer PDF
-  - Calendrier scolaire 2026 2027 gratuit
-  - Calendrier scolaire 2026 2027 modifiable
-  - Calendrier 2026 scolaire 2027
-  - Calendrier scolaire 2026 2027 avec Numéro de semaine
-  - 2026 calendrier 2027 avec jours fériés vacances scolaires
-  statut: idee
-  slug: null
-  date_prevue: '2027-01-23'
-- requete: quand visiter ecosse
-  rubrique: destinations
-  score: 0.98
-  demande: 2.4
-  volume: null
-  faisabilite: 0.4
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 2
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - yohomobile.com
-  - es.pinterest.com
-  - hikersbay.com
-  secondaires: []
+  - quand partir en avril mai
+  - vacances pas cher en avril
+  - escapade en avril
+  - ou partir ou soleil en avril
+  - destination pas cher en avril
+  - quel voyage en famille en avril
   questions:
-  - Quel temps fait-il en Écosse en avril ?
-  - Quel budget pour 15 jours en Écosse ?
-  - Quels sont les avis sur l'Écosse en décembre ?
-  - Où aller en Écosse pour la première fois ?
+  - Où partir en avril pour une semaine ?
+  - Quelles sont les plus belles destinations pour voyager en famille ?
+  - Où partir pour 500 euros tout compris ?
+  - Où fait-il chaud en France en avril ?
+  - Quelle saison pour le mois de mai ?
+  - Quelles sont les prévisions météo pour le mois d'avril ?
+  - Où aller au soleil fin avril début mai ?
+  - Quel est le mois du printemps ?
   associees: []
   statut: idee
   slug: null
-  date_prevue: '2027-01-27'
-- requete: quand partir philippines
+  cle: voyage en avril en famille
+  volume_source: Keyword Surfer
+  variantes:
+    où partir en avril au soleil: 8100
+    pays chaud pas cher en avril: 1900
+    où partir en avril en famille: 1300
+    où partir en avril pas cher: 590
+  date_prevue: '2027-01-22'
+- requete: que faire au Costa Rica
   rubrique: destinations
-  score: 0.96
-  demande: 2.5
-  volume: null
-  faisabilite: 0.38
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 2
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - eturia.ro
-  - arabiaweather.com
-  - climatestotravel.com
-  secondaires: []
-  questions:
-  - Quel budget pour 2 semaines aux Philippines ?
-  - Quel est le plus bel endroit des Philippines ?
-  - Est-ce que la vie est chère aux Philippines ?
-  - Est-il conseillé d'aller aux Philippines ?
-  associees:
-  - Филиппины погода по месяцам
-  - Vremea filipine decembrie
-  - Vremea in filipine in noiembrie
-  - Когда сезон на Филиппинах Боракай
-  - Погода на Филиппинах в феврале
-  - Погода на Филиппинах в июле
-  - Погода на Филиппинах в январе
-  - Погода Филиппины июнь
-  statut: idee
-  slug: null
-  date_prevue: '2027-02-05'
-- requete: quand visiter mont saint michel
-  rubrique: destinations
-  score: 0.94
-  demande: 2.8
-  volume: null
-  faisabilite: 0.34
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 1
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - guiadomundo.com.br
-  - holidaycheck.de
-  - paesionline.it
-  secondaires:
-  - quand et comment visiter le mont saint michel
-  questions:
-  - Que peut-on faire au Mont Saint-Michel ?
-  - Quel jour y a-t-il le moins de monde au Mont Saint-Michel ?
-  - Où se trouve la Baie du Mont-Saint-Michel ?
-  - Combien de temps faut-il prévoir pour visiter le Mont Saint-Michel ?
-  associees: []
-  statut: idee
-  slug: null
-- requete: quand partir sri lanka
-  rubrique: destinations
-  score: 0.94
-  demande: 2.2
-  volume: null
-  faisabilite: 0.42
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 3
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - partir.com
-  - nomade-aventure.com
-  - selectour.com
-  secondaires: []
-  questions:
-  - Quelle est la meilleure période pour aller au Sri Lanka ?
-  - Quelle saison en ce moment au Sri Lanka ?
-  - Quel est le mois le plus pluvieux ?
-  - Quel budget pour 15 jours au Sri Lanka ?
-  associees:
-  - Quand partir au Sri Lanka Routard
-  - Que faire au Sri Lanka
-  - Quand partir au Sri Lanka et Maldives
-  - Partir au Sri Lanka en novembre
-  - Sri Lanka en octobre avis
-  - Novembre Sri Lanka
-  - Sri Lanka saison des pluies
-  - Sri Lanka en novembre avis
-  statut: idee
-  slug: null
-- requete: road trip quebec
-  rubrique: destinations
-  score: 0.94
-  demande: 1.9
-  volume: null
-  faisabilite: 0.49
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 3
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - es.pinterest.com
-  - pinterest.com
-  - fr.pinterest.com
-  secondaires:
-  - road trip quebec 2 semaines
-  - road trip quebec en famille
-  - road trip québec 10 jours
-  - road trip quebec montreal
-  - road trip quebec automne
-  - road trip quebec hiver
-  - road trip québec 15 jours
-  - road trip pas cher quebec
-  - road trip québec 3 semaines
-  - road trip quebec septembre
-  questions:
-  - Où aller pour 5 jours au Québec ?
-  - Quel est le budget à prévoir pour un voyage au Québec ?
-  - Quelles sont les meilleures destinations pour un road trip ?
-  - Que puis-je faire pendant 10 jours au Québec en automne ?
-  associees: []
-  statut: idee
-  slug: null
-  date_prevue: '2026-12-28'
-- requete: road trip quel pays
-  rubrique: destinations
-  score: 0.93
-  demande: 1.9
-  volume: null
-  faisabilite: 0.49
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 3
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - autoeurope.fr
-  - weroad.fr
-  - salutbyebye.com
-  secondaires: []
-  questions:
-  - Quels sont les 10 endroits à voir absolument dans sa vie ?
-  - Quelles sont les 10 destinations paradisiaques les plus belles du monde ?
-  - Quels sont les 10 meilleurs voyages en Europe ?
-  - Quels sont les 10 pays à visiter absolument ?
-  associees: []
-  statut: idee
-  slug: null
-  date_prevue: '2027-01-06'
-- requete: quand visiter islande
-  rubrique: destinations
-  score: 0.92
-  demande: 2.2
-  volume: null
-  faisabilite: 0.42
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 2
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - cl.pinterest.com
-  - arabiaweather.com
-  - rance.tv
-  secondaires: []
-  questions:
-  - Quel est le plus bel endroit en Islande ?
-  - Est-il prudent d'aller en Islande en ce moment ?
-  - Quel temps fait-il en Islande en août ?
-  - Quel budget pour 10 jours en Islande ?
-  associees: []
-  statut: idee
-  slug: null
-- requete: road trip reunion
-  rubrique: destinations
-  score: 0.92
+  score: 2.82
   demande: 1.8
-  volume: null
-  faisabilite: 0.52
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 3
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - fr.pinterest.com
-  - roadtrippin.fr
-  - canaillesdumonde.com
-  secondaires:
-  - road trip reunion 2 semaines
-  - road trip reunion 3 semaines
-  - road trip reunion maurice
-  - road trip reunion 10 jours
-  - road trip reunion 15 jours
-  - road trip reunion 12 jours
-  - road trip reunion ile maurice
-  - road trip reunion drama
-  - road trip reunion blog
-  - road trip reunion 1 semaine
-  questions:
-  - Quelle est la rando absolument à faire à La Réunion ?
-  - Combien de temps faut-il pour faire le tour de La Réunion en voiture ?
-  - Quel est le meilleur guide de voyage pour La Réunion ?
-  - Combien de jours sont nécessaires pour visiter La Réunion ?
-  associees: []
-  statut: idee
-  slug: null
-  date_prevue: '2027-01-15'
-- requete: quand partir pas cher en guadeloupe
-  rubrique: voyager-malin
-  score: 0.88
-  demande: 2.0
-  volume: null
-  faisabilite: 0.49
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 3
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - kahouanne-location.fr
-  - holidays.swerin.com
-  - facebook.com
-  secondaires: []
-  questions:
-  - Quelle période aller en Guadeloupe ?
-  - Quel est le prix d'un billet d'avion aller-retour pour la Guadeloupe ?
-  - Quel coin éviter en Guadeloupe ?
-  - Quel temps fait-il en Guadeloupe en novembre ?
-  associees: []
-  statut: idee
-  slug: null
-- requete: que voir costa rica
-  rubrique: destinations
-  score: 0.88
-  demande: 1.8
-  volume: null
+  volume: 1300
   faisabilite: 0.49
   saison: []
   tranco_median_top10: 1120
@@ -1227,12 +576,241 @@ articles:
   associees: []
   statut: idee
   slug: null
-  date_prevue: '2027-01-02'
-- requete: road trip ecosse
+  cle: que voir costa rica
+  volume_source: Keyword Surfer
+  variantes:
+    Costa Rica dangereux: 2900
+    circuit Costa Rica 15 jours: 590
+    quoi faire au Costa Rica: 390
+  date_prevue: '2026-12-04'
+- requete: où partir en janvier au soleil
   rubrique: destinations
-  score: 0.87
+  score: 2.81
+  demande: 9.2
+  volume: 5400
+  faisabilite: 0.38
+  saison:
+  - 1
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 3
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - vacancesconcept.fr
+  - redion.be
+  - nomadiamag.com
+  secondaires:
+  - vacances pas cher janvier
+  - destination janvier
+  - quand partir en janvier au soleil
+  - ou partir en famille en janvier au soleil
+  - où partir en janvier au soleil pas cher
+  questions:
+  - Où partir en janvier 2026 au soleil pas cher ?
+  - Où passer l'hiver au chaud sans se ruiner ?
+  - Où est-il conseillé de voyager en janvier ?
+  - Quelles îles font chaud ?
+  - Où partir en vacances en janvier pour avoir chaud ?
+  - Où partir en voyage avec un petit budget ?
+  - Quel pays où il fait chaud en janvier ?
+  - Où aller se baigner en janvier ?
+  associees:
+  - Ou passer 3 mois d'hiver au soleil
+  - Ou passer 3 mois d'hiver au soleil pas cher
+  - Pays chaud en hiver pas cher
+  - Google flight
+  - TUI
+  - Skyscanner
+  - De quoi passer l hiver au chaud mots fléchés
+  - Voyage Privé
+  statut: idee
+  slug: null
+  cle: ou partir janvier soleil
+  volume_source: Keyword Surfer
+  variantes:
+    pays chaud pas cher en janvier: 1900
+    où aller au soleil en janvier: 1600
+    où partir en janvier en europe: 1000
+    où partir en janvier au soleil pas cher: 720
+  date_prevue: '2026-12-09'
+- requete: visite New York
+  rubrique: destinations
+  score: 2.77
+  demande: 1.9
+  volume: 2900
+  faisabilite: 0.46
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 3
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - new-york-city.fr
+  - experiences.classictic.com
+  - leglobetrotteur.fr
+  secondaires:
+  - que faire new york 5 jours
+  - que faire new york quand il pleut
+  - que faire new york 1 semaine
+  - que faire new york noel
+  - que faire new york 4 jours
+  - que faire new york decembre
+  - que faire new york 3 jours
+  questions:
+  - Quelle est la meilleure période pour aller à New York ?
+  - Quel budget prévoir pour 5 jours à New York ?
+  - Quels sont 10 mots qui définissent New York ?
+  - Quelle est la place la plus connue de New York ?
+  associees: []
+  statut: idee
+  slug: null
+  cle: que faire new york
+  volume_source: Keyword Surfer
+  variantes:
+    que faire à New York en 4 jours: 90
+  date_prevue: '2026-12-05'
+- requete: voyager seule
+  rubrique: destinations
+  score: 2.77
+  demande: 1.8
+  volume: 2400
+  faisabilite: 0.44
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 3
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - copinesdevoyage.com
+  - maisonsduvoyage.com
+  - styqr.fr
+  secondaires:
+  - voyage en groupe quand on est seul
+  questions:
+  - Quelles sont les idées de voyages en solo pour une femme ?
+  - Pourquoi part-on en voyage ?
+  - Quels sont les voyages organisés pour les jeunes de 18 à 25 ans ?
+  - Quelle est la meilleure destination pour un célibataire ?
+  associees:
+  - Voyage jeune 18 25 ans
+  - Voyage organisé 25 35 ans
+  - Voyage célibataire 25 30 ans
+  - Voyage organisé 25 35 ans France
+  - Voyage célibataire 30 ans
+  - Voyage organisé jeunes adultes
+  - Voyage entre jeunes adultes
+  - Voyage solo tout inclus
+  statut: idee
+  slug: null
+  cle: voyage quand on est seul
+  volume_source: Keyword Surfer
+  variantes:
+    voyage solo: 1900
+    voyage en groupe pour personne seule: 1000
+    partir seul en vacances: 880
+  date_prevue: '2026-12-07'
+- requete: que faire au Sri Lanka
+  rubrique: destinations
+  score: 2.55
+  demande: 1.8
+  volume: 1900
+  faisabilite: 0.46
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 3
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - objectif-vacances.com
+  - vision-voyage.com
+  - tripadvisor.fr
+  secondaires:
+  - que voir au sri lanka en 15 jours
+  - que voir au sri lanka en 8 jours
+  - que voir au sri lanka en 10 jours
+  - que voir au sri lanka carte
+  - que voir au sri lanka en 3 semaines
+  - que voir sud sri lanka
+  - que voir à colombo sri lanka
+  - que voir a ella sri lanka
+  questions:
+  - Quel temps fait-il au Sri Lanka au mois d'août ?
+  - Quel festival aura lieu au Sri Lanka en 2026 ?
+  - Où faut-il aller au Sri Lanka ?
+  - Est-il prudent d'aller au Sri Lanka en ce moment ?
+  associees: []
+  statut: idee
+  slug: null
+  cle: que voir sri lanka
+  volume_source: Keyword Surfer
+  variantes:
+    que voir au Sri Lanka: 590
+    que voir au Sri Lanka en 15 jours: 140
+  date_prevue: '2026-12-12'
+- requete: voyage en famille en Thaïlande
+  rubrique: destinations
+  score: 2.45
+  demande: 2.6
+  volume: 1600
+  faisabilite: 0.46
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 3
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - travel-price.fr
+  - voyage-royal.fr
+  - hanoivoyage.com
+  secondaires:
+  - budget voyage thailande en famille
+  questions:
+  - Est-ce qu'un français peut vivre en Thaïlande ?
+  - Combien coûte un voyage en Thaïlande ?
+  - Où est-il déconseillé d'aller en Thaïlande ?
+  - Est-ce que ça vaut le coup d'aller à Phuket ?
+  associees: []
+  statut: idee
+  slug: null
+  cle: voyage en famille thailande
+  volume_source: Keyword Surfer
+  variantes:
+    prix voyage Thaïlande: 720
+  date_prevue: '2026-12-11'
+- requete: pays les plus chauds du monde
+  rubrique: destinations
+  score: 2.32
+  demande: 3.2
+  volume: 1900
+  faisabilite: 0.41
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 2
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - moz.life
+  - alternativeairlines.com
+  - in.pinterest.com
+  secondaires: []
+  questions:
+  - Quel est l'endroit le plus chaud du monde ?
+  - Quels sont les 10 pays les plus chauds du monde ?
+  - Quels sont les 20 pays les plus chauds du monde ?
+  - Quelles sont les villes les plus chaudes du monde ?
+  associees: []
+  statut: idee
+  slug: null
+  cle: endroits les plus chauds du monde
+  volume_source: Keyword Surfer
+  variantes:
+    villes les plus chaudes du monde: 1300
+  date_prevue: '2026-12-14'
+- requete: road trip Écosse
+  rubrique: destinations
+  score: 2.32
   demande: 2.3
-  volume: null
+  volume: 2900
   faisabilite: 0.38
   saison: []
   tranco_median_top10: 1120
@@ -1270,7 +848,725 @@ articles:
   - Carte Écosse à imprimer
   statut: idee
   slug: null
-  date_prevue: '2027-01-25'
+  cle: road trip ecosse
+  volume_source: Keyword Surfer
+  variantes:
+    road trip Écosse 10 jours: 320
+    road trip Écosse 15 jours: 320
+    road trip Écosse 7 jours: 110
+  date_prevue: '2026-12-16'
+- requete: vacances pas cher en France
+  rubrique: voyager-malin
+  score: 2.3
+  demande: 6.6
+  volume: 2900
+  faisabilite: 0.41
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 2
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - voyageonsmoinschere.fr
+  - lefigaro.fr
+  - vacancesconcept.fr
+  secondaires:
+  - quand partir france
+  - vacances pas cher en france tout compris
+  - vacances pas cher en france aout
+  - vacances pas cher france septembre
+  - vacances en famille france pas cher
+  - destination vacances entre amis pas cher en france
+  - vacances en famille en france pas cher tout compris
+  - vacances pas cher en france bord de mer
+  - vacances pas cher en france montagne
+  - vacances pas cher hors france
+  - vacances pas cher haut de france
+  questions:
+  - Où passer les vacances d'été pas cher ?
+  - Où aller en France endroit paradisiaque ?
+  - Où puis-je trouver des séjours pas chers en dernière minute ?
+  - Où partir pour 500 euros tout compris ?
+  - Quel est le meilleur mois pour visiter Paris ?
+  - Quelle est la température moyenne de saison en France ?
+  - Quelle est la région de France avec le meilleur climat ?
+  - Quel est le type de climat de la France ?
+  associees: []
+  statut: idee
+  slug: null
+  cle: vacances pas cher france
+  volume_source: Keyword Surfer
+  variantes:
+    vacances pas cher en France tout compris: 720
+    vacances en famille en France pas cher tout compris: 320
+    vacances pas cher en France en septembre: 210
+    vacances en famille en France pas cher: 210
+    vacances pas cher en France bord de mer: 90
+  date_prevue: '2026-12-19'
+- requete: road trip Italie
+  rubrique: destinations
+  score: 2.23
+  demande: 2.7
+  volume: 480
+  faisabilite: 0.49
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 3
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - kimaroundtheworld.nl
+  - cherifaistesvalises.com
+  - autotours.fr
+  secondaires:
+  - road trip marseille italie
+  - road trip nord italie
+  - road trip italie 1 semaine
+  - road trip italie en juillet
+  - road trip italie en octobre
+  - road trip italie 2 semaines
+  - road trip italie 15 jours
+  - road trip italie hors des sentiers battus
+  - road trip pas cher italie
+  - road trip italie 3 semaines
+  questions:
+  - Où aller en Italie pour 2 jours ?
+  - Quelles sont les choses à ne pas faire en Italie ?
+  - Quelle est la meilleure route pour aller en Italie ?
+  - Quel est le meilleur circuit pour visiter l'Italie ?
+  associees:
+  - Roadtrip Italië 2 weken
+  - Roadtrip Italië 14 dagen
+  - Roadtrip Italië 3 weken
+  - Roadtrip Italië route
+  - Roadtrip naar Italië
+  - Roadtrip naar Italië vanuit Nederland
+  - Roadtrip Italië 10 dagen
+  - Kosten roadtrip italie
+  statut: idee
+  slug: null
+  cle: road trip italie
+  volume_source: Keyword Surfer
+  variantes:
+    road trip Italie 1 semaine: 720
+    road trip Italie 2 semaines: 720
+    road trip Italie 3 semaines: 260
+    road trip nord de l'Italie: 140
+  date_prevue: '2026-12-25'
+- requete: quand partir en Écosse
+  rubrique: destinations
+  score: 2.22
+  demande: 2.4
+  volume: 1300
+  faisabilite: 0.4
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 2
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - yohomobile.com
+  - es.pinterest.com
+  - hikersbay.com
+  secondaires: []
+  questions:
+  - Quel temps fait-il en Écosse en avril ?
+  - Quel budget pour 15 jours en Écosse ?
+  - Quels sont les avis sur l'Écosse en décembre ?
+  - Où aller en Écosse pour la première fois ?
+  associees: []
+  statut: idee
+  slug: null
+  cle: quand visiter ecosse
+  volume_source: Keyword Surfer
+  variantes:
+    midges Écosse: 2400
+    quand aller en Écosse: 320
+    quand visiter l'Écosse: 90
+  date_prevue: '2027-01-16'
+- requete: sites les plus visités en France
+  rubrique: destinations
+  score: 2.18
+  demande: 4.7
+  volume: 720
+  faisabilite: 0.49
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 3
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - globe-trotting.com
+  - monbeaupays.fr
+  - leventalafrancaise.com
+  secondaires:
+  - quels sont les endroits les plus visités en france
+  questions:
+  - Quels sont les 10 départements les plus visités en France ?
+  - Quels sont les 50 sites touristiques les plus visités en France ?
+  - Quels sont les 10 endroits à voir absolument dans sa vie ?
+  - Quelles sont les 5 villes les plus visitées en France ?
+  associees:
+  - Les 20 sites touristiques les plus visités en France
+  - Top 10 des sites touristiques les plus visités en France
+  - Quels sont les 5 sites les plus visités en France
+  - Les sites touristiques les plus visités en France 2025
+  - Les 100 monuments les plus visités en France
+  - Sites les plus visités en France hors Paris
+  - Monument le plus visité en France Mont-Saint-Michel
+  - Lieu le plus visité du monde
+  statut: idee
+  slug: null
+  cle: endroits les plus visités en france
+  volume_source: Keyword Surfer
+  variantes:
+    lieux les plus visités en France: 390
+    sites touristiques les plus visités en France: 390
+  date_prevue: '2026-12-23'
+- requete: road trip Québec
+  rubrique: destinations
+  score: 2.07
+  demande: 1.9
+  volume: 720
+  faisabilite: 0.49
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 3
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - es.pinterest.com
+  - pinterest.com
+  - fr.pinterest.com
+  secondaires:
+  - road trip quebec 2 semaines
+  - road trip quebec en famille
+  - road trip québec 10 jours
+  - road trip quebec montreal
+  - road trip quebec automne
+  - road trip quebec hiver
+  - road trip québec 15 jours
+  - road trip pas cher quebec
+  - road trip québec 3 semaines
+  - road trip quebec septembre
+  questions:
+  - Où aller pour 5 jours au Québec ?
+  - Quel est le budget à prévoir pour un voyage au Québec ?
+  - Quelles sont les meilleures destinations pour un road trip ?
+  - Que puis-je faire pendant 10 jours au Québec en automne ?
+  associees: []
+  statut: idee
+  slug: null
+  cle: road trip quebec
+  volume_source: Keyword Surfer
+  variantes:
+    road trip Québec 10 jours: 170
+    road trip Québec 15 jours: 90
+  date_prevue: '2027-01-02'
+- requete: road trip Réunion
+  rubrique: destinations
+  score: 1.97
+  demande: 1.8
+  volume: 480
+  faisabilite: 0.52
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 3
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - fr.pinterest.com
+  - roadtrippin.fr
+  - canaillesdumonde.com
+  secondaires:
+  - road trip reunion 2 semaines
+  - road trip reunion 3 semaines
+  - road trip reunion maurice
+  - road trip reunion 10 jours
+  - road trip reunion 15 jours
+  - road trip reunion 12 jours
+  - road trip reunion ile maurice
+  - road trip reunion drama
+  - road trip reunion blog
+  - road trip reunion 1 semaine
+  questions:
+  - Quelle est la rando absolument à faire à La Réunion ?
+  - Combien de temps faut-il pour faire le tour de La Réunion en voiture ?
+  - Quel est le meilleur guide de voyage pour La Réunion ?
+  - Combien de jours sont nécessaires pour visiter La Réunion ?
+  associees: []
+  statut: idee
+  slug: null
+  cle: road trip reunion
+  volume_source: Keyword Surfer
+  variantes:
+    itinéraire Réunion: 140
+    circuit Réunion 12 jours: 110
+  date_prevue: '2027-01-11'
+- requete: plus beaux endroits de France
+  rubrique: destinations
+  score: 1.84
+  demande: 4.2
+  volume: 880
+  faisabilite: 0.39
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 2
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - terdav.com
+  - grandangle.fr
+  - generationvoyage.fr
+  secondaires:
+  - les plus beaux endroits ou se baigner en france
+  - les plus beaux endroits naturels de france
+  - quels sont les endroits les plus beaux de france
+  - les plus beaux endroits nord de la france
+  questions:
+  - Quels sont les 10 plus beaux endroits de France ?
+  - Où aller en France endroit paradisiaque ?
+  - Quels sont les 10 endroits à voir absolument dans sa vie ?
+  - Quel est l'endroit le plus beau de la France ?
+  associees:
+  - Beau endroit en France avec la mer
+  - Les plus beaux coins de France pour les vacances
+  - Les plus beaux paysages naturels de France
+  - Les plus beaux endroits de France carte
+  - 100 lieux à visiter en France
+  - Les plus beaux endroits secrets de France
+  - Les 1000 plus beaux sites touristiques de France
+  - Les 20 plus beaux endroits du monde
+  statut: idee
+  slug: null
+  cle: endroits les plus beaux de france
+  volume_source: Keyword Surfer
+  variantes:
+    30 plus beaux endroits de France à visiter: 1000
+  date_prevue: '2026-12-26'
+- requete: road trip Bretagne
+  rubrique: destinations
+  score: 1.78
+  demande: 4.0
+  volume: 260
+  faisabilite: 0.49
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 3
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - bretagne-reisen.de
+  - pinterest.com
+  - fr.pinterest.com
+  secondaires:
+  - road trip bretagne 4 jours
+  - road trip bretagne nord
+  - road trip bretagne 3 jours
+  - road trip bretagne 7 jours
+  - road trip bretagne mont saint michel
+  - road trip bretagne sud
+  - road trip bretagne 2 jours
+  - road trip bretagne avec enfant
+  - road trip van bretagne 7 jours
+  - road trip bretagne 15 jours
+  questions:
+  - Quelle est la plus jolie partie de la Bretagne ?
+  - Quel est le plus beau road trip en moto ?
+  - Quel est le meilleur itinéraire pour découvrir la Bretagne en 10 jours ?
+  - Où faire un road trip en camping-car ?
+  associees:
+  - Roadtrip Bretagne camper
+  - 7-daagse rondreis Bretagne ANWB
+  - Rondreis Bretagne 10 dagen
+  - Bretagne route
+  - Rondreis bretagne 8 dagen
+  - Weer Bretagne 14 dagen
+  - Rondreis Bretagne met caravan
+  - Bretagne kaart
+  statut: idee
+  slug: null
+  cle: road trip bretagne
+  volume_source: Keyword Surfer
+  variantes:
+    road trip Bretagne 7 jours: 320
+    road trip Bretagne 15 jours: 170
+    road trip Bretagne 4 jours: 140
+    road trip Bretagne 3 jours: 110
+  date_prevue: '2027-01-20'
+- requete: plus beaux endroits du monde
+  rubrique: destinations
+  score: 1.68
+  demande: 4.8
+  volume: 720
+  faisabilite: 0.41
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 2
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - pinterest.com
+  - forbes.fr
+  - easyvoyage.com
+  secondaires:
+  - quels sont les endroits les plus beaux du monde
+  - les plus beaux endroits du monde pas cher
+  - les plus beaux endroits naturels du monde
+  questions:
+  - Quels sont les 10 pays les plus beaux du monde ?
+  - Quels sont les plus beaux du monde ?
+  associees: []
+  statut: idee
+  slug: null
+  cle: endroits les plus beaux du monde
+  volume_source: Keyword Surfer
+  variantes: {}
+  date_prevue: '2027-01-04'
+- requete: Japon hors des sentiers battus
+  rubrique: hors-des-sentiers-battus
+  score: 1.66
+  demande: 2.3
+  volume: 210
+  faisabilite: 0.46
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 3
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - shantitravel.com
+  - 1001expeditions.fr
+  - fr.quora.com
+  secondaires:
+  - itineraire hors des sentiers battus japon
+  - japon hors des sentiers battus blog
+  - voyage hors des sentiers battus japon
+  - guide japon hors des sentiers battus
+  - clio japon hors des sentiers battus
+  - blog voyage japon hors des sentiers battus
+  questions:
+  - Quelles sont les choses à ne pas faire au Japon ?
+  - Quelle est la plus belle partie du Japon ?
+  - Où se situe le Japon par rapport à la France ?
+  - Quel budget prévoir pour 10 jours au Japon ?
+  associees: []
+  statut: idee
+  slug: null
+  cle: japon hors des sentiers battu
+  volume_source: Keyword Surfer
+  variantes:
+    itinéraire Japon: 880
+  date_prevue: '2026-12-28'
+- requete: voyage entre amis
+  rubrique: destinations
+  score: 1.54
+  demande: 11.1
+  volume: 260
+  faisabilite: 0.41
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 2
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - fr.lastminute.com
+  - vacancesbleues-voyages.fr
+  - flightgift.com
+  secondaires:
+  - voyage entre amis pas cher
+  - voyage entre pote ou aller
+  - voyage entre amis destination
+  questions:
+  - Quelle est la meilleure destination pour partir entre amis ?
+  - Où puis-je faire un voyage pas cher entre amis ?
+  - Où partir en vacances entre amis ?
+  - Quelles sont les 10 destinations à éviter en 2026 ?
+  - Où aller en vacances avec un petit budget ?
+  - Où puis-je trouver un voyage tout inclus vraiment pas cher ?
+  - Quels sont les 10 pays à visiter absolument ?
+  - Où puis-je partir en vacances entre amis à moindre coût ?
+  associees:
+  - Destination vacances entre amis pas cher
+  - Destination vacances entre amis pas cher en france
+  - Ou partir en vacances entre amis pour faire la fête
+  - Destination vacances entre amis France
+  - Voyage entre amis film
+  - Week-end entre amis Europe
+  - Ou partir en week-end entre amis en France
+  - Idées de voyages entre amis
+  statut: idee
+  slug: null
+  cle: voyage entre amis europe
+  volume_source: Keyword Surfer
+  variantes:
+    week end entre copines: 590
+    vacances entre amis: 260
+    voyage entre amis destination: 70
+  date_prevue: '2027-01-01'
+- requete: road trip Grèce
+  rubrique: destinations
+  score: 1.41
+  demande: 1.7
+  volume: 210
+  faisabilite: 0.49
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 3
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - paysetpassions.com
+  - es.pinterest.com
+  - capnomade.ovh
+  secondaires:
+  - road trip grece 10 jours
+  - road trip grece continentale
+  - road trip grece 1 semaine
+  - road trip grece 2 semaines
+  - road trip grece blog
+  - road trip grèce 7 jours
+  - road trip grece du nord
+  - road trip grece en van
+  - road trip grece 15 jours
+  questions:
+  - Quel est le meilleur circuit à faire en Grèce ?
+  - Quel est le mois idéal pour aller en Grèce ?
+  - Est-il prudent d'aller en Grèce en ce moment ?
+  - Quels sont les 10 plus beaux endroits à visiter en Grèce ?
+  associees: []
+  statut: idee
+  slug: null
+  cle: road trip grece
+  volume_source: Keyword Surfer
+  variantes:
+    road trip Grèce 2 semaines: 110
+  date_prevue: '2027-01-29'
+- requete: voyage en europe en famille
+  rubrique: destinations
+  score: 1.19
+  demande: 14.5
+  volume: 480
+  faisabilite: 0.3
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 2
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - mesconseilsvoyage.com
+  - parent-conseil.com
+  - msn.com
+  secondaires:
+  - voyage en famille pas cher
+  - voyage en famille quelle destination
+  - voyage en famille tout compris
+  - voyage en famille quel pays
+  - voyage en europe pas cher en famille
+  - voyage en famille hors europe
+  - meilleur voyage en famille en europe
+  - voyage en famille europe ete
+  questions:
+  - Quel pays visiter avec un enfant de 3 ans ?
+  - Est-ce que je peux voyager avec mon enfant sans autorisation de son père ?
+  - Quelles sont les 10 villes européennes les plus agréables à visiter ?
+  - Quelle ville européenne est idéale à visiter en 3 jours ?
+  - Comment avoir les 200 € pour les vacances ?
+  - Quel est le pays idéal pour voyager avec des enfants ?
+  - Quels sont les 10 pays à visiter absolument ?
+  - Où partir cet été sans se ruiner ?
+  associees: []
+  statut: idee
+  slug: null
+  cle: voyage en europe en famille
+  volume_source: Keyword Surfer
+  variantes:
+    vacances en famille en europe: 320
+    voyage en europe pas cher en famille: 210
+  date_prevue: '2027-01-09'
+- requete: quand partir philippines
+  rubrique: destinations
+  score: 0.96
+  demande: 2.5
+  volume: null
+  faisabilite: 0.38
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 2
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - eturia.ro
+  - arabiaweather.com
+  - climatestotravel.com
+  secondaires: []
+  questions:
+  - Quel budget pour 2 semaines aux Philippines ?
+  - Quel est le plus bel endroit des Philippines ?
+  - Est-ce que la vie est chère aux Philippines ?
+  - Est-il conseillé d'aller aux Philippines ?
+  associees:
+  - Филиппины погода по месяцам
+  - Vremea filipine decembrie
+  - Vremea in filipine in noiembrie
+  - Когда сезон на Филиппинах Боракай
+  - Погода на Филиппинах в феврале
+  - Погода на Филиппинах в июле
+  - Погода на Филиппинах в январе
+  - Погода Филиппины июнь
+  statut: idee
+  slug: null
+  cle: quand partir philippines
+  volume_source: à relever
+  date_prevue: '2027-01-30'
+- requete: destination pas chère week-end Europe
+  rubrique: voyager-malin
+  score: 0.94
+  demande: 3.5
+  volume: 170
+  faisabilite: 0.41
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 2
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - magazine.meteocity.com
+  - fr.pinterest.com
+  - voyage-horizons.fr
+  secondaires:
+  - destination pas cher en août hors europe
+  - destination pas cher week end europe
+  - destination pas cher en juillet europe
+  - destination hors europe pas cher
+  - destination pas cher en mars europe
+  - destination pas cher en juin europe
+  - destination pas cher en octobre europe
+  - destination pas cher en decembre europe
+  questions:
+  - Quelles sont les destinations les moins chères pour voyager hors Europe ?
+  - Où partir pour 500 euros tout compris ?
+  - Où passer 3 jours en Europe ?
+  - Où puis-je faire un voyage moins cher en Europe ?
+  associees: []
+  statut: idee
+  slug: null
+  cle: destination pas cher europe
+  volume_source: Keyword Surfer
+  variantes: {}
+- requete: quand visiter mont saint michel
+  rubrique: destinations
+  score: 0.94
+  demande: 2.8
+  volume: null
+  faisabilite: 0.34
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 1
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - guiadomundo.com.br
+  - holidaycheck.de
+  - paesionline.it
+  secondaires:
+  - quand et comment visiter le mont saint michel
+  questions:
+  - Que peut-on faire au Mont Saint-Michel ?
+  - Quel jour y a-t-il le moins de monde au Mont Saint-Michel ?
+  - Où se trouve la Baie du Mont-Saint-Michel ?
+  - Combien de temps faut-il prévoir pour visiter le Mont Saint-Michel ?
+  associees: []
+  statut: idee
+  slug: null
+  cle: quand visiter mont saint michel
+  volume_source: à relever
+- requete: quand partir sri lanka
+  rubrique: destinations
+  score: 0.94
+  demande: 2.2
+  volume: null
+  faisabilite: 0.42
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 3
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - partir.com
+  - nomade-aventure.com
+  - selectour.com
+  secondaires: []
+  questions:
+  - Quelle est la meilleure période pour aller au Sri Lanka ?
+  - Quelle saison en ce moment au Sri Lanka ?
+  - Quel est le mois le plus pluvieux ?
+  - Quel budget pour 15 jours au Sri Lanka ?
+  associees:
+  - Quand partir au Sri Lanka Routard
+  - Que faire au Sri Lanka
+  - Quand partir au Sri Lanka et Maldives
+  - Partir au Sri Lanka en novembre
+  - Sri Lanka en octobre avis
+  - Novembre Sri Lanka
+  - Sri Lanka saison des pluies
+  - Sri Lanka en novembre avis
+  statut: idee
+  slug: null
+  cle: quand partir sri lanka
+  volume_source: à relever
+- requete: quand visiter islande
+  rubrique: destinations
+  score: 0.92
+  demande: 2.2
+  volume: null
+  faisabilite: 0.42
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 2
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - cl.pinterest.com
+  - arabiaweather.com
+  - rance.tv
+  secondaires: []
+  questions:
+  - Quel est le plus bel endroit en Islande ?
+  - Est-il prudent d'aller en Islande en ce moment ?
+  - Quel temps fait-il en Islande en août ?
+  - Quel budget pour 10 jours en Islande ?
+  associees: []
+  statut: idee
+  slug: null
+  cle: quand visiter islande
+  volume_source: à relever
+- requete: quand partir pas cher en guadeloupe
+  rubrique: voyager-malin
+  score: 0.88
+  demande: 2.0
+  volume: null
+  faisabilite: 0.49
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 3
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - kahouanne-location.fr
+  - holidays.swerin.com
+  - facebook.com
+  secondaires: []
+  questions:
+  - Quelle période aller en Guadeloupe ?
+  - Quel est le prix d'un billet d'avion aller-retour pour la Guadeloupe ?
+  - Quel coin éviter en Guadeloupe ?
+  - Quel temps fait-il en Guadeloupe en novembre ?
+  associees: []
+  statut: idee
+  slug: null
+  cle: quand partir pas cher en guadeloupe
+  volume_source: à relever
 - requete: quand partir en europe
   rubrique: destinations
   score: 0.87
@@ -1303,155 +1599,8 @@ articles:
   - 6月歐洲天氣
   statut: idee
   slug: null
-- requete: que faire new york
-  rubrique: destinations
-  score: 0.87
-  demande: 1.9
-  volume: null
-  faisabilite: 0.46
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 3
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - new-york-city.fr
-  - experiences.classictic.com
-  - leglobetrotteur.fr
-  secondaires:
-  - que faire new york 5 jours
-  - que faire new york quand il pleut
-  - que faire new york 1 semaine
-  - que faire new york noel
-  - que faire new york 4 jours
-  - que faire new york decembre
-  - que faire new york 3 jours
-  questions:
-  - Quelle est la meilleure période pour aller à New York ?
-  - Quel budget prévoir pour 5 jours à New York ?
-  - Quels sont 10 mots qui définissent New York ?
-  - Quelle est la place la plus connue de New York ?
-  associees: []
-  statut: idee
-  slug: null
-  date_prevue: '2027-01-08'
-- requete: voyage entre amis vietnam
-  rubrique: destinations
-  score: 0.84
-  demande: 2.4
-  volume: null
-  faisabilite: 0.35
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 2
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - es.pinterest.com
-  - agoda.com
-  - youtube.com
-  secondaires: []
-  questions:
-  - Quel est le prix d'un voyage organisé au Vietnam ?
-  - Est-il prudent de partir au Vietnam en ce moment ?
-  - Quelles sont les pratiques sexuelles au Vietnam ?
-  - Quel est l'endroit paradisiaque le plus connu au Vietnam ?
-  associees: []
-  statut: idee
-  slug: null
-  date_prevue: '2027-01-11'
-- requete: que voir sri lanka
-  rubrique: destinations
-  score: 0.83
-  demande: 1.8
-  volume: null
-  faisabilite: 0.46
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 3
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - objectif-vacances.com
-  - vision-voyage.com
-  - tripadvisor.fr
-  secondaires:
-  - que voir au sri lanka en 15 jours
-  - que voir au sri lanka en 8 jours
-  - que voir au sri lanka en 10 jours
-  - que voir au sri lanka carte
-  - que voir au sri lanka en 3 semaines
-  - que voir sud sri lanka
-  - que voir à colombo sri lanka
-  - que voir a ella sri lanka
-  questions:
-  - Quel temps fait-il au Sri Lanka au mois d'août ?
-  - Quel festival aura lieu au Sri Lanka en 2026 ?
-  - Où faut-il aller au Sri Lanka ?
-  - Est-il prudent d'aller au Sri Lanka en ce moment ?
-  associees: []
-  statut: idee
-  slug: null
-  date_prevue: '2027-01-16'
-- requete: que visiter seychelles
-  rubrique: destinations
-  score: 0.83
-  demande: 1.8
-  volume: null
-  faisabilite: 0.46
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 3
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - annuaire-dofollow.com
-  - annuairevoyage.net
-  - lautreafrique.info
-  secondaires: []
-  questions:
-  - Quelle est la meilleure période pour se rendre aux Seychelles ?
-  - Quelles sont les 3 îles principales des Seychelles ?
-  - Que peut-on faire à Victoria, aux Seychelles ?
-  - Quels sont les risques aux Seychelles ?
-  associees: []
-  statut: idee
-  slug: null
-  date_prevue: '2027-01-20'
-- requete: road trip grece
-  rubrique: destinations
-  score: 0.83
-  demande: 1.7
-  volume: null
-  faisabilite: 0.49
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 3
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - paysetpassions.com
-  - es.pinterest.com
-  - capnomade.ovh
-  secondaires:
-  - road trip grece 10 jours
-  - road trip grece continentale
-  - road trip grece 1 semaine
-  - road trip grece 2 semaines
-  - road trip grece blog
-  - road trip grèce 7 jours
-  - road trip grece du nord
-  - road trip grece en van
-  - road trip grece 15 jours
-  questions:
-  - Quel est le meilleur circuit à faire en Grèce ?
-  - Quel est le mois idéal pour aller en Grèce ?
-  - Est-il prudent d'aller en Grèce en ce moment ?
-  - Quels sont les 10 plus beaux endroits à visiter en Grèce ?
-  associees: []
-  statut: idee
-  slug: null
-  date_prevue: '2027-02-03'
+  cle: quand partir en europe
+  volume_source: à relever
 - requete: road trip kirghizistan
   rubrique: destinations
   score: 0.83
@@ -1477,28 +1626,9 @@ articles:
   associees: []
   statut: idee
   slug: null
-- requete: hors des sentiers battus sri lanka
-  rubrique: hors-des-sentiers-battus
-  score: 0.81
-  demande: 1.8
-  volume: null
-  faisabilite: 0.46
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 3
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - walkceylon.com.lk
-  - voyageadm.com
-  - bluelankatours.com
-  secondaires:
-  - sri lanka hors des sentiers battus blog
-  questions: []
-  associees: []
-  statut: idee
-  slug: null
-  date_prevue: '2027-01-29'
+  cle: road trip kirghizistan
+  volume_source: à relever
+  date_prevue: '2027-02-06'
 - requete: quand partir seychelles
   rubrique: destinations
   score: 0.79
@@ -1523,6 +1653,8 @@ articles:
   associees: []
   statut: idee
   slug: null
+  cle: quand partir seychelles
+  volume_source: à relever
 - requete: road trip japon
   rubrique: destinations
   score: 0.79
@@ -1564,66 +1696,8 @@ articles:
   - Road trip japon nature
   statut: idee
   slug: null
-- requete: voyage quand on est seul
-  rubrique: destinations
-  score: 0.79
-  demande: 1.8
-  volume: null
-  faisabilite: 0.44
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 3
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - copinesdevoyage.com
-  - maisonsduvoyage.com
-  - styqr.fr
-  secondaires:
-  - voyage en groupe quand on est seul
-  questions:
-  - Quelles sont les idées de voyages en solo pour une femme ?
-  - Pourquoi part-on en voyage ?
-  - Quels sont les voyages organisés pour les jeunes de 18 à 25 ans ?
-  - Quelle est la meilleure destination pour un célibataire ?
-  associees:
-  - Voyage jeune 18 25 ans
-  - Voyage organisé 25 35 ans
-  - Voyage célibataire 25 30 ans
-  - Voyage organisé 25 35 ans France
-  - Voyage célibataire 30 ans
-  - Voyage organisé jeunes adultes
-  - Voyage entre jeunes adultes
-  - Voyage solo tout inclus
-  statut: idee
-  slug: null
-  date_prevue: '2027-01-30'
-- requete: vacances entre amis france
-  rubrique: destinations
-  score: 0.78
-  demande: 2.0
-  volume: null
-  faisabilite: 0.38
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 2
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - petitfute.com
-  - sejoursenfrance.fr
-  - mediatheque.saintpierre.re
-  secondaires:
-  - destination vacances entre amis france
-  questions:
-  - Où aller en été pour éviter la foule ?
-  - Quelles sont les 10 destinations préférées des Français ?
-  - Quels sont les endroits paradisiaques en France ?
-  - Quelle ville est sympa pour un week-end ?
-  associees: []
-  statut: idee
-  slug: null
-  date_prevue: '2027-02-01'
+  cle: road trip japon
+  volume_source: à relever
 - requete: voyage en famille japon
   rubrique: destinations
   score: 0.78
@@ -1657,7 +1731,9 @@ articles:
   - 15 jours au Japon blog
   statut: idee
   slug: null
-  date_prevue: '2027-02-06'
+  cle: voyage en famille japon
+  volume_source: à relever
+  date_prevue: '2027-01-18'
 - requete: voyage comment
   rubrique: destinations
   score: 0.78
@@ -1700,6 +1776,9 @@ articles:
   - Meilleur site pour organiser un voyage
   statut: idee
   slug: null
+  cle: voyage comment
+  volume_source: à relever
+  date_prevue: '2027-01-23'
 - requete: voyage pas cher europe
   rubrique: voyager-malin
   score: 0.76
@@ -1736,6 +1815,8 @@ articles:
   - Cheap Europe tour
   statut: idee
   slug: null
+  cle: voyage pas cher europe
+  volume_source: à relever
 - requete: que visiter canada
   rubrique: destinations
   score: 0.75
@@ -1769,6 +1850,9 @@ articles:
   - Ville à visiter au Canada
   statut: idee
   slug: null
+  cle: que visiter canada
+  volume_source: à relever
+  date_prevue: '2027-01-25'
 - requete: que voir grece
   rubrique: destinations
   score: 0.7
@@ -1808,6 +1892,9 @@ articles:
   - Grèce hors des sentiers battus
   statut: idee
   slug: null
+  cle: que voir grece
+  volume_source: à relever
+  date_prevue: '2027-01-27'
 - requete: où partir quelques jours en france
   rubrique: destinations
   score: 0.66
@@ -1840,6 +1927,8 @@ articles:
   - Meilleur destination pour un week-end en France
   statut: idee
   slug: null
+  cle: où partir quelques jours en france
+  volume_source: à relever
 - requete: road trip marseille
   rubrique: destinations
   score: 0.65
@@ -1880,6 +1969,8 @@ articles:
   - Marseille par la nationale
   statut: idee
   slug: null
+  cle: road trip marseille
+  volume_source: à relever
 - requete: road trip norvege
   rubrique: destinations
   score: 0.64
@@ -1922,6 +2013,8 @@ articles:
   - Voyage en Norvège aurore boréale
   statut: idee
   slug: null
+  cle: road trip norvege
+  volume_source: à relever
 - requete: endroits les plus visités au monde
   rubrique: destinations
   score: 0.63
@@ -1946,6 +2039,9 @@ articles:
   associees: []
   statut: idee
   slug: null
+  cle: endroits les plus visités au monde
+  volume_source: à relever
+  date_prevue: '2027-02-01'
 - requete: voyage entre amis à l'étranger
   rubrique: destinations
   score: 0.62
@@ -1978,6 +2074,9 @@ articles:
   - Ou partir en week-end entre amis en France
   statut: idee
   slug: null
+  cle: voyage entre amis à l'étranger
+  volume_source: à relever
+  date_prevue: '2027-02-03'
 - requete: road trip canada
   rubrique: destinations
   score: 0.59
@@ -2020,6 +2119,8 @@ articles:
   - Road trip Canada Québec
   statut: idee
   slug: null
+  cle: road trip canada
+  volume_source: à relever
 - requete: marseille hors des sentiers battus
   rubrique: hors-des-sentiers-battus
   score: 0.56
@@ -2049,6 +2150,9 @@ articles:
   - Sortie originale Marseille
   statut: idee
   slug: null
+  cle: marseille hors des sentiers battus
+  volume_source: à relever
+  date_prevue: '2027-02-05'
 - requete: week end quelque part
   rubrique: destinations
   score: 0.54
@@ -2077,6 +2181,8 @@ articles:
   - End clothing londres
   statut: idee
   slug: null
+  cle: week end quelque part
+  volume_source: à relever
 - requete: vacances pas cher tout compris
   rubrique: voyager-malin
   score: 0.42
@@ -2113,6 +2219,8 @@ articles:
   - Voyage pas cher tout compris dernière minute
   statut: idee
   slug: null
+  cle: vacances pas cher tout compris
+  volume_source: à relever
 - requete: que voir nouvelle zelande
   rubrique: destinations
   score: 0.4
@@ -2140,6 +2248,176 @@ articles:
   associees: []
   statut: idee
   slug: null
+  cle: que voir nouvelle zelande
+  volume_source: à relever
+- requete: endroits les plus frais en France
+  rubrique: destinations
+  score: 0.0
+  demande: 4.0
+  volume: 0
+  faisabilite: 0.31
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 1
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - parismatch.com
+  - justacote.com
+  - envie-de-vacances.fr
+  secondaires: []
+  questions:
+  - Quelles sont les 3 villes les plus chaudes de France ?
+  - Où passer l'été au frais en France ?
+  - Quelle est la ville la plus sèche de France ?
+  - Quelles sont les 10 villes les plus froides de France ?
+  associees: []
+  statut: ecarte
+  slug: null
+  cle: endroits les plus frais en france
+  volume_source: Keyword Surfer
+  variantes: {}
+- requete: voyage entre amis Vietnam
+  rubrique: destinations
+  score: 0.0
+  demande: 2.4
+  volume: 0
+  faisabilite: 0.35
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 2
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - es.pinterest.com
+  - agoda.com
+  - youtube.com
+  secondaires: []
+  questions:
+  - Quel est le prix d'un voyage organisé au Vietnam ?
+  - Est-il prudent de partir au Vietnam en ce moment ?
+  - Quelles sont les pratiques sexuelles au Vietnam ?
+  - Quel est l'endroit paradisiaque le plus connu au Vietnam ?
+  associees: []
+  statut: ecarte
+  slug: null
+  cle: voyage entre amis vietnam
+  volume_source: Keyword Surfer
+  variantes: {}
+- requete: week-end de Pâques 2027
+  rubrique: destinations
+  score: 0.0
+  demande: 2.3
+  volume: 0
+  faisabilite: 0.46
+  saison:
+  - 4
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 3
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - icalendrier.fr
+  - vacances-scolaires-education.fr
+  - calendrier.best
+  secondaires:
+  - ou partir week end de paques
+  - week end de paques quand
+  questions: []
+  associees:
+  - Calendrier 2026 2027 gratuit
+  - Calendrier scolaire 2026 2027 Excel
+  - Calendrier 2026 2027 à imprimer PDF
+  - Calendrier scolaire 2026 2027 gratuit
+  - Calendrier scolaire 2026 2027 modifiable
+  - Calendrier 2026 scolaire 2027
+  - Calendrier scolaire 2026 2027 avec Numéro de semaine
+  - 2026 calendrier 2027 avec jours fériés vacances scolaires
+  statut: ecarte
+  slug: null
+  cle: week end paques 2027
+  volume_source: Keyword Surfer
+  variantes:
+    Pâques 2027: 1900
+- requete: vacances entre amis en France
+  rubrique: destinations
+  score: 0.0
+  demande: 2.0
+  volume: 0
+  faisabilite: 0.38
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 2
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - petitfute.com
+  - sejoursenfrance.fr
+  - mediatheque.saintpierre.re
+  secondaires:
+  - destination vacances entre amis france
+  questions:
+  - Où aller en été pour éviter la foule ?
+  - Quelles sont les 10 destinations préférées des Français ?
+  - Quels sont les endroits paradisiaques en France ?
+  - Quelle ville est sympa pour un week-end ?
+  associees: []
+  statut: ecarte
+  slug: null
+  cle: vacances entre amis france
+  volume_source: Keyword Surfer
+  variantes: {}
+- requete: road trip quel pays
+  rubrique: destinations
+  score: 0.0
+  demande: 1.9
+  volume: 0
+  faisabilite: 0.49
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 3
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - autoeurope.fr
+  - weroad.fr
+  - salutbyebye.com
+  secondaires: []
+  questions:
+  - Quels sont les 10 endroits à voir absolument dans sa vie ?
+  - Quelles sont les 10 destinations paradisiaques les plus belles du monde ?
+  - Quels sont les 10 meilleurs voyages en Europe ?
+  - Quels sont les 10 pays à visiter absolument ?
+  associees: []
+  statut: ecarte
+  slug: null
+  cle: road trip quel pays
+  volume_source: Keyword Surfer
+  variantes: {}
+- requete: Sri Lanka hors des sentiers battus
+  rubrique: hors-des-sentiers-battus
+  score: 0.0
+  demande: 1.8
+  volume: 0
+  faisabilite: 0.46
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 3
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - walkceylon.com.lk
+  - voyageadm.com
+  - bluelankatours.com
+  secondaires:
+  - sri lanka hors des sentiers battus blog
+  questions: []
+  associees: []
+  statut: ecarte
+  slug: null
+  cle: hors des sentiers battus sri lanka
+  volume_source: Keyword Surfer
+  variantes: {}
 idees_paa:
 - Combien coûte un voyage en Thaïlande ?
 - Combien de jours sont nécessaires pour visiter La Réunion ?

@@ -1,0 +1,162 @@
+# Volumes de recherche mensuels (Google France) relevés à la main avec l'extension Chrome Keyword Surfer, sur la
+# page de résultats de chaque requête (tableau « Keyword ideas »). Gratuit, mais Google affiche un CAPTCHA après
+# ~35 recherches d'affilée : relever par lots, plusieurs heures d'écart.
+# Clé = requête principale d'un article dans config/keywords.yml. `requete` = la formulation la plus recherchée
+# (elle devient le `keyword` de l'article), `volume` = sa recherche mensuelle, `variantes` = autres formulations
+# utiles à couvrir (H2, FAQ, keywords_secondaires). volume 0 = la requête n'apparaît pas (moins de 50) : écartée.
+releve_le: 2026-11-18
+source: Keyword Surfer (surferseo.com), Google France
+
+articles:
+  "partir en février au soleil":
+    requete: "où partir en février au soleil"
+    volume: 14800
+    variantes: {"où partir en février au soleil pas cher": 2900, "où partir en février en europe": 1900, "où aller au soleil en février": 1600, "vacances soleil février": 1300, "où partir en février au soleil en famille": 1000, "pays chaud en février europe": 880}
+  "ou partir janvier soleil":
+    requete: "où partir en janvier au soleil"
+    volume: 5400
+    variantes: {"pays chaud pas cher en janvier": 1900, "où aller au soleil en janvier": 1600, "où partir en janvier en europe": 1000, "où partir en janvier au soleil pas cher": 720}
+  "voyage entre amis europe":
+    requete: "voyage entre amis"
+    volume: 260
+    variantes: {"week end entre copines": 590, "vacances entre amis": 260, "voyage entre amis destination": 70}
+  "voyage en europe en famille":
+    requete: "voyage en europe en famille"
+    volume: 480
+    variantes: {"vacances en famille en europe": 320, "voyage en europe pas cher en famille": 210}
+  "vacances pas cher france":
+    requete: "vacances pas cher en France"
+    volume: 2900
+    variantes: {"vacances pas cher en France tout compris": 720, "vacances en famille en France pas cher tout compris": 320, "vacances pas cher en France en septembre": 210, "vacances en famille en France pas cher": 210, "vacances pas cher en France bord de mer": 90}
+  "endroits les plus visités en france":
+    requete: "sites les plus visités en France"
+    volume: 720
+    variantes: {"lieux les plus visités en France": 390, "sites touristiques les plus visités en France": 390}
+  "road trip bretagne":
+    requete: "road trip Bretagne"
+    volume: 260
+    variantes: {"road trip Bretagne 7 jours": 320, "road trip Bretagne 15 jours": 170, "road trip Bretagne 4 jours": 140, "road trip Bretagne 3 jours": 110}
+  "quand partir vietnam":
+    requete: "quand partir au Vietnam"
+    volume: 9900
+    variantes: {"quand partir au nord du Vietnam": 320, "quand partir au Vietnam et au Cambodge": 170, "quand partir au sud du Vietnam": 140}
+  "week end amoureux bretagne":
+    requete: "week-end en amoureux en Bretagne"
+    volume: 4400
+    variantes: {}
+  "voyage en famille thailande":
+    requete: "voyage en famille en Thaïlande"
+    volume: 1600
+    variantes: {"prix voyage Thaïlande": 720}
+  "endroits les plus beaux du monde":
+    requete: "plus beaux endroits du monde"
+    volume: 720
+    variantes: {}
+  "road trip italie":
+    requete: "road trip Italie"
+    volume: 480
+    variantes: {"road trip Italie 1 semaine": 720, "road trip Italie 2 semaines": 720, "road trip Italie 3 semaines": 260, "road trip nord de l'Italie": 140}
+  "voyage en mars":
+    requete: "où partir en mars"
+    volume: 8100
+    variantes: {"où partir en mars au soleil": 3600, "où partir en mars au soleil pas cher": 1600, "vacances en mars": 1300, "voyage en mars": 880, "voyage en mars au soleil": 390}
+  "quand partir thailande":
+    requete: "quand partir en Thaïlande"
+    volume: 14800
+    variantes: {"saison des pluies Thaïlande": 6600, "quand partir en Thaïlande pas cher": 390}
+  "japon hors des sentiers battu":
+    requete: "Japon hors des sentiers battus"
+    volume: 210
+    variantes: {"itinéraire Japon": 880}
+  "endroits les plus beaux de france":
+    requete: "plus beaux endroits de France"
+    volume: 880
+    variantes: {"30 plus beaux endroits de France à visiter": 1000}
+  "road trip quebec":
+    requete: "road trip Québec"
+    volume: 720
+    variantes: {"road trip Québec 10 jours": 170, "road trip Québec 15 jours": 90}
+  "destination pas cher europe":
+    requete: "destination pas chère week-end Europe"
+    volume: 170
+    variantes: {}
+  "quand partir reunion":
+    requete: "quand partir à la Réunion"
+    volume: 8100
+    variantes: {"quand partir à l'île de la Réunion": 480}
+  "que voir costa rica":
+    requete: "que faire au Costa Rica"
+    volume: 1300
+    variantes: {"Costa Rica dangereux": 2900, "circuit Costa Rica 15 jours": 590, "quoi faire au Costa Rica": 390}
+  "endroits les plus chauds du monde":
+    requete: "pays les plus chauds du monde"
+    volume: 1900
+    variantes: {"villes les plus chaudes du monde": 1300}
+  "road trip quel pays":
+    requete: "road trip quel pays"
+    volume: 0
+    variantes: {}
+  "que faire new york":
+    requete: "visite New York"
+    volume: 2900
+    variantes: {"que faire à New York en 4 jours": 90}
+  "quand partir ile maurice":
+    requete: "quand partir à l'île Maurice"
+    volume: 12100
+    variantes: {}
+  "voyage entre amis vietnam":
+    requete: "voyage entre amis Vietnam"
+    volume: 0
+    variantes: {}
+  "endroits les plus frais en france":
+    requete: "endroits les plus frais en France"
+    volume: 0
+    variantes: {}
+  "road trip reunion":
+    requete: "road trip Réunion"
+    volume: 480
+    variantes: {"itinéraire Réunion": 140, "circuit Réunion 12 jours": 110}
+  "que voir sri lanka":
+    requete: "que faire au Sri Lanka"
+    volume: 1900
+    variantes: {"que voir au Sri Lanka": 590, "que voir au Sri Lanka en 15 jours": 140}
+  "quand visiter japon":
+    requete: "quand partir au Japon"
+    volume: 6600
+    variantes: {"quand aller au Japon": 1900, "climat Japon": 1600, "quand visiter le Japon": 480}
+  "que visiter seychelles":
+    requete: "quand partir aux Seychelles"
+    volume: 9900
+    variantes: {"que faire aux Seychelles": 2400, "quand aller aux Seychelles": 1300, "que visiter aux Seychelles": 140}
+  "voyage en avril en famille":
+    requete: "où partir en avril"
+    volume: 12100
+    variantes: {"où partir en avril au soleil": 8100, "pays chaud pas cher en avril": 1900, "où partir en avril en famille": 1300, "où partir en avril pas cher": 590}
+  "week end paques 2027":
+    requete: "week-end de Pâques 2027"
+    volume: 0
+    variantes: {"Pâques 2027": 1900}
+  "road trip ecosse":
+    requete: "road trip Écosse"
+    volume: 2900
+    variantes: {"road trip Écosse 10 jours": 320, "road trip Écosse 15 jours": 320, "road trip Écosse 7 jours": 110}
+  "quand visiter ecosse":
+    requete: "quand partir en Écosse"
+    volume: 1300
+    variantes: {"midges Écosse": 2400, "quand aller en Écosse": 320, "quand visiter l'Écosse": 90}
+  "hors des sentiers battus sri lanka":
+    requete: "Sri Lanka hors des sentiers battus"
+    volume: 0
+    variantes: {}
+  "voyage quand on est seul":
+    requete: "voyager seule"
+    volume: 2400
+    variantes: {"voyage solo": 1900, "voyage en groupe pour personne seule": 1000, "partir seul en vacances": 880}
+  "vacances entre amis france":   # même intention que « voyage entre amis » : couvert par cet article
+    requete: "vacances entre amis en France"
+    volume: 0
+    variantes: {}
+  "road trip grece":
+    requete: "road trip Grèce"
+    volume: 210
+    variantes: {"road trip Grèce 2 semaines": 110}
