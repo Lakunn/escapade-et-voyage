@@ -1,8 +1,8 @@
-# Calendrier éditorial — généré le 2026-11-18
+# Calendrier éditorial, généré le 2026-11-18
 
-4948 requêtes découvertes, 80 SERP relevées, 62 articles possibles, 40 placés (4 par semaine).
+4948 requêtes découvertes, 80 SERP, 63 articles possibles, 40 placés (4 par semaine). Volumes : Keyword Surfer 38, indice Suggest 25.
 
-Volume = recherches mensuelles Google France relevées avec Keyword Surfer (config/volumes.yml) ; à défaut, demande = indice Google Suggest (une requête suggérée tôt et sur plusieurs déclinaisons est très tapée). Faisabilité = part du top 10 (top 5 compté double) tenue par des sites faibles (hors des 150 000 premiers domaines Tranco), des forums ou des plateformes, avec un malus pour les sites officiels en top 5 et l'AI Overview. Score = demande × faisabilité × adéquation à la ligne éditoriale.
+Volume = recherches Google mensuelles (Keyword Surfer, DataForSEO ou Bing converti) ; « à relever » = pas encore mesuré, classé sur l'indice Google Suggest. Faisabilité = part du top 10 (top 5 compté double) tenue par des sites faibles (hors des 150 000 premiers domaines Tranco), des forums ou des plateformes. Score = volume × faisabilité × adéquation à la ligne éditoriale. Un même gabarit de titre au plus une fois par semaine.
 
 ## Calendrier
 
@@ -36,23 +36,24 @@ Volume = recherches mensuelles Google France relevées avec Keyword Surfer (conf
 | mer. 13/01 | quand partir au Vietnam | 9 900 | destinations | 2.97 | 0.37 | toute l'année | Quel est le climat au Vietnam en avril ? · Quel budget pour 15 jours au Vietnam ? · Quel temps fait-il au Vietnam en septembre ? |
 | ven. 15/01 | quand partir au Japon | 6 600 | destinations | 2.88 | 0.38 | toute l'année | Quel budget prévoir pour 15 jours au Japon ? · Quel temps fait-il au Japon en mai ? · Quel temps fait-il au Japon en octobre ? |
 | sam. 16/01 | quand partir en Écosse | 1 300 | destinations | 2.22 | 0.4 | toute l'année | Quel temps fait-il en Écosse en avril ? · Quel budget pour 15 jours en Écosse ? · Quels sont les avis sur l'Écosse en décembre ? |
-| lun. 18/01 | voyage en famille japon | à relever | destinations | 0.78 | 0.39 | toute l'année | Quelle est la date de la fête des garçons au Japon ? · Quel est le meilleur guide pour voyager au Japon ? · Est-il possible d'aller au Japon avec un bébé ? |
-| mer. 20/01 | road trip Bretagne | 260 | destinations | 1.78 | 0.49 | toute l'année | Quelle est la plus jolie partie de la Bretagne ? · Quel est le plus beau road trip en moto ? · Quel est le meilleur itinéraire pour découvrir la Bretagne en 10 jours ? |
-| ven. 22/01 | où partir en avril | 12 100 | destinations | 2.82 | 0.32 | avr., mai | Où partir en avril pour une semaine ? · Quelles sont les plus belles destinations pour voyager en famille ? · Où partir pour 500 euros tout compris ? |
-| sam. 23/01 | voyage comment | à relever | destinations | 0.78 | 0.46 | toute l'année | Quelles sont les étapes pour voyager ? · Comment organiser un voyage de manière efficace ? · Quelle est la liste de choses à ne pas oublier dans sa valise ? |
-| lun. 25/01 | que visiter canada | à relever | destinations | 0.75 | 0.44 | toute l'année | Quels sont les incontournables à visiter au Canada ? · Quelle est la plus belle partie du Canada ? · Quel budget prévoir pour 15 jours au Canada ? |
-| mer. 27/01 | que voir grece | à relever | destinations | 0.7 | 0.39 | toute l'année | Est-il conseillé d'aller en Grèce ? · Quels sont les meilleurs circuits de 10 jours en Grèce ? · Quel budget pour une semaine en Grèce ? |
-| ven. 29/01 | road trip Grèce | 210 | destinations | 1.41 | 0.49 | toute l'année | Quel est le meilleur circuit à faire en Grèce ? · Quel est le mois idéal pour aller en Grèce ? · Est-il prudent d'aller en Grèce en ce moment ? |
-| sam. 30/01 | quand partir philippines | à relever | destinations | 0.96 | 0.38 | toute l'année | Quel budget pour 2 semaines aux Philippines ? · Quel est le plus bel endroit des Philippines ? · Est-ce que la vie est chère aux Philippines ? |
-| lun. 01/02 | endroits les plus visités au monde | à relever | destinations | 0.63 | 0.34 | toute l'année | Quels sont les 3 pays les plus visités au monde ? · Quels sont les 10 monuments les plus visités au monde ? · Quels sont les 50 sites touristiques les plus visités au monde ? |
-| mer. 03/02 | voyage entre amis à l'étranger | à relever | destinations | 0.62 | 0.33 | toute l'année | Quelle est la meilleure destination pour un voyage entre amis ? · Où puis-je faire un voyage pas cher entre amis ? · Où partir en vacances entre amis ? |
-| ven. 05/02 | marseille hors des sentiers battus | à relever | hors-des-sentiers-battus | 0.56 | 0.28 | toute l'année |  |
-| sam. 06/02 | road trip kirghizistan | à relever | destinations | 0.83 | 0.49 | toute l'année |  |
+| lun. 18/01 | road trip Bretagne | 260 | destinations | 1.78 | 0.49 | toute l'année | Quelle est la plus jolie partie de la Bretagne ? · Quel est le plus beau road trip en moto ? · Quel est le meilleur itinéraire pour découvrir la Bretagne en 10 jours ? |
+| mer. 20/01 | road trip Grèce | 210 | destinations | 1.41 | 0.49 | toute l'année | Quel est le meilleur circuit à faire en Grèce ? · Quel est le mois idéal pour aller en Grèce ? · Est-il prudent d'aller en Grèce en ce moment ? |
+| ven. 22/01 | où partir en avril | 12 100 | destinations | 4.31 | 0.49 | avr. | Où partir en avril pour une semaine ? · Quelles sont les plus belles destinations pour voyager en famille ? · Où partir pour 500 euros tout compris ? |
+| sam. 23/01 | quand partir en avril mai | à relever | destinations | 1.59 | 0.29 | avr., mai | Quelle saison pour le mois de mai ? · Quelles sont les prévisions météo pour le mois d'avril ? · Où aller au soleil fin avril début mai ? |
+| lun. 25/01 | destination pas chère week-end Europe | 170 | voyager-malin | 0.94 | 0.41 | toute l'année | Quelles sont les destinations les moins chères pour voyager hors Europe ? · Où partir pour 500 euros tout compris ? · Où passer 3 jours en Europe ? |
+| mer. 27/01 | voyage en famille japon | à relever | destinations | 0.39 | 0.39 | toute l'année | Quelle est la date de la fête des garçons au Japon ? · Quel est le meilleur guide pour voyager au Japon ? · Est-il possible d'aller au Japon avec un bébé ? |
+| ven. 29/01 | road trip kirghizistan | à relever | destinations | 0.42 | 0.49 | toute l'année |  |
+| sam. 30/01 | voyage comment | à relever | destinations | 0.39 | 0.46 | toute l'année | Quelles sont les étapes pour voyager ? · Comment organiser un voyage de manière efficace ? · Quelle est la liste de choses à ne pas oublier dans sa valise ? |
+| lun. 01/02 | quand visiter mont saint michel | à relever | destinations | 0.48 | 0.34 | toute l'année | Que peut-on faire au Mont Saint-Michel ? · Quel jour y a-t-il le moins de monde au Mont Saint-Michel ? · Où se trouve la Baie du Mont-Saint-Michel ? |
+| mer. 03/02 | que visiter canada | à relever | destinations | 0.37 | 0.44 | toute l'année | Quels sont les incontournables à visiter au Canada ? · Quelle est la plus belle partie du Canada ? · Quel budget prévoir pour 15 jours au Canada ? |
+| ven. 05/02 | que voir grece | à relever | destinations | 0.35 | 0.39 | toute l'année | Est-il conseillé d'aller en Grèce ? · Quels sont les meilleurs circuits de 10 jours en Grèce ? · Quel budget pour une semaine en Grèce ? |
+| sam. 06/02 | road trip japon | à relever | destinations | 0.39 | 0.43 | toute l'année | Quel budget prévoir pour 15 jours au Japon ? · Est-il possible de faire un road trip au Japon ? · Quel est le mois idéal pour aller au Japon ? |
 
 ## Tous les articles possibles
 
 | Requête | Volume/mois | Rubrique | Score | Faisab. | Top 3 | Statut |
 |---|---|---|---|---|---|---|
+| où partir en avril | 12 100 | destinations | 4.31 | 0.49 | youtube.com, splendia.com, blogs4travellers.fr | idee |
 | quand partir à l'île Maurice | 12 100 | destinations | 4.08 | 0.49 | voyage-ile-maurice.info, facebook.com, mairie72.fr | idee |
 | quand partir à la Réunion | 8 100 | destinations | 3.99 | 0.52 | chateau-dravert.com, splendia.com, whentotravel.com | idee |
 | quand partir aux Seychelles | 9 900 | destinations | 3.76 | 0.46 | annuaire-dofollow.com, annuairevoyage.net, lautreafrique.info | idee |
@@ -62,7 +63,6 @@ Volume = recherches mensuelles Google France relevées avec Keyword Surfer (conf
 | quand partir au Vietnam | 9 900 | destinations | 2.97 | 0.37 | monnaieblog.wordpress.com, api.asiavivatravel.com, offvisa.com | idee |
 | quand partir au Japon | 6 600 | destinations | 2.88 | 0.38 | shantitravel.com, kanpai.fr, petitfute.com | idee |
 | week-end en amoureux en Bretagne | 4 400 | destinations | 2.86 | 0.43 | wonderbox.fr, capcadeau.com, passion-d-explorer.fr | idee |
-| où partir en avril | 12 100 | destinations | 2.82 | 0.32 | youtube.com, splendia.com, blogs4travellers.fr | idee |
 | que faire au Costa Rica | 1 300 | destinations | 2.82 | 0.49 | fr.tripeconomy.com, baroudeurmalin.com, voyageannuaire.com | idee |
 | où partir en janvier au soleil | 5 400 | destinations | 2.81 | 0.38 | vacancesconcept.fr, redion.be, nomadiamag.com | idee |
 | visite New York | 2 900 | destinations | 2.77 | 0.46 | new-york-city.fr, experiences.classictic.com, leglobetrotteur.fr | idee |
@@ -81,34 +81,35 @@ Volume = recherches mensuelles Google France relevées avec Keyword Surfer (conf
 | road trip Bretagne | 260 | destinations | 1.78 | 0.49 | bretagne-reisen.de, pinterest.com, fr.pinterest.com | idee |
 | plus beaux endroits du monde | 720 | destinations | 1.68 | 0.41 | pinterest.com, forbes.fr, easyvoyage.com | idee |
 | Japon hors des sentiers battus | 210 | hors-des-sentiers-battus | 1.66 | 0.46 | shantitravel.com, 1001expeditions.fr, fr.quora.com | idee |
+| quand partir en avril mai | à relever | destinations | 1.59 | 0.29 | arabiaweather.com, news.travel.orange.com, homeexchange.fr | idee |
 | voyage entre amis | 260 | destinations | 1.54 | 0.41 | fr.lastminute.com, vacancesbleues-voyages.fr, flightgift.com | idee |
 | road trip Grèce | 210 | destinations | 1.41 | 0.49 | paysetpassions.com, es.pinterest.com, capnomade.ovh | idee |
 | voyage en europe en famille | 480 | destinations | 1.19 | 0.3 | mesconseilsvoyage.com, parent-conseil.com, msn.com | idee |
-| quand partir philippines | à relever | destinations | 0.96 | 0.38 | eturia.ro, arabiaweather.com, climatestotravel.com | idee |
 | destination pas chère week-end Europe | 170 | voyager-malin | 0.94 | 0.41 | magazine.meteocity.com, fr.pinterest.com, voyage-horizons.fr | idee |
-| quand visiter mont saint michel | à relever | destinations | 0.94 | 0.34 | guiadomundo.com.br, holidaycheck.de, paesionline.it | idee |
-| quand partir sri lanka | à relever | destinations | 0.94 | 0.42 | partir.com, nomade-aventure.com, selectour.com | idee |
-| quand visiter islande | à relever | destinations | 0.92 | 0.42 | cl.pinterest.com, arabiaweather.com, rance.tv | idee |
-| quand partir pas cher en guadeloupe | à relever | voyager-malin | 0.88 | 0.49 | kahouanne-location.fr, holidays.swerin.com, facebook.com | idee |
-| quand partir en europe | à relever | destinations | 0.87 | 0.46 | turismo.eurodicas.com.br, onde-e-quando.net, xinmedia.com | idee |
-| road trip kirghizistan | à relever | destinations | 0.83 | 0.49 | leseclaireursduvoyage.fr, pg.world, facebook.com | idee |
-| quand partir seychelles | à relever | destinations | 0.79 | 0.35 | voyageauxseychelles.weebly.com, petitfute.de, fox-voyage.fr | idee |
-| road trip japon | à relever | destinations | 0.79 | 0.43 | claironyva.com, japonsecret.fr, lonelyplanet.fr | idee |
-| voyage en famille japon | à relever | destinations | 0.78 | 0.39 | evaneos.fr, kanpai.fr, japantravel-centre.com | idee |
-| voyage comment | à relever | destinations | 0.78 | 0.46 | globe-trotting.com, leblogdesaventuriers.com, partirou.com | idee |
-| voyage pas cher europe | à relever | voyager-malin | 0.76 | 0.28 | logitravel.com, lastminute.com, logitravel.fr | idee |
-| que visiter canada | à relever | destinations | 0.75 | 0.44 | cercledesvoyages.com, tourlane.fr, oovatu.com | idee |
-| que voir grece | à relever | destinations | 0.7 | 0.39 | lonelyplanet.fr, lesdeuxpetitsbaroudeurs.com, voyageursdumonde.fr | idee |
-| où partir quelques jours en france | à relever | destinations | 0.66 | 0.39 | findweek.fr, greengo.voyage, tendances-vacances.pierreetvacances.com | idee |
-| road trip marseille | à relever | destinations | 0.65 | 0.38 | viamichelin.fr, pt.pinterest.com, fr.pinterest.com | idee |
-| road trip norvege | à relever | destinations | 0.64 | 0.36 | alwaysreadytocheckin.com, jettours.com, routard.com | idee |
-| endroits les plus visités au monde | à relever | destinations | 0.63 | 0.34 | melhoresdestinos.com.br, jagranjosh.com, ar.pinterest.com | idee |
-| voyage entre amis à l'étranger | à relever | destinations | 0.62 | 0.33 | vacancesbleues-voyages.fr, fr.lastminute.com, tui.fr | idee |
-| road trip canada | à relever | destinations | 0.59 | 0.35 | lonelyplanet.fr, canada-en-liberte.com, tui.fr | idee |
-| marseille hors des sentiers battus | à relever | hors-des-sentiers-battus | 0.56 | 0.28 | lebonbon.fr, fr.hotels.com, greengo.voyage | idee |
-| week end quelque part | à relever | destinations | 0.54 | 0.32 | endclothing.com, sgae.gouv.fr, alcool-info-service.fr | idee |
-| vacances pas cher tout compris | à relever | voyager-malin | 0.42 | 0.22 | voyages.leclerc, fr.lastminute.com, voyages.carrefour.fr | idee |
-| que voir nouvelle zelande | à relever | destinations | 0.4 | 0.22 | fr.hotels.com, lepetitjournal.com, rexby.com | idee |
+| quand visiter mont saint michel | à relever | destinations | 0.48 | 0.34 | guiadomundo.com.br, holidaycheck.de, paesionline.it | idee |
+| quand partir philippines | à relever | destinations | 0.47 | 0.38 | eturia.ro, arabiaweather.com, climatestotravel.com | idee |
+| quand partir sri lanka | à relever | destinations | 0.46 | 0.42 | partir.com, nomade-aventure.com, selectour.com | idee |
+| quand visiter islande | à relever | destinations | 0.46 | 0.42 | cl.pinterest.com, arabiaweather.com, rance.tv | idee |
+| quand partir en europe | à relever | destinations | 0.44 | 0.46 | turismo.eurodicas.com.br, onde-e-quando.net, xinmedia.com | idee |
+| quand partir pas cher en guadeloupe | à relever | voyager-malin | 0.44 | 0.49 | kahouanne-location.fr, holidays.swerin.com, facebook.com | idee |
+| road trip kirghizistan | à relever | destinations | 0.42 | 0.49 | leseclaireursduvoyage.fr, pg.world, facebook.com | idee |
+| quand partir seychelles | à relever | destinations | 0.4 | 0.35 | voyageauxseychelles.weebly.com, petitfute.de, fox-voyage.fr | idee |
+| voyage en famille japon | à relever | destinations | 0.39 | 0.39 | evaneos.fr, kanpai.fr, japantravel-centre.com | idee |
+| road trip japon | à relever | destinations | 0.39 | 0.43 | claironyva.com, japonsecret.fr, lonelyplanet.fr | idee |
+| voyage comment | à relever | destinations | 0.39 | 0.46 | globe-trotting.com, leblogdesaventuriers.com, partirou.com | idee |
+| voyage pas cher europe | à relever | voyager-malin | 0.38 | 0.28 | logitravel.com, lastminute.com, logitravel.fr | idee |
+| que visiter canada | à relever | destinations | 0.37 | 0.44 | cercledesvoyages.com, tourlane.fr, oovatu.com | idee |
+| que voir grece | à relever | destinations | 0.35 | 0.39 | lonelyplanet.fr, lesdeuxpetitsbaroudeurs.com, voyageursdumonde.fr | idee |
+| où partir quelques jours en france | à relever | destinations | 0.33 | 0.39 | findweek.fr, greengo.voyage, tendances-vacances.pierreetvacances.com | idee |
+| endroits les plus visités au monde | à relever | destinations | 0.32 | 0.34 | melhoresdestinos.com.br, jagranjosh.com, ar.pinterest.com | idee |
+| road trip norvege | à relever | destinations | 0.32 | 0.36 | alwaysreadytocheckin.com, jettours.com, routard.com | idee |
+| road trip marseille | à relever | destinations | 0.32 | 0.38 | viamichelin.fr, pt.pinterest.com, fr.pinterest.com | idee |
+| voyage entre amis à l'étranger | à relever | destinations | 0.31 | 0.33 | vacancesbleues-voyages.fr, fr.lastminute.com, tui.fr | idee |
+| road trip canada | à relever | destinations | 0.3 | 0.35 | lonelyplanet.fr, canada-en-liberte.com, tui.fr | idee |
+| marseille hors des sentiers battus | à relever | hors-des-sentiers-battus | 0.28 | 0.28 | lebonbon.fr, fr.hotels.com, greengo.voyage | idee |
+| week end quelque part | à relever | destinations | 0.27 | 0.32 | endclothing.com, sgae.gouv.fr, alcool-info-service.fr | idee |
+| vacances pas cher tout compris | à relever | voyager-malin | 0.21 | 0.22 | voyages.leclerc, fr.lastminute.com, voyages.carrefour.fr | idee |
+| que voir nouvelle zelande | à relever | destinations | 0.2 | 0.22 | fr.hotels.com, lepetitjournal.com, rexby.com | idee |
 | endroits les plus frais en France | 0 | destinations | 0.0 | 0.31 | parismatch.com, justacote.com, envie-de-vacances.fr | ecarte |
 | voyage entre amis Vietnam | 0 | destinations | 0.0 | 0.35 | es.pinterest.com, agoda.com, youtube.com | ecarte |
 | week-end de Pâques 2027 | 0 | destinations | 0.0 | 0.46 | icalendrier.fr, vacances-scolaires-education.fr, calendrier.best | ecarte |
@@ -146,6 +147,7 @@ Volume = recherches mensuelles Google France relevées avec Keyword Surfer (conf
 - Est-il prudent de partir au Vietnam en ce moment ?
 - Est-il sûr de voyager au Costa Rica ?
 - Il fait beau à l'Île Maurice en août ?
+- Où aller au mois d'avril pour avoir chaud ?
 - Où aller au soleil fin avril début mai ?
 - Où aller en France endroit paradisiaque ?
 - Où aller en Italie pour 2 jours ?
@@ -172,9 +174,8 @@ Volume = recherches mensuelles Google France relevées avec Keyword Surfer (conf
 - Où partir cet été sans se ruiner ?
 - Où partir en Mars et avril au chaud ?
 - Où partir en all inclusive le moins cher ?
+- Où partir en avril en tout inclus ?
 - Où partir en avril pour une semaine ?
 - Où partir en janvier et février ?
 - Où partir en vacances avec un petit budget ?
 - Où partir en vacances en janvier pour avoir chaud ?
-- Où partir en vacances entre amis ?
-- Où partir en voyage avec un petit budget ?

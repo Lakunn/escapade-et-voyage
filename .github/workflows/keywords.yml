@@ -1,0 +1,57 @@
+name: 8 · Carte des mots-clés
+
+# Le 1er de chaque mois : suggestions Google, volumes (config/volumes.yml relevés avec Keyword Surfer, puis
+# DataForSEO ou Bing si les secrets existent), SERP et calendrier éditorial. Commite config/keywords.yml et
+# keywords/calendrier.md. Fichier identique dans les 4 dépôts de sites.
+# Secrets (Settings › Secrets and variables › Actions), tous facultatifs :
+#   SERPAPI_API_KEY        SERP (250 gratuites par mois, partagées entre les 4 sites)
+#   DATAFORSEO_LOGIN / DATAFORSEO_PASSWORD   volumes Google et SERP (~0,10 $ par site et par mois)
+#   BING_WEBMASTER_API_KEY volumes Bing gratuits, convertis en équivalent Google
+on:
+  schedule:
+    - cron: "23 5 1 * *"
+  workflow_dispatch:
+    inputs:
+      serp:
+        description: "Nombre de SERP (vide = valeur du fichier de graines, 0 = aucune)"
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: keywords
+  cancel-in-progress: false
+
+jobs:
+  carte:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests==2.32.3 PyYAML==6.0.2
+      - name: Cache des appels (suggestions, SERP, volumes, Tranco)
+        uses: actions/cache@v4
+        with:
+          path: keywords/.cache
+          key: keywords-cache-${{ github.run_id }}
+          restore-keys: keywords-cache-
+      - name: Carte et calendrier
+        env:
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+          DATAFORSEO_LOGIN: ${{ secrets.DATAFORSEO_LOGIN }}
+          DATAFORSEO_PASSWORD: ${{ secrets.DATAFORSEO_PASSWORD }}
+          BING_WEBMASTER_API_KEY: ${{ secrets.BING_WEBMASTER_API_KEY }}
+        run: |
+          if [ -n "${{ inputs.serp }}" ]; then python scripts/keyword_map.py --serp "${{ inputs.serp }}"; else python scripts/keyword_map.py; fi
+      - name: Commit
+        run: |
+          git config user.name "vr-media-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add config/keywords.yml keywords/calendrier.md
+          git diff --cached --quiet && echo "Carte inchangée" && exit 0
+          git commit -m "Carte des mots-clés et calendrier ($(date -u +%F))"
+          git pull --rebase origin main && git push

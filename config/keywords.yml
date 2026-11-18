@@ -1,7 +1,9 @@
-# Carte des mots-clés d'escapade-et-voyage.fr, générée par scripts/keyword_map.py le 2026-11-18.
-# Ne pas éditer à la main : relancer le script (statut et slug viennent du champ `keyword` des articles).
+# Carte des mots-clés, générée par scripts/keyword_map.py le 2026-11-18. Ne pas éditer à la main :
+# volumes manuels dans config/volumes.yml, graines et règles dans config/keyword_seeds.yml.
 genere_le: '2026-11-18'
-methode: suggestions Google + PAA ; demande = indice Suggest
+sources_volumes:
+  Keyword Surfer: 38
+  indice Suggest: 25
 calendrier:
 - date: '2026-11-30'
   requete: où partir en février au soleil
@@ -116,59 +118,94 @@ calendrier:
   volume: 1300
   rubrique: destinations
 - date: '2027-01-18'
-  requete: voyage en famille japon
-  volume: null
-  rubrique: destinations
-- date: '2027-01-20'
   requete: road trip Bretagne
   volume: 260
+  rubrique: destinations
+- date: '2027-01-20'
+  requete: road trip Grèce
+  volume: 210
   rubrique: destinations
 - date: '2027-01-22'
   requete: où partir en avril
   volume: 12100
   rubrique: destinations
 - date: '2027-01-23'
-  requete: voyage comment
+  requete: quand partir en avril mai
   volume: null
   rubrique: destinations
 - date: '2027-01-25'
-  requete: que visiter canada
-  volume: null
-  rubrique: destinations
+  requete: destination pas chère week-end Europe
+  volume: 170
+  rubrique: voyager-malin
 - date: '2027-01-27'
-  requete: que voir grece
+  requete: voyage en famille japon
   volume: null
   rubrique: destinations
 - date: '2027-01-29'
-  requete: road trip Grèce
-  volume: 210
-  rubrique: destinations
-- date: '2027-01-30'
-  requete: quand partir philippines
-  volume: null
-  rubrique: destinations
-- date: '2027-02-01'
-  requete: endroits les plus visités au monde
-  volume: null
-  rubrique: destinations
-- date: '2027-02-03'
-  requete: voyage entre amis à l'étranger
-  volume: null
-  rubrique: destinations
-- date: '2027-02-05'
-  requete: marseille hors des sentiers battus
-  volume: null
-  rubrique: hors-des-sentiers-battus
-- date: '2027-02-06'
   requete: road trip kirghizistan
   volume: null
   rubrique: destinations
-articles:
-- requete: quand partir à l'île Maurice
+- date: '2027-01-30'
+  requete: voyage comment
+  volume: null
   rubrique: destinations
-  score: 4.08
-  demande: 2.3
+- date: '2027-02-01'
+  requete: quand visiter mont saint michel
+  volume: null
+  rubrique: destinations
+- date: '2027-02-03'
+  requete: que visiter canada
+  volume: null
+  rubrique: destinations
+- date: '2027-02-05'
+  requete: que voir grece
+  volume: null
+  rubrique: destinations
+- date: '2027-02-06'
+  requete: road trip japon
+  volume: null
+  rubrique: destinations
+articles:
+- cle: voyage en avril en famille
+  requete: où partir en avril
+  rubrique: destinations
   volume: 12100
+  volume_source: Keyword Surfer
+  demande: 3.1
+  faisabilite: 0.49
+  saison:
+  - 4
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 3
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - youtube.com
+  - splendia.com
+  - blogs4travellers.fr
+  secondaires:
+  - quel voyage en famille en avril
+  variantes:
+    où partir en avril au soleil: 8100
+    pays chaud pas cher en avril: 1900
+    où partir en avril en famille: 1300
+    où partir en avril pas cher: 590
+  questions:
+  - Où partir en avril pour une semaine ?
+  - Quelles sont les plus belles destinations pour voyager en famille ?
+  - Où partir pour 500 euros tout compris ?
+  - Où fait-il chaud en France en avril ?
+  associees: []
+  statut: idee
+  slug: null
+  score: 4.31
+  date_prevue: '2027-01-22'
+- cle: quand partir ile maurice
+  requete: quand partir à l'île Maurice
+  rubrique: destinations
+  volume: 12100
+  volume_source: Keyword Surfer
+  demande: 2.3
   faisabilite: 0.49
   saison: []
   tranco_median_top10: 1120
@@ -180,6 +217,7 @@ articles:
   - facebook.com
   - mairie72.fr
   secondaires: []
+  variantes: {}
   questions:
   - Est-ce que ça vaut le coup d'aller à l'Île Maurice ?
   - Quel temps fait-il à l'Île Maurice en octobre ?
@@ -188,15 +226,14 @@ articles:
   associees: []
   statut: idee
   slug: null
-  cle: quand partir ile maurice
-  volume_source: Keyword Surfer
-  variantes: {}
+  score: 4.08
   date_prevue: '2026-12-18'
-- requete: quand partir à la Réunion
+- cle: quand partir reunion
+  requete: quand partir à la Réunion
   rubrique: destinations
-  score: 3.99
-  demande: 2.3
   volume: 8100
+  volume_source: Keyword Surfer
+  demande: 2.3
   faisabilite: 0.52
   saison: []
   tranco_median_top10: 1120
@@ -211,6 +248,8 @@ articles:
   - quand partir pas cher a la reunion
   - quand partir ile de la réunion
   - quand partir reunion maurice
+  variantes:
+    quand partir à l'île de la Réunion: 480
   questions:
   - Quand fait-il partir à La Réunion ?
   - Quelle est la meilleure saison pour partir à La Réunion ?
@@ -219,16 +258,14 @@ articles:
   associees: []
   statut: idee
   slug: null
-  cle: quand partir reunion
-  volume_source: Keyword Surfer
-  variantes:
-    quand partir à l'île de la Réunion: 480
+  score: 3.99
   date_prevue: '2026-12-30'
-- requete: quand partir aux Seychelles
+- cle: que visiter seychelles
+  requete: quand partir aux Seychelles
   rubrique: destinations
-  score: 3.76
-  demande: 1.8
   volume: 9900
+  volume_source: Keyword Surfer
+  demande: 1.8
   faisabilite: 0.46
   saison: []
   tranco_median_top10: 1120
@@ -240,6 +277,10 @@ articles:
   - annuairevoyage.net
   - lautreafrique.info
   secondaires: []
+  variantes:
+    que faire aux Seychelles: 2400
+    quand aller aux Seychelles: 1300
+    que visiter aux Seychelles: 140
   questions:
   - Quelle est la meilleure période pour se rendre aux Seychelles ?
   - Quelles sont les 3 îles principales des Seychelles ?
@@ -248,18 +289,14 @@ articles:
   associees: []
   statut: idee
   slug: null
-  cle: que visiter seychelles
-  volume_source: Keyword Surfer
-  variantes:
-    que faire aux Seychelles: 2400
-    quand aller aux Seychelles: 1300
-    que visiter aux Seychelles: 140
+  score: 3.76
   date_prevue: '2027-01-06'
-- requete: quand partir en Thaïlande
+- cle: quand partir thailande
+  requete: quand partir en Thaïlande
   rubrique: destinations
-  score: 3.66
-  demande: 3.4
   volume: 14800
+  volume_source: Keyword Surfer
+  demande: 3.4
   faisabilite: 0.41
   saison: []
   tranco_median_top10: 1120
@@ -278,6 +315,9 @@ articles:
   - quand partir en thaïlande pas cher
   - quand partir en thailande en novembre
   - quand partir en thailande chiang mai
+  variantes:
+    saison des pluies Thaïlande: 6600
+    quand partir en Thaïlande pas cher: 390
   questions:
   - Quelle est la période la mieux pour aller en Thaïlande ?
   - Quel mois ne pas partir en Thaïlande ?
@@ -294,17 +334,14 @@ articles:
   - Quand partir Thaïlande nord
   statut: idee
   slug: null
-  cle: quand partir thailande
-  volume_source: Keyword Surfer
-  variantes:
-    saison des pluies Thaïlande: 6600
-    quand partir en Thaïlande pas cher: 390
+  score: 3.66
   date_prevue: '2027-01-08'
-- requete: où partir en février au soleil
+- cle: partir en février au soleil
+  requete: où partir en février au soleil
   rubrique: destinations
-  score: 3.61
-  demande: 10.6
   volume: 14800
+  volume_source: Keyword Surfer
+  demande: 10.6
   faisabilite: 0.4
   saison:
   - 1
@@ -326,6 +363,13 @@ articles:
   - ou partir janvier fevrier au soleil
   - ou partir en février au soleil en europe
   - où partir en février mars au soleil
+  variantes:
+    où partir en février au soleil pas cher: 2900
+    où partir en février en europe: 1900
+    où aller au soleil en février: 1600
+    vacances soleil février: 1300
+    où partir en février au soleil en famille: 1000
+    pays chaud en février europe: 880
   questions:
   - Où aller en février au soleil pas loin ?
   - Où passer l'hiver au chaud sans se ruiner ?
@@ -338,21 +382,14 @@ articles:
   associees: []
   statut: idee
   slug: null
-  cle: partir en février au soleil
-  volume_source: Keyword Surfer
-  variantes:
-    où partir en février au soleil pas cher: 2900
-    où partir en février en europe: 1900
-    où aller au soleil en février: 1600
-    vacances soleil février: 1300
-    où partir en février au soleil en famille: 1000
-    pays chaud en février europe: 880
+  score: 3.61
   date_prevue: '2026-11-30'
-- requete: où partir en mars
+- cle: voyage en mars
+  requete: où partir en mars
   rubrique: destinations
-  score: 3.23
-  demande: 5.5
   volume: 8100
+  volume_source: Keyword Surfer
+  demande: 5.5
   faisabilite: 0.4
   saison:
   - 3
@@ -376,6 +413,12 @@ articles:
   - voyage en mars tout compris pas cher
   - voyage en mars avril
   - voyage en mars europe
+  variantes:
+    où partir en mars au soleil: 3600
+    où partir en mars au soleil pas cher: 1600
+    vacances en mars: 1300
+    voyage en mars: 880
+    voyage en mars au soleil: 390
   questions:
   - Où aller pas cher en Mars ?
   - Où aller en Mars en Europe où il fait chaud ?
@@ -396,20 +439,14 @@ articles:
   - Ou partir en mars pas cher
   statut: idee
   slug: null
-  cle: voyage en mars
-  volume_source: Keyword Surfer
-  variantes:
-    où partir en mars au soleil: 3600
-    où partir en mars au soleil pas cher: 1600
-    vacances en mars: 1300
-    voyage en mars: 880
-    voyage en mars au soleil: 390
+  score: 3.23
   date_prevue: '2026-12-21'
-- requete: quand partir au Vietnam
+- cle: quand partir vietnam
+  requete: quand partir au Vietnam
   rubrique: destinations
-  score: 2.97
-  demande: 4.3
   volume: 9900
+  volume_source: Keyword Surfer
+  demande: 4.3
   faisabilite: 0.37
   saison: []
   tranco_median_top10: 1120
@@ -425,6 +462,10 @@ articles:
   - quand partir vietnam cambodge
   - quand partir hanoi vietnam
   - quand partir vietnam sud
+  variantes:
+    quand partir au nord du Vietnam: 320
+    quand partir au Vietnam et au Cambodge: 170
+    quand partir au sud du Vietnam: 140
   questions:
   - Quel est le climat au Vietnam en avril ?
   - Quel budget pour 15 jours au Vietnam ?
@@ -433,18 +474,14 @@ articles:
   associees: []
   statut: idee
   slug: null
-  cle: quand partir vietnam
-  volume_source: Keyword Surfer
-  variantes:
-    quand partir au nord du Vietnam: 320
-    quand partir au Vietnam et au Cambodge: 170
-    quand partir au sud du Vietnam: 140
+  score: 2.97
   date_prevue: '2027-01-13'
-- requete: quand partir au Japon
+- cle: quand visiter japon
+  requete: quand partir au Japon
   rubrique: destinations
-  score: 2.88
-  demande: 2.9
   volume: 6600
+  volume_source: Keyword Surfer
+  demande: 2.9
   faisabilite: 0.38
   saison: []
   tranco_median_top10: 1120
@@ -456,6 +493,10 @@ articles:
   - kanpai.fr
   - petitfute.com
   secondaires: []
+  variantes:
+    quand aller au Japon: 1900
+    climat Japon: 1600
+    quand visiter le Japon: 480
   questions:
   - Quel budget prévoir pour 15 jours au Japon ?
   - Quel temps fait-il au Japon en mai ?
@@ -464,18 +505,14 @@ articles:
   associees: []
   statut: idee
   slug: null
-  cle: quand visiter japon
-  volume_source: Keyword Surfer
-  variantes:
-    quand aller au Japon: 1900
-    climat Japon: 1600
-    quand visiter le Japon: 480
+  score: 2.88
   date_prevue: '2027-01-15'
-- requete: week-end en amoureux en Bretagne
+- cle: week end amoureux bretagne
+  requete: week-end en amoureux en Bretagne
   rubrique: destinations
-  score: 2.86
-  demande: 3.2
   volume: 4400
+  volume_source: Keyword Surfer
+  demande: 3.2
   faisabilite: 0.43
   saison: []
   tranco_median_top10: 1120
@@ -488,6 +525,7 @@ articles:
   - passion-d-explorer.fr
   secondaires:
   - week end insolite en amoureux bretagne
+  variantes: {}
   questions:
   - Quelle est la plus jolie partie de la Bretagne ?
   - Que peut-on faire en Bretagne ce week-end ?
@@ -496,59 +534,14 @@ articles:
   associees: []
   statut: idee
   slug: null
-  cle: week end amoureux bretagne
-  volume_source: Keyword Surfer
-  variantes: {}
+  score: 2.86
   date_prevue: '2026-12-02'
-- requete: où partir en avril
+- cle: que voir costa rica
+  requete: que faire au Costa Rica
   rubrique: destinations
-  score: 2.82
-  demande: 14.1
-  volume: 12100
-  faisabilite: 0.32
-  saison:
-  - 4
-  - 5
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 3
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - youtube.com
-  - splendia.com
-  - blogs4travellers.fr
-  secondaires:
-  - quand partir en avril mai
-  - vacances pas cher en avril
-  - escapade en avril
-  - ou partir ou soleil en avril
-  - destination pas cher en avril
-  - quel voyage en famille en avril
-  questions:
-  - Où partir en avril pour une semaine ?
-  - Quelles sont les plus belles destinations pour voyager en famille ?
-  - Où partir pour 500 euros tout compris ?
-  - Où fait-il chaud en France en avril ?
-  - Quelle saison pour le mois de mai ?
-  - Quelles sont les prévisions météo pour le mois d'avril ?
-  - Où aller au soleil fin avril début mai ?
-  - Quel est le mois du printemps ?
-  associees: []
-  statut: idee
-  slug: null
-  cle: voyage en avril en famille
-  volume_source: Keyword Surfer
-  variantes:
-    où partir en avril au soleil: 8100
-    pays chaud pas cher en avril: 1900
-    où partir en avril en famille: 1300
-    où partir en avril pas cher: 590
-  date_prevue: '2027-01-22'
-- requete: que faire au Costa Rica
-  rubrique: destinations
-  score: 2.82
-  demande: 1.8
   volume: 1300
+  volume_source: Keyword Surfer
+  demande: 1.8
   faisabilite: 0.49
   saison: []
   tranco_median_top10: 1120
@@ -568,6 +561,10 @@ articles:
   - que voir au costa rica carte
   - que voir absolument au costa rica
   - que voir a monteverde costa rica
+  variantes:
+    Costa Rica dangereux: 2900
+    circuit Costa Rica 15 jours: 590
+    quoi faire au Costa Rica: 390
   questions:
   - Combien de temps faut-il pour visiter le Costa Rica ?
   - Est-ce qu'on parle français au Costa Rica ?
@@ -576,18 +573,14 @@ articles:
   associees: []
   statut: idee
   slug: null
-  cle: que voir costa rica
-  volume_source: Keyword Surfer
-  variantes:
-    Costa Rica dangereux: 2900
-    circuit Costa Rica 15 jours: 590
-    quoi faire au Costa Rica: 390
+  score: 2.82
   date_prevue: '2026-12-04'
-- requete: où partir en janvier au soleil
+- cle: ou partir janvier soleil
+  requete: où partir en janvier au soleil
   rubrique: destinations
-  score: 2.81
-  demande: 9.2
   volume: 5400
+  volume_source: Keyword Surfer
+  demande: 9.2
   faisabilite: 0.38
   saison:
   - 1
@@ -605,6 +598,11 @@ articles:
   - quand partir en janvier au soleil
   - ou partir en famille en janvier au soleil
   - où partir en janvier au soleil pas cher
+  variantes:
+    pays chaud pas cher en janvier: 1900
+    où aller au soleil en janvier: 1600
+    où partir en janvier en europe: 1000
+    où partir en janvier au soleil pas cher: 720
   questions:
   - Où partir en janvier 2026 au soleil pas cher ?
   - Où passer l'hiver au chaud sans se ruiner ?
@@ -625,19 +623,14 @@ articles:
   - Voyage Privé
   statut: idee
   slug: null
-  cle: ou partir janvier soleil
-  volume_source: Keyword Surfer
-  variantes:
-    pays chaud pas cher en janvier: 1900
-    où aller au soleil en janvier: 1600
-    où partir en janvier en europe: 1000
-    où partir en janvier au soleil pas cher: 720
+  score: 2.81
   date_prevue: '2026-12-09'
-- requete: visite New York
+- cle: que faire new york
+  requete: visite New York
   rubrique: destinations
-  score: 2.77
-  demande: 1.9
   volume: 2900
+  volume_source: Keyword Surfer
+  demande: 1.9
   faisabilite: 0.46
   saison: []
   tranco_median_top10: 1120
@@ -656,6 +649,8 @@ articles:
   - que faire new york 4 jours
   - que faire new york decembre
   - que faire new york 3 jours
+  variantes:
+    que faire à New York en 4 jours: 90
   questions:
   - Quelle est la meilleure période pour aller à New York ?
   - Quel budget prévoir pour 5 jours à New York ?
@@ -664,16 +659,14 @@ articles:
   associees: []
   statut: idee
   slug: null
-  cle: que faire new york
-  volume_source: Keyword Surfer
-  variantes:
-    que faire à New York en 4 jours: 90
-  date_prevue: '2026-12-05'
-- requete: voyager seule
-  rubrique: destinations
   score: 2.77
-  demande: 1.8
+  date_prevue: '2026-12-05'
+- cle: voyage quand on est seul
+  requete: voyager seule
+  rubrique: destinations
   volume: 2400
+  volume_source: Keyword Surfer
+  demande: 1.8
   faisabilite: 0.44
   saison: []
   tranco_median_top10: 1120
@@ -686,6 +679,10 @@ articles:
   - styqr.fr
   secondaires:
   - voyage en groupe quand on est seul
+  variantes:
+    voyage solo: 1900
+    voyage en groupe pour personne seule: 1000
+    partir seul en vacances: 880
   questions:
   - Quelles sont les idées de voyages en solo pour une femme ?
   - Pourquoi part-on en voyage ?
@@ -702,18 +699,14 @@ articles:
   - Voyage solo tout inclus
   statut: idee
   slug: null
-  cle: voyage quand on est seul
-  volume_source: Keyword Surfer
-  variantes:
-    voyage solo: 1900
-    voyage en groupe pour personne seule: 1000
-    partir seul en vacances: 880
+  score: 2.77
   date_prevue: '2026-12-07'
-- requete: que faire au Sri Lanka
+- cle: que voir sri lanka
+  requete: que faire au Sri Lanka
   rubrique: destinations
-  score: 2.55
-  demande: 1.8
   volume: 1900
+  volume_source: Keyword Surfer
+  demande: 1.8
   faisabilite: 0.46
   saison: []
   tranco_median_top10: 1120
@@ -733,6 +726,9 @@ articles:
   - que voir sud sri lanka
   - que voir à colombo sri lanka
   - que voir a ella sri lanka
+  variantes:
+    que voir au Sri Lanka: 590
+    que voir au Sri Lanka en 15 jours: 140
   questions:
   - Quel temps fait-il au Sri Lanka au mois d'août ?
   - Quel festival aura lieu au Sri Lanka en 2026 ?
@@ -741,17 +737,14 @@ articles:
   associees: []
   statut: idee
   slug: null
-  cle: que voir sri lanka
-  volume_source: Keyword Surfer
-  variantes:
-    que voir au Sri Lanka: 590
-    que voir au Sri Lanka en 15 jours: 140
+  score: 2.55
   date_prevue: '2026-12-12'
-- requete: voyage en famille en Thaïlande
+- cle: voyage en famille thailande
+  requete: voyage en famille en Thaïlande
   rubrique: destinations
-  score: 2.45
-  demande: 2.6
   volume: 1600
+  volume_source: Keyword Surfer
+  demande: 2.6
   faisabilite: 0.46
   saison: []
   tranco_median_top10: 1120
@@ -764,6 +757,8 @@ articles:
   - hanoivoyage.com
   secondaires:
   - budget voyage thailande en famille
+  variantes:
+    prix voyage Thaïlande: 720
   questions:
   - Est-ce qu'un français peut vivre en Thaïlande ?
   - Combien coûte un voyage en Thaïlande ?
@@ -772,16 +767,14 @@ articles:
   associees: []
   statut: idee
   slug: null
-  cle: voyage en famille thailande
-  volume_source: Keyword Surfer
-  variantes:
-    prix voyage Thaïlande: 720
+  score: 2.45
   date_prevue: '2026-12-11'
-- requete: pays les plus chauds du monde
+- cle: endroits les plus chauds du monde
+  requete: pays les plus chauds du monde
   rubrique: destinations
-  score: 2.32
-  demande: 3.2
   volume: 1900
+  volume_source: Keyword Surfer
+  demande: 3.2
   faisabilite: 0.41
   saison: []
   tranco_median_top10: 1120
@@ -793,6 +786,8 @@ articles:
   - alternativeairlines.com
   - in.pinterest.com
   secondaires: []
+  variantes:
+    villes les plus chaudes du monde: 1300
   questions:
   - Quel est l'endroit le plus chaud du monde ?
   - Quels sont les 10 pays les plus chauds du monde ?
@@ -801,16 +796,14 @@ articles:
   associees: []
   statut: idee
   slug: null
-  cle: endroits les plus chauds du monde
-  volume_source: Keyword Surfer
-  variantes:
-    villes les plus chaudes du monde: 1300
-  date_prevue: '2026-12-14'
-- requete: road trip Écosse
-  rubrique: destinations
   score: 2.32
-  demande: 2.3
+  date_prevue: '2026-12-14'
+- cle: road trip ecosse
+  requete: road trip Écosse
+  rubrique: destinations
   volume: 2900
+  volume_source: Keyword Surfer
+  demande: 2.3
   faisabilite: 0.38
   saison: []
   tranco_median_top10: 1120
@@ -832,6 +825,10 @@ articles:
   - road trip ecosse 5 jours
   - road trip highlands ecosse
   - road trip ecosse 4 jours
+  variantes:
+    road trip Écosse 10 jours: 320
+    road trip Écosse 15 jours: 320
+    road trip Écosse 7 jours: 110
   questions:
   - Quelle est la plus belle partie de l'Écosse ?
   - Où puis-je trouver une carte détaillée de l'Écosse ?
@@ -848,18 +845,14 @@ articles:
   - Carte Écosse à imprimer
   statut: idee
   slug: null
-  cle: road trip ecosse
-  volume_source: Keyword Surfer
-  variantes:
-    road trip Écosse 10 jours: 320
-    road trip Écosse 15 jours: 320
-    road trip Écosse 7 jours: 110
+  score: 2.32
   date_prevue: '2026-12-16'
-- requete: vacances pas cher en France
+- cle: vacances pas cher france
+  requete: vacances pas cher en France
   rubrique: voyager-malin
-  score: 2.3
-  demande: 6.6
   volume: 2900
+  volume_source: Keyword Surfer
+  demande: 6.6
   faisabilite: 0.41
   saison: []
   tranco_median_top10: 1120
@@ -882,6 +875,12 @@ articles:
   - vacances pas cher en france montagne
   - vacances pas cher hors france
   - vacances pas cher haut de france
+  variantes:
+    vacances pas cher en France tout compris: 720
+    vacances en famille en France pas cher tout compris: 320
+    vacances pas cher en France en septembre: 210
+    vacances en famille en France pas cher: 210
+    vacances pas cher en France bord de mer: 90
   questions:
   - Où passer les vacances d'été pas cher ?
   - Où aller en France endroit paradisiaque ?
@@ -894,20 +893,14 @@ articles:
   associees: []
   statut: idee
   slug: null
-  cle: vacances pas cher france
-  volume_source: Keyword Surfer
-  variantes:
-    vacances pas cher en France tout compris: 720
-    vacances en famille en France pas cher tout compris: 320
-    vacances pas cher en France en septembre: 210
-    vacances en famille en France pas cher: 210
-    vacances pas cher en France bord de mer: 90
+  score: 2.3
   date_prevue: '2026-12-19'
-- requete: road trip Italie
+- cle: road trip italie
+  requete: road trip Italie
   rubrique: destinations
-  score: 2.23
-  demande: 2.7
   volume: 480
+  volume_source: Keyword Surfer
+  demande: 2.7
   faisabilite: 0.49
   saison: []
   tranco_median_top10: 1120
@@ -929,6 +922,11 @@ articles:
   - road trip italie hors des sentiers battus
   - road trip pas cher italie
   - road trip italie 3 semaines
+  variantes:
+    road trip Italie 1 semaine: 720
+    road trip Italie 2 semaines: 720
+    road trip Italie 3 semaines: 260
+    road trip nord de l'Italie: 140
   questions:
   - Où aller en Italie pour 2 jours ?
   - Quelles sont les choses à ne pas faire en Italie ?
@@ -945,19 +943,14 @@ articles:
   - Kosten roadtrip italie
   statut: idee
   slug: null
-  cle: road trip italie
-  volume_source: Keyword Surfer
-  variantes:
-    road trip Italie 1 semaine: 720
-    road trip Italie 2 semaines: 720
-    road trip Italie 3 semaines: 260
-    road trip nord de l'Italie: 140
+  score: 2.23
   date_prevue: '2026-12-25'
-- requete: quand partir en Écosse
+- cle: quand visiter ecosse
+  requete: quand partir en Écosse
   rubrique: destinations
-  score: 2.22
-  demande: 2.4
   volume: 1300
+  volume_source: Keyword Surfer
+  demande: 2.4
   faisabilite: 0.4
   saison: []
   tranco_median_top10: 1120
@@ -969,6 +962,10 @@ articles:
   - es.pinterest.com
   - hikersbay.com
   secondaires: []
+  variantes:
+    midges Écosse: 2400
+    quand aller en Écosse: 320
+    quand visiter l'Écosse: 90
   questions:
   - Quel temps fait-il en Écosse en avril ?
   - Quel budget pour 15 jours en Écosse ?
@@ -977,18 +974,14 @@ articles:
   associees: []
   statut: idee
   slug: null
-  cle: quand visiter ecosse
-  volume_source: Keyword Surfer
-  variantes:
-    midges Écosse: 2400
-    quand aller en Écosse: 320
-    quand visiter l'Écosse: 90
+  score: 2.22
   date_prevue: '2027-01-16'
-- requete: sites les plus visités en France
+- cle: endroits les plus visités en france
+  requete: sites les plus visités en France
   rubrique: destinations
-  score: 2.18
-  demande: 4.7
   volume: 720
+  volume_source: Keyword Surfer
+  demande: 4.7
   faisabilite: 0.49
   saison: []
   tranco_median_top10: 1120
@@ -1001,6 +994,9 @@ articles:
   - leventalafrancaise.com
   secondaires:
   - quels sont les endroits les plus visités en france
+  variantes:
+    lieux les plus visités en France: 390
+    sites touristiques les plus visités en France: 390
   questions:
   - Quels sont les 10 départements les plus visités en France ?
   - Quels sont les 50 sites touristiques les plus visités en France ?
@@ -1017,17 +1013,14 @@ articles:
   - Lieu le plus visité du monde
   statut: idee
   slug: null
-  cle: endroits les plus visités en france
-  volume_source: Keyword Surfer
-  variantes:
-    lieux les plus visités en France: 390
-    sites touristiques les plus visités en France: 390
+  score: 2.18
   date_prevue: '2026-12-23'
-- requete: road trip Québec
+- cle: road trip quebec
+  requete: road trip Québec
   rubrique: destinations
-  score: 2.07
-  demande: 1.9
   volume: 720
+  volume_source: Keyword Surfer
+  demande: 1.9
   faisabilite: 0.49
   saison: []
   tranco_median_top10: 1120
@@ -1049,6 +1042,9 @@ articles:
   - road trip pas cher quebec
   - road trip québec 3 semaines
   - road trip quebec septembre
+  variantes:
+    road trip Québec 10 jours: 170
+    road trip Québec 15 jours: 90
   questions:
   - Où aller pour 5 jours au Québec ?
   - Quel est le budget à prévoir pour un voyage au Québec ?
@@ -1057,17 +1053,14 @@ articles:
   associees: []
   statut: idee
   slug: null
-  cle: road trip quebec
-  volume_source: Keyword Surfer
-  variantes:
-    road trip Québec 10 jours: 170
-    road trip Québec 15 jours: 90
+  score: 2.07
   date_prevue: '2027-01-02'
-- requete: road trip Réunion
+- cle: road trip reunion
+  requete: road trip Réunion
   rubrique: destinations
-  score: 1.97
-  demande: 1.8
   volume: 480
+  volume_source: Keyword Surfer
+  demande: 1.8
   faisabilite: 0.52
   saison: []
   tranco_median_top10: 1120
@@ -1089,6 +1082,9 @@ articles:
   - road trip reunion drama
   - road trip reunion blog
   - road trip reunion 1 semaine
+  variantes:
+    itinéraire Réunion: 140
+    circuit Réunion 12 jours: 110
   questions:
   - Quelle est la rando absolument à faire à La Réunion ?
   - Combien de temps faut-il pour faire le tour de La Réunion en voiture ?
@@ -1097,17 +1093,14 @@ articles:
   associees: []
   statut: idee
   slug: null
-  cle: road trip reunion
-  volume_source: Keyword Surfer
-  variantes:
-    itinéraire Réunion: 140
-    circuit Réunion 12 jours: 110
+  score: 1.97
   date_prevue: '2027-01-11'
-- requete: plus beaux endroits de France
+- cle: endroits les plus beaux de france
+  requete: plus beaux endroits de France
   rubrique: destinations
-  score: 1.84
-  demande: 4.2
   volume: 880
+  volume_source: Keyword Surfer
+  demande: 4.2
   faisabilite: 0.39
   saison: []
   tranco_median_top10: 1120
@@ -1123,6 +1116,8 @@ articles:
   - les plus beaux endroits naturels de france
   - quels sont les endroits les plus beaux de france
   - les plus beaux endroits nord de la france
+  variantes:
+    30 plus beaux endroits de France à visiter: 1000
   questions:
   - Quels sont les 10 plus beaux endroits de France ?
   - Où aller en France endroit paradisiaque ?
@@ -1139,16 +1134,14 @@ articles:
   - Les 20 plus beaux endroits du monde
   statut: idee
   slug: null
-  cle: endroits les plus beaux de france
-  volume_source: Keyword Surfer
-  variantes:
-    30 plus beaux endroits de France à visiter: 1000
+  score: 1.84
   date_prevue: '2026-12-26'
-- requete: road trip Bretagne
+- cle: road trip bretagne
+  requete: road trip Bretagne
   rubrique: destinations
-  score: 1.78
-  demande: 4.0
   volume: 260
+  volume_source: Keyword Surfer
+  demande: 4.0
   faisabilite: 0.49
   saison: []
   tranco_median_top10: 1120
@@ -1170,6 +1163,11 @@ articles:
   - road trip bretagne avec enfant
   - road trip van bretagne 7 jours
   - road trip bretagne 15 jours
+  variantes:
+    road trip Bretagne 7 jours: 320
+    road trip Bretagne 15 jours: 170
+    road trip Bretagne 4 jours: 140
+    road trip Bretagne 3 jours: 110
   questions:
   - Quelle est la plus jolie partie de la Bretagne ?
   - Quel est le plus beau road trip en moto ?
@@ -1186,19 +1184,14 @@ articles:
   - Bretagne kaart
   statut: idee
   slug: null
-  cle: road trip bretagne
-  volume_source: Keyword Surfer
-  variantes:
-    road trip Bretagne 7 jours: 320
-    road trip Bretagne 15 jours: 170
-    road trip Bretagne 4 jours: 140
-    road trip Bretagne 3 jours: 110
-  date_prevue: '2027-01-20'
-- requete: plus beaux endroits du monde
+  score: 1.78
+  date_prevue: '2027-01-18'
+- cle: endroits les plus beaux du monde
+  requete: plus beaux endroits du monde
   rubrique: destinations
-  score: 1.68
-  demande: 4.8
   volume: 720
+  volume_source: Keyword Surfer
+  demande: 4.8
   faisabilite: 0.41
   saison: []
   tranco_median_top10: 1120
@@ -1213,21 +1206,21 @@ articles:
   - quels sont les endroits les plus beaux du monde
   - les plus beaux endroits du monde pas cher
   - les plus beaux endroits naturels du monde
+  variantes: {}
   questions:
   - Quels sont les 10 pays les plus beaux du monde ?
   - Quels sont les plus beaux du monde ?
   associees: []
   statut: idee
   slug: null
-  cle: endroits les plus beaux du monde
-  volume_source: Keyword Surfer
-  variantes: {}
+  score: 1.68
   date_prevue: '2027-01-04'
-- requete: Japon hors des sentiers battus
+- cle: japon hors des sentiers battu
+  requete: Japon hors des sentiers battus
   rubrique: hors-des-sentiers-battus
-  score: 1.66
-  demande: 2.3
   volume: 210
+  volume_source: Keyword Surfer
+  demande: 2.3
   faisabilite: 0.46
   saison: []
   tranco_median_top10: 1120
@@ -1245,6 +1238,8 @@ articles:
   - guide japon hors des sentiers battus
   - clio japon hors des sentiers battus
   - blog voyage japon hors des sentiers battus
+  variantes:
+    itinéraire Japon: 880
   questions:
   - Quelles sont les choses à ne pas faire au Japon ?
   - Quelle est la plus belle partie du Japon ?
@@ -1253,16 +1248,60 @@ articles:
   associees: []
   statut: idee
   slug: null
-  cle: japon hors des sentiers battu
-  volume_source: Keyword Surfer
-  variantes:
-    itinéraire Japon: 880
+  score: 1.66
   date_prevue: '2026-12-28'
-- requete: voyage entre amis
+- cle: quand partir en avril mai
+  requete: quand partir en avril mai
   rubrique: destinations
-  score: 1.54
-  demande: 11.1
+  volume: null
+  volume_source: null
+  demande: 11.0
+  faisabilite: 0.29
+  saison:
+  - 4
+  - 5
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 0
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - arabiaweather.com
+  - news.travel.orange.com
+  - homeexchange.fr
+  secondaires:
+  - vacances pas cher en avril
+  - escapade en avril
+  - ou partir ou soleil en avril
+  - destination pas cher en avril
+  variantes: {}
+  questions:
+  - Quelle saison pour le mois de mai ?
+  - Quelles sont les prévisions météo pour le mois d'avril ?
+  - Où aller au soleil fin avril début mai ?
+  - Quel est le mois du printemps ?
+  - Où aller au mois d'avril pour avoir chaud ?
+  - Où aller en vacances avec un petit budget ?
+  - Où puis-je trouver un séjour pas cher en avril 2026 ?
+  - Où partir en avril en tout inclus ?
+  associees:
+  - Météo 5 avril 2026
+  - Météo avril 2025
+  - Météo avril 2026 Lyon
+  - Météo avril 2026 Marseille
+  - Météo avril 2026 Lille
+  - Météo 20 avril 2026
+  - Température avril 2026 Paris
+  - Météo 27 avril 2026
+  statut: idee
+  slug: null
+  score: 1.59
+  date_prevue: '2027-01-23'
+- cle: voyage entre amis europe
+  requete: voyage entre amis
+  rubrique: destinations
   volume: 260
+  volume_source: Keyword Surfer
+  demande: 11.1
   faisabilite: 0.41
   saison: []
   tranco_median_top10: 1120
@@ -1277,6 +1316,10 @@ articles:
   - voyage entre amis pas cher
   - voyage entre pote ou aller
   - voyage entre amis destination
+  variantes:
+    week end entre copines: 590
+    vacances entre amis: 260
+    voyage entre amis destination: 70
   questions:
   - Quelle est la meilleure destination pour partir entre amis ?
   - Où puis-je faire un voyage pas cher entre amis ?
@@ -1297,18 +1340,14 @@ articles:
   - Idées de voyages entre amis
   statut: idee
   slug: null
-  cle: voyage entre amis europe
-  volume_source: Keyword Surfer
-  variantes:
-    week end entre copines: 590
-    vacances entre amis: 260
-    voyage entre amis destination: 70
+  score: 1.54
   date_prevue: '2027-01-01'
-- requete: road trip Grèce
+- cle: road trip grece
+  requete: road trip Grèce
   rubrique: destinations
-  score: 1.41
-  demande: 1.7
   volume: 210
+  volume_source: Keyword Surfer
+  demande: 1.7
   faisabilite: 0.49
   saison: []
   tranco_median_top10: 1120
@@ -1329,6 +1368,8 @@ articles:
   - road trip grece du nord
   - road trip grece en van
   - road trip grece 15 jours
+  variantes:
+    road trip Grèce 2 semaines: 110
   questions:
   - Quel est le meilleur circuit à faire en Grèce ?
   - Quel est le mois idéal pour aller en Grèce ?
@@ -1337,16 +1378,14 @@ articles:
   associees: []
   statut: idee
   slug: null
-  cle: road trip grece
-  volume_source: Keyword Surfer
-  variantes:
-    road trip Grèce 2 semaines: 110
-  date_prevue: '2027-01-29'
-- requete: voyage en europe en famille
+  score: 1.41
+  date_prevue: '2027-01-20'
+- cle: voyage en europe en famille
+  requete: voyage en europe en famille
   rubrique: destinations
-  score: 1.19
-  demande: 14.5
   volume: 480
+  volume_source: Keyword Surfer
+  demande: 14.5
   faisabilite: 0.3
   saison: []
   tranco_median_top10: 1120
@@ -1366,6 +1405,9 @@ articles:
   - voyage en famille hors europe
   - meilleur voyage en famille en europe
   - voyage en famille europe ete
+  variantes:
+    vacances en famille en europe: 320
+    voyage en europe pas cher en famille: 210
   questions:
   - Quel pays visiter avec un enfant de 3 ans ?
   - Est-ce que je peux voyager avec mon enfant sans autorisation de son père ?
@@ -1378,52 +1420,14 @@ articles:
   associees: []
   statut: idee
   slug: null
-  cle: voyage en europe en famille
-  volume_source: Keyword Surfer
-  variantes:
-    vacances en famille en europe: 320
-    voyage en europe pas cher en famille: 210
+  score: 1.19
   date_prevue: '2027-01-09'
-- requete: quand partir philippines
-  rubrique: destinations
-  score: 0.96
-  demande: 2.5
-  volume: null
-  faisabilite: 0.38
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 2
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - eturia.ro
-  - arabiaweather.com
-  - climatestotravel.com
-  secondaires: []
-  questions:
-  - Quel budget pour 2 semaines aux Philippines ?
-  - Quel est le plus bel endroit des Philippines ?
-  - Est-ce que la vie est chère aux Philippines ?
-  - Est-il conseillé d'aller aux Philippines ?
-  associees:
-  - Филиппины погода по месяцам
-  - Vremea filipine decembrie
-  - Vremea in filipine in noiembrie
-  - Когда сезон на Филиппинах Боракай
-  - Погода на Филиппинах в феврале
-  - Погода на Филиппинах в июле
-  - Погода на Филиппинах в январе
-  - Погода Филиппины июнь
-  statut: idee
-  slug: null
-  cle: quand partir philippines
-  volume_source: à relever
-  date_prevue: '2027-01-30'
-- requete: destination pas chère week-end Europe
+- cle: destination pas cher europe
+  requete: destination pas chère week-end Europe
   rubrique: voyager-malin
-  score: 0.94
-  demande: 3.5
   volume: 170
+  volume_source: Keyword Surfer
+  demande: 3.5
   faisabilite: 0.41
   saison: []
   tranco_median_top10: 1120
@@ -1443,6 +1447,7 @@ articles:
   - destination pas cher en juin europe
   - destination pas cher en octobre europe
   - destination pas cher en decembre europe
+  variantes: {}
   questions:
   - Quelles sont les destinations les moins chères pour voyager hors Europe ?
   - Où partir pour 500 euros tout compris ?
@@ -1451,14 +1456,14 @@ articles:
   associees: []
   statut: idee
   slug: null
-  cle: destination pas cher europe
-  volume_source: Keyword Surfer
-  variantes: {}
-- requete: quand visiter mont saint michel
-  rubrique: destinations
   score: 0.94
-  demande: 2.8
+  date_prevue: '2027-01-25'
+- cle: quand visiter mont saint michel
+  requete: quand visiter mont saint michel
+  rubrique: destinations
   volume: null
+  volume_source: null
+  demande: 2.8
   faisabilite: 0.34
   saison: []
   tranco_median_top10: 1120
@@ -1471,6 +1476,7 @@ articles:
   - paesionline.it
   secondaires:
   - quand et comment visiter le mont saint michel
+  variantes: {}
   questions:
   - Que peut-on faire au Mont Saint-Michel ?
   - Quel jour y a-t-il le moins de monde au Mont Saint-Michel ?
@@ -1479,13 +1485,49 @@ articles:
   associees: []
   statut: idee
   slug: null
-  cle: quand visiter mont saint michel
-  volume_source: à relever
-- requete: quand partir sri lanka
+  score: 0.48
+  date_prevue: '2027-02-01'
+- cle: quand partir philippines
+  requete: quand partir philippines
   rubrique: destinations
-  score: 0.94
-  demande: 2.2
   volume: null
+  volume_source: null
+  demande: 2.5
+  faisabilite: 0.38
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 2
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - eturia.ro
+  - arabiaweather.com
+  - climatestotravel.com
+  secondaires: []
+  variantes: {}
+  questions:
+  - Quel budget pour 2 semaines aux Philippines ?
+  - Quel est le plus bel endroit des Philippines ?
+  - Est-ce que la vie est chère aux Philippines ?
+  - Est-il conseillé d'aller aux Philippines ?
+  associees:
+  - Филиппины погода по месяцам
+  - Vremea filipine decembrie
+  - Vremea in filipine in noiembrie
+  - Когда сезон на Филиппинах Боракай
+  - Погода на Филиппинах в феврале
+  - Погода на Филиппинах в июле
+  - Погода на Филиппинах в январе
+  - Погода Филиппины июнь
+  statut: idee
+  slug: null
+  score: 0.47
+- cle: quand partir sri lanka
+  requete: quand partir sri lanka
+  rubrique: destinations
+  volume: null
+  volume_source: null
+  demande: 2.2
   faisabilite: 0.42
   saison: []
   tranco_median_top10: 1120
@@ -1497,6 +1539,7 @@ articles:
   - nomade-aventure.com
   - selectour.com
   secondaires: []
+  variantes: {}
   questions:
   - Quelle est la meilleure période pour aller au Sri Lanka ?
   - Quelle saison en ce moment au Sri Lanka ?
@@ -1513,13 +1556,13 @@ articles:
   - Sri Lanka en novembre avis
   statut: idee
   slug: null
-  cle: quand partir sri lanka
-  volume_source: à relever
-- requete: quand visiter islande
+  score: 0.46
+- cle: quand visiter islande
+  requete: quand visiter islande
   rubrique: destinations
-  score: 0.92
-  demande: 2.2
   volume: null
+  volume_source: null
+  demande: 2.2
   faisabilite: 0.42
   saison: []
   tranco_median_top10: 1120
@@ -1531,6 +1574,7 @@ articles:
   - arabiaweather.com
   - rance.tv
   secondaires: []
+  variantes: {}
   questions:
   - Quel est le plus bel endroit en Islande ?
   - Est-il prudent d'aller en Islande en ce moment ?
@@ -1539,39 +1583,13 @@ articles:
   associees: []
   statut: idee
   slug: null
-  cle: quand visiter islande
-  volume_source: à relever
-- requete: quand partir pas cher en guadeloupe
-  rubrique: voyager-malin
-  score: 0.88
-  demande: 2.0
-  volume: null
-  faisabilite: 0.49
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 3
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - kahouanne-location.fr
-  - holidays.swerin.com
-  - facebook.com
-  secondaires: []
-  questions:
-  - Quelle période aller en Guadeloupe ?
-  - Quel est le prix d'un billet d'avion aller-retour pour la Guadeloupe ?
-  - Quel coin éviter en Guadeloupe ?
-  - Quel temps fait-il en Guadeloupe en novembre ?
-  associees: []
-  statut: idee
-  slug: null
-  cle: quand partir pas cher en guadeloupe
-  volume_source: à relever
-- requete: quand partir en europe
+  score: 0.46
+- cle: quand partir en europe
+  requete: quand partir en europe
   rubrique: destinations
-  score: 0.87
-  demande: 1.9
   volume: null
+  volume_source: null
+  demande: 1.9
   faisabilite: 0.46
   saison: []
   tranco_median_top10: 1120
@@ -1587,6 +1605,7 @@ articles:
   - quand partir en europe de l'est
   - quand partir en europe centrale
   - ou partir quand en europe lonely planet
+  variantes: {}
   questions: []
   associees:
   - 6月歐洲旅遊推薦
@@ -1599,13 +1618,40 @@ articles:
   - 6月歐洲天氣
   statut: idee
   slug: null
-  cle: quand partir en europe
-  volume_source: à relever
-- requete: road trip kirghizistan
-  rubrique: destinations
-  score: 0.83
-  demande: 1.7
+  score: 0.44
+- cle: quand partir pas cher en guadeloupe
+  requete: quand partir pas cher en guadeloupe
+  rubrique: voyager-malin
   volume: null
+  volume_source: null
+  demande: 2.0
+  faisabilite: 0.49
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 3
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - kahouanne-location.fr
+  - holidays.swerin.com
+  - facebook.com
+  secondaires: []
+  variantes: {}
+  questions:
+  - Quelle période aller en Guadeloupe ?
+  - Quel est le prix d'un billet d'avion aller-retour pour la Guadeloupe ?
+  - Quel coin éviter en Guadeloupe ?
+  - Quel temps fait-il en Guadeloupe en novembre ?
+  associees: []
+  statut: idee
+  slug: null
+  score: 0.44
+- cle: road trip kirghizistan
+  requete: road trip kirghizistan
+  rubrique: destinations
+  volume: null
+  volume_source: null
+  demande: 1.7
   faisabilite: 0.49
   saison: []
   tranco_median_top10: 1120
@@ -1622,18 +1668,19 @@ articles:
   - road trip ouzbekistan kirghizistan
   - road trip 4x4 kirghizistan
   - road trip 10 jours kirghizistan
+  variantes: {}
   questions: []
   associees: []
   statut: idee
   slug: null
-  cle: road trip kirghizistan
-  volume_source: à relever
-  date_prevue: '2027-02-06'
-- requete: quand partir seychelles
+  score: 0.42
+  date_prevue: '2027-01-29'
+- cle: quand partir seychelles
+  requete: quand partir seychelles
   rubrique: destinations
-  score: 0.79
-  demande: 2.3
   volume: null
+  volume_source: null
+  demande: 2.3
   faisabilite: 0.35
   saison: []
   tranco_median_top10: 1120
@@ -1645,6 +1692,7 @@ articles:
   - petitfute.de
   - fox-voyage.fr
   secondaires: []
+  variantes: {}
   questions:
   - Quelle est la température de l'eau aux Seychelles ?
   - Quels sont les risques aux Seychelles ?
@@ -1653,13 +1701,50 @@ articles:
   associees: []
   statut: idee
   slug: null
-  cle: quand partir seychelles
-  volume_source: à relever
-- requete: road trip japon
+  score: 0.4
+- cle: voyage en famille japon
+  requete: voyage en famille japon
   rubrique: destinations
-  score: 0.79
-  demande: 1.8
   volume: null
+  volume_source: null
+  demande: 2.0
+  faisabilite: 0.39
+  saison: []
+  tranco_median_top10: 1120
+  resultats_faibles_top10: 2
+  officiels_top5: 0
+  ai_overview: true
+  top3:
+  - evaneos.fr
+  - kanpai.fr
+  - japantravel-centre.com
+  secondaires:
+  - budget voyage japon famille 4 personnes
+  variantes: {}
+  questions:
+  - Quelle est la date de la fête des garçons au Japon ?
+  - Quel est le meilleur guide pour voyager au Japon ?
+  - Est-il possible d'aller au Japon avec un bébé ?
+  - Qu'est-ce qui est irrespectueux au Japon ?
+  associees:
+  - Voyage Japon 2 semaines en famille
+  - Voyage au Japon en famille avis
+  - 3 semaines au Japon en famille
+  - Circuit Japon famille
+  - Japon en août en famille
+  - Quand partir au Japon avec des enfants
+  - Partir au japon avec enfants
+  - 15 jours au Japon blog
+  statut: idee
+  slug: null
+  score: 0.39
+  date_prevue: '2027-01-27'
+- cle: road trip japon
+  requete: road trip japon
+  rubrique: destinations
+  volume: null
+  volume_source: null
+  demande: 1.8
   faisabilite: 0.43
   saison: []
   tranco_median_top10: 1120
@@ -1680,6 +1765,7 @@ articles:
   - road trip japon blog
   - road trip japon 20 jours
   - road trip japon en famille
+  variantes: {}
   questions:
   - Quel budget prévoir pour 15 jours au Japon ?
   - Est-il possible de faire un road trip au Japon ?
@@ -1696,49 +1782,14 @@ articles:
   - Road trip japon nature
   statut: idee
   slug: null
-  cle: road trip japon
-  volume_source: à relever
-- requete: voyage en famille japon
+  score: 0.39
+  date_prevue: '2027-02-06'
+- cle: voyage comment
+  requete: voyage comment
   rubrique: destinations
-  score: 0.78
-  demande: 2.0
   volume: null
-  faisabilite: 0.39
-  saison: []
-  tranco_median_top10: 1120
-  resultats_faibles_top10: 2
-  officiels_top5: 0
-  ai_overview: true
-  top3:
-  - evaneos.fr
-  - kanpai.fr
-  - japantravel-centre.com
-  secondaires:
-  - budget voyage japon famille 4 personnes
-  questions:
-  - Quelle est la date de la fête des garçons au Japon ?
-  - Quel est le meilleur guide pour voyager au Japon ?
-  - Est-il possible d'aller au Japon avec un bébé ?
-  - Qu'est-ce qui est irrespectueux au Japon ?
-  associees:
-  - Voyage Japon 2 semaines en famille
-  - Voyage au Japon en famille avis
-  - 3 semaines au Japon en famille
-  - Circuit Japon famille
-  - Japon en août en famille
-  - Quand partir au Japon avec des enfants
-  - Partir au japon avec enfants
-  - 15 jours au Japon blog
-  statut: idee
-  slug: null
-  cle: voyage en famille japon
-  volume_source: à relever
-  date_prevue: '2027-01-18'
-- requete: voyage comment
-  rubrique: destinations
-  score: 0.78
+  volume_source: null
   demande: 1.7
-  volume: null
   faisabilite: 0.46
   saison: []
   tranco_median_top10: 1120
@@ -1760,6 +1811,7 @@ articles:
   - comment voyage au canada
   - comment voyage les animaux en avion
   - comment voyage les colibris
+  variantes: {}
   questions:
   - Quelles sont les étapes pour voyager ?
   - Comment organiser un voyage de manière efficace ?
@@ -1776,14 +1828,14 @@ articles:
   - Meilleur site pour organiser un voyage
   statut: idee
   slug: null
-  cle: voyage comment
-  volume_source: à relever
-  date_prevue: '2027-01-23'
-- requete: voyage pas cher europe
+  score: 0.39
+  date_prevue: '2027-01-30'
+- cle: voyage pas cher europe
+  requete: voyage pas cher europe
   rubrique: voyager-malin
-  score: 0.76
-  demande: 3.0
   volume: null
+  volume_source: null
+  demande: 3.0
   faisabilite: 0.28
   saison: []
   tranco_median_top10: 1120
@@ -1799,6 +1851,7 @@ articles:
   - voyage pas cher en europe tout compris
   - voyage pas cher en europe aout
   - voyage pas cher en europe juin
+  variantes: {}
   questions:
   - Quelles sont les destinations les moins chères pour voyager hors Europe ?
   - Où partir pour 500 euros tout compris ?
@@ -1815,13 +1868,13 @@ articles:
   - Cheap Europe tour
   statut: idee
   slug: null
-  cle: voyage pas cher europe
-  volume_source: à relever
-- requete: que visiter canada
+  score: 0.38
+- cle: que visiter canada
+  requete: que visiter canada
   rubrique: destinations
-  score: 0.75
-  demande: 1.7
   volume: null
+  volume_source: null
+  demande: 1.7
   faisabilite: 0.44
   saison: []
   tranco_median_top10: 1120
@@ -1834,6 +1887,7 @@ articles:
   - oovatu.com
   secondaires:
   - que visiter canada est
+  variantes: {}
   questions:
   - Quels sont les incontournables à visiter au Canada ?
   - Quelle est la plus belle partie du Canada ?
@@ -1850,14 +1904,14 @@ articles:
   - Ville à visiter au Canada
   statut: idee
   slug: null
-  cle: que visiter canada
-  volume_source: à relever
-  date_prevue: '2027-01-25'
-- requete: que voir grece
+  score: 0.37
+  date_prevue: '2027-02-03'
+- cle: que voir grece
+  requete: que voir grece
   rubrique: destinations
-  score: 0.7
-  demande: 1.8
   volume: null
+  volume_source: null
+  demande: 1.8
   faisabilite: 0.39
   saison: []
   tranco_median_top10: 1120
@@ -1876,6 +1930,7 @@ articles:
   - que voir en grece thessalonique
   - que voir en grece en 4 jours
   - que voir en grece centrale
+  variantes: {}
   questions:
   - Est-il conseillé d'aller en Grèce ?
   - Quels sont les meilleurs circuits de 10 jours en Grèce ?
@@ -1892,14 +1947,14 @@ articles:
   - Grèce hors des sentiers battus
   statut: idee
   slug: null
-  cle: que voir grece
-  volume_source: à relever
-  date_prevue: '2027-01-27'
-- requete: où partir quelques jours en france
+  score: 0.35
+  date_prevue: '2027-02-05'
+- cle: où partir quelques jours en france
+  requete: où partir quelques jours en france
   rubrique: destinations
-  score: 0.66
-  demande: 1.7
   volume: null
+  volume_source: null
+  demande: 1.7
   faisabilite: 0.39
   saison: []
   tranco_median_top10: 1120
@@ -1911,6 +1966,7 @@ articles:
   - greengo.voyage
   - tendances-vacances.pierreetvacances.com
   secondaires: []
+  variantes: {}
   questions:
   - Où aller pour 3 jours en France ?
   - Où partir pour 4 jours en France ?
@@ -1927,55 +1983,40 @@ articles:
   - Meilleur destination pour un week-end en France
   statut: idee
   slug: null
-  cle: où partir quelques jours en france
-  volume_source: à relever
-- requete: road trip marseille
+  score: 0.33
+- cle: endroits les plus visités au monde
+  requete: endroits les plus visités au monde
   rubrique: destinations
-  score: 0.65
-  demande: 1.7
   volume: null
-  faisabilite: 0.38
+  volume_source: null
+  demande: 1.9
+  faisabilite: 0.34
   saison: []
   tranco_median_top10: 1120
-  resultats_faibles_top10: 2
+  resultats_faibles_top10: 1
   officiels_top5: 0
   ai_overview: true
   top3:
-  - viamichelin.fr
-  - pt.pinterest.com
-  - fr.pinterest.com
-  secondaires:
-  - road trip marseille nice
-  - road trip marseille monaco
-  - road trip marseille venise
-  - road trip marseille rome
-  - road trip marseille portugal
-  - road trip marseille paris
-  - road trip marseille espagne
-  - road trip marseille barcelone
+  - melhoresdestinos.com.br
+  - jagranjosh.com
+  - ar.pinterest.com
+  secondaires: []
+  variantes: {}
   questions:
-  - Quelles sont les destinations possibles à partir de Marseille ?
-  - Où se promener à Marseille ?
-  - Quels sont les villages à visiter autour de Marseille ?
-  - Où partir 3 jours de Marseille ?
-  associees:
-  - Itinéraire Marseille Mappy
-  - Prix pour aller à Marseille en voiture
-  - Itinéraire Marseille sans péage
-  - Marseille itinéraire
-  - Itinéraire Marseille transport en commun
-  - Marseille maps
-  - Marseille en voiture temps
-  - Marseille par la nationale
+  - Quels sont les 3 pays les plus visités au monde ?
+  - Quels sont les 10 monuments les plus visités au monde ?
+  - Quels sont les 50 sites touristiques les plus visités au monde ?
+  - Quels sont les 20 sites web les plus visités au monde ?
+  associees: []
   statut: idee
   slug: null
-  cle: road trip marseille
-  volume_source: à relever
-- requete: road trip norvege
+  score: 0.32
+- cle: road trip norvege
+  requete: road trip norvege
   rubrique: destinations
-  score: 0.64
-  demande: 1.8
   volume: null
+  volume_source: null
+  demande: 1.8
   faisabilite: 0.36
   saison: []
   tranco_median_top10: 1120
@@ -1997,6 +2038,7 @@ articles:
   - road trip norvege septembre
   - road trip norvege suede
   - road trip norvege juillet
+  variantes: {}
   questions:
   - Quel est le plus beau pays de Scandinavie ?
   - Quelles sont les 18 routes touristiques panoramiques en Norvège ?
@@ -2013,40 +2055,56 @@ articles:
   - Voyage en Norvège aurore boréale
   statut: idee
   slug: null
-  cle: road trip norvege
-  volume_source: à relever
-- requete: endroits les plus visités au monde
+  score: 0.32
+- cle: road trip marseille
+  requete: road trip marseille
   rubrique: destinations
-  score: 0.63
-  demande: 1.9
   volume: null
-  faisabilite: 0.34
+  volume_source: null
+  demande: 1.7
+  faisabilite: 0.38
   saison: []
   tranco_median_top10: 1120
-  resultats_faibles_top10: 1
+  resultats_faibles_top10: 2
   officiels_top5: 0
   ai_overview: true
   top3:
-  - melhoresdestinos.com.br
-  - jagranjosh.com
-  - ar.pinterest.com
-  secondaires: []
+  - viamichelin.fr
+  - pt.pinterest.com
+  - fr.pinterest.com
+  secondaires:
+  - road trip marseille nice
+  - road trip marseille monaco
+  - road trip marseille venise
+  - road trip marseille rome
+  - road trip marseille portugal
+  - road trip marseille paris
+  - road trip marseille espagne
+  - road trip marseille barcelone
+  variantes: {}
   questions:
-  - Quels sont les 3 pays les plus visités au monde ?
-  - Quels sont les 10 monuments les plus visités au monde ?
-  - Quels sont les 50 sites touristiques les plus visités au monde ?
-  - Quels sont les 20 sites web les plus visités au monde ?
-  associees: []
+  - Quelles sont les destinations possibles à partir de Marseille ?
+  - Où se promener à Marseille ?
+  - Quels sont les villages à visiter autour de Marseille ?
+  - Où partir 3 jours de Marseille ?
+  associees:
+  - Itinéraire Marseille Mappy
+  - Prix pour aller à Marseille en voiture
+  - Itinéraire Marseille sans péage
+  - Marseille itinéraire
+  - Itinéraire Marseille transport en commun
+  - Marseille maps
+  - Marseille en voiture temps
+  - Marseille par la nationale
   statut: idee
   slug: null
-  cle: endroits les plus visités au monde
-  volume_source: à relever
-  date_prevue: '2027-02-01'
-- requete: voyage entre amis à l'étranger
+  score: 0.32
+- cle: voyage entre amis à l'étranger
+  requete: voyage entre amis à l'étranger
   rubrique: destinations
-  score: 0.62
-  demande: 1.9
   volume: null
+  volume_source: null
+  demande: 1.9
   faisabilite: 0.33
   saison: []
   tranco_median_top10: 1120
@@ -2058,6 +2116,7 @@ articles:
   - fr.lastminute.com
   - tui.fr
   secondaires: []
+  variantes: {}
   questions:
   - Quelle est la meilleure destination pour un voyage entre amis ?
   - Où puis-je faire un voyage pas cher entre amis ?
@@ -2074,14 +2133,13 @@ articles:
   - Ou partir en week-end entre amis en France
   statut: idee
   slug: null
-  cle: voyage entre amis à l'étranger
-  volume_source: à relever
-  date_prevue: '2027-02-03'
-- requete: road trip canada
+  score: 0.31
+- cle: road trip canada
+  requete: road trip canada
   rubrique: destinations
-  score: 0.59
-  demande: 1.7
   volume: null
+  volume_source: null
+  demande: 1.7
   faisabilite: 0.35
   saison: []
   tranco_median_top10: 1120
@@ -2103,6 +2161,7 @@ articles:
   - quel road trip au canada
   - road trip canada camping car
   - road trip new york canada
+  variantes: {}
   questions:
   - Quel est le budget moyen pour un road trip au Canada ?
   - Quel est le meilleur road trip à faire au Canada ?
@@ -2119,13 +2178,13 @@ articles:
   - Road trip Canada Québec
   statut: idee
   slug: null
-  cle: road trip canada
-  volume_source: à relever
-- requete: marseille hors des sentiers battus
+  score: 0.3
+- cle: marseille hors des sentiers battus
+  requete: marseille hors des sentiers battus
   rubrique: hors-des-sentiers-battus
-  score: 0.56
-  demande: 2.0
   volume: null
+  volume_source: null
+  demande: 2.0
   faisabilite: 0.28
   saison: []
   tranco_median_top10: 1120
@@ -2138,6 +2197,7 @@ articles:
   - greengo.voyage
   secondaires:
   - visiter marseille hors des sentiers battus
+  variantes: {}
   questions: []
   associees:
   - Guide Marseille
@@ -2150,14 +2210,13 @@ articles:
   - Sortie originale Marseille
   statut: idee
   slug: null
-  cle: marseille hors des sentiers battus
-  volume_source: à relever
-  date_prevue: '2027-02-05'
-- requete: week end quelque part
+  score: 0.28
+- cle: week end quelque part
+  requete: week end quelque part
   rubrique: destinations
-  score: 0.54
-  demande: 1.7
   volume: null
+  volume_source: null
+  demande: 1.7
   faisabilite: 0.32
   saison: []
   tranco_median_top10: 1120
@@ -2169,6 +2228,7 @@ articles:
   - sgae.gouv.fr
   - alcool-info-service.fr
   secondaires: []
+  variantes: {}
   questions: []
   associees:
   - END Boutique
@@ -2181,13 +2241,13 @@ articles:
   - End clothing londres
   statut: idee
   slug: null
-  cle: week end quelque part
-  volume_source: à relever
-- requete: vacances pas cher tout compris
+  score: 0.27
+- cle: vacances pas cher tout compris
+  requete: vacances pas cher tout compris
   rubrique: voyager-malin
-  score: 0.42
-  demande: 2.1
   volume: null
+  volume_source: null
+  demande: 2.1
   faisabilite: 0.22
   saison: []
   tranco_median_top10: 1120
@@ -2203,6 +2263,7 @@ articles:
   - vacances pas cher derniere minute tout compris
   - vacances pas cher rimini tout compris
   - vacances pas cher tout compris aout
+  variantes: {}
   questions:
   - Où partir en all inclusive le moins cher ?
   - Où partir en vacances avec un petit budget ?
@@ -2219,13 +2280,13 @@ articles:
   - Voyage pas cher tout compris dernière minute
   statut: idee
   slug: null
-  cle: vacances pas cher tout compris
-  volume_source: à relever
-- requete: que voir nouvelle zelande
+  score: 0.21
+- cle: que voir nouvelle zelande
+  requete: que voir nouvelle zelande
   rubrique: destinations
-  score: 0.4
-  demande: 1.8
   volume: null
+  volume_source: null
+  demande: 1.8
   faisabilite: 0.22
   saison: []
   tranco_median_top10: 1120
@@ -2240,6 +2301,7 @@ articles:
   - que voir en nouvelle zelande ile du sud
   - que voir en nouvelle zelande ile du nord
   - que voir absolument en nouvelle zelande
+  variantes: {}
   questions:
   - Quelle est la culture en Nouvelle-Zélande ?
   - Quelle est la plus belle ville de la Nouvelle-Zélande ?
@@ -2248,13 +2310,13 @@ articles:
   associees: []
   statut: idee
   slug: null
-  cle: que voir nouvelle zelande
-  volume_source: à relever
-- requete: endroits les plus frais en France
+  score: 0.2
+- cle: endroits les plus frais en france
+  requete: endroits les plus frais en France
   rubrique: destinations
-  score: 0.0
-  demande: 4.0
   volume: 0
+  volume_source: Keyword Surfer
+  demande: 4.0
   faisabilite: 0.31
   saison: []
   tranco_median_top10: 1120
@@ -2266,6 +2328,7 @@ articles:
   - justacote.com
   - envie-de-vacances.fr
   secondaires: []
+  variantes: {}
   questions:
   - Quelles sont les 3 villes les plus chaudes de France ?
   - Où passer l'été au frais en France ?
@@ -2274,14 +2337,13 @@ articles:
   associees: []
   statut: ecarte
   slug: null
-  cle: endroits les plus frais en france
-  volume_source: Keyword Surfer
-  variantes: {}
-- requete: voyage entre amis Vietnam
-  rubrique: destinations
   score: 0.0
-  demande: 2.4
+- cle: voyage entre amis vietnam
+  requete: voyage entre amis Vietnam
+  rubrique: destinations
   volume: 0
+  volume_source: Keyword Surfer
+  demande: 2.4
   faisabilite: 0.35
   saison: []
   tranco_median_top10: 1120
@@ -2293,6 +2355,7 @@ articles:
   - agoda.com
   - youtube.com
   secondaires: []
+  variantes: {}
   questions:
   - Quel est le prix d'un voyage organisé au Vietnam ?
   - Est-il prudent de partir au Vietnam en ce moment ?
@@ -2301,14 +2364,13 @@ articles:
   associees: []
   statut: ecarte
   slug: null
-  cle: voyage entre amis vietnam
-  volume_source: Keyword Surfer
-  variantes: {}
-- requete: week-end de Pâques 2027
-  rubrique: destinations
   score: 0.0
-  demande: 2.3
+- cle: week end paques 2027
+  requete: week-end de Pâques 2027
+  rubrique: destinations
   volume: 0
+  volume_source: Keyword Surfer
+  demande: 2.3
   faisabilite: 0.46
   saison:
   - 4
@@ -2323,6 +2385,8 @@ articles:
   secondaires:
   - ou partir week end de paques
   - week end de paques quand
+  variantes:
+    Pâques 2027: 1900
   questions: []
   associees:
   - Calendrier 2026 2027 gratuit
@@ -2335,15 +2399,13 @@ articles:
   - 2026 calendrier 2027 avec jours fériés vacances scolaires
   statut: ecarte
   slug: null
-  cle: week end paques 2027
-  volume_source: Keyword Surfer
-  variantes:
-    Pâques 2027: 1900
-- requete: vacances entre amis en France
-  rubrique: destinations
   score: 0.0
-  demande: 2.0
+- cle: vacances entre amis france
+  requete: vacances entre amis en France
+  rubrique: destinations
   volume: 0
+  volume_source: Keyword Surfer
+  demande: 2.0
   faisabilite: 0.38
   saison: []
   tranco_median_top10: 1120
@@ -2356,6 +2418,7 @@ articles:
   - mediatheque.saintpierre.re
   secondaires:
   - destination vacances entre amis france
+  variantes: {}
   questions:
   - Où aller en été pour éviter la foule ?
   - Quelles sont les 10 destinations préférées des Français ?
@@ -2364,14 +2427,13 @@ articles:
   associees: []
   statut: ecarte
   slug: null
-  cle: vacances entre amis france
-  volume_source: Keyword Surfer
-  variantes: {}
-- requete: road trip quel pays
-  rubrique: destinations
   score: 0.0
-  demande: 1.9
+- cle: road trip quel pays
+  requete: road trip quel pays
+  rubrique: destinations
   volume: 0
+  volume_source: Keyword Surfer
+  demande: 1.9
   faisabilite: 0.49
   saison: []
   tranco_median_top10: 1120
@@ -2383,6 +2445,7 @@ articles:
   - weroad.fr
   - salutbyebye.com
   secondaires: []
+  variantes: {}
   questions:
   - Quels sont les 10 endroits à voir absolument dans sa vie ?
   - Quelles sont les 10 destinations paradisiaques les plus belles du monde ?
@@ -2391,14 +2454,13 @@ articles:
   associees: []
   statut: ecarte
   slug: null
-  cle: road trip quel pays
-  volume_source: Keyword Surfer
-  variantes: {}
-- requete: Sri Lanka hors des sentiers battus
-  rubrique: hors-des-sentiers-battus
   score: 0.0
-  demande: 1.8
+- cle: hors des sentiers battus sri lanka
+  requete: Sri Lanka hors des sentiers battus
+  rubrique: hors-des-sentiers-battus
   volume: 0
+  volume_source: Keyword Surfer
+  demande: 1.8
   faisabilite: 0.46
   saison: []
   tranco_median_top10: 1120
@@ -2411,13 +2473,12 @@ articles:
   - bluelankatours.com
   secondaires:
   - sri lanka hors des sentiers battus blog
+  variantes: {}
   questions: []
   associees: []
   statut: ecarte
   slug: null
-  cle: hors des sentiers battus sri lanka
-  volume_source: Keyword Surfer
-  variantes: {}
+  score: 0.0
 idees_paa:
 - Combien coûte un voyage en Thaïlande ?
 - Combien de jours sont nécessaires pour visiter La Réunion ?
@@ -2447,6 +2508,7 @@ idees_paa:
 - Est-il prudent de partir au Vietnam en ce moment ?
 - Est-il sûr de voyager au Costa Rica ?
 - Il fait beau à l'Île Maurice en août ?
+- Où aller au mois d'avril pour avoir chaud ?
 - Où aller au soleil fin avril début mai ?
 - Où aller en France endroit paradisiaque ?
 - Où aller en Italie pour 2 jours ?
@@ -2473,6 +2535,7 @@ idees_paa:
 - Où partir cet été sans se ruiner ?
 - Où partir en Mars et avril au chaud ?
 - Où partir en all inclusive le moins cher ?
+- Où partir en avril en tout inclus ?
 - Où partir en avril pour une semaine ?
 - Où partir en janvier et février ?
 - Où partir en vacances avec un petit budget ?
@@ -2492,6 +2555,7 @@ idees_paa:
 - Où puis-je trouver des séjours pas chers en dernière minute ?
 - Où puis-je trouver des voyages de groupe pour une personne seule ?
 - Où puis-je trouver les vacances tout inclus les moins chères ?
+- Où puis-je trouver un séjour pas cher en avril 2026 ?
 - Où puis-je trouver un voyage tout inclus vraiment pas cher ?
 - Où puis-je trouver un week-end tout compris en Bretagne ?
 - Où puis-je trouver une carte détaillée de l'Écosse ?
@@ -2566,1207 +2630,1604 @@ idees_paa:
 - Quel temps fait-il en Guadeloupe en novembre ?
 - Quel temps fait-il en Islande en août ?
 - Quel temps fait-il en Écosse en avril ?
-- Quel temps fait-il à l'Île Maurice en octobre ?
-- Quelle est la culture en Nouvelle-Zélande ?
-- Quelle est la date de la fête des garçons au Japon ?
 reserve:
 - requete: vacances pas cher octobre
   demande: 5.5
+  volume: null
   rubrique: voyager-malin
 - requete: vacances pas cher septembre
   demande: 4.7
+  volume: null
   rubrique: voyager-malin
 - requete: voyage en famille octobre
   demande: 4.2
+  volume: null
   rubrique: destinations
 - requete: où partir en octobre au soleil
   demande: 4.2
+  volume: null
   rubrique: destinations
 - requete: vacances pas cher aout
   demande: 4.3
+  volume: null
   rubrique: voyager-malin
 - requete: où partir novembre
   demande: 3.8
+  volume: null
   rubrique: destinations
 - requete: voyage en juin
   demande: 3.7
+  volume: null
   rubrique: destinations
 - requete: où partir octobre
   demande: 3.5
+  volume: null
   rubrique: destinations
 - requete: voyage en juillet
   demande: 3.3
+  volume: null
   rubrique: destinations
 - requete: vacances pas cher juillet
   demande: 3.6
+  volume: null
   rubrique: voyager-malin
 - requete: quand partir
   demande: 3.3
+  volume: null
   rubrique: destinations
 - requete: voyage en mai
   demande: 3.2
+  volume: null
   rubrique: destinations
 - requete: voyage en décembre
   demande: 3.2
+  volume: null
   rubrique: destinations
 - requete: quand partir en octobre novembre
   demande: 3.2
+  volume: null
   rubrique: destinations
 - requete: voyage juillet en famille
   demande: 3.2
+  volume: null
   rubrique: destinations
 - requete: destination pas cher octobre
   demande: 3.4
+  volume: null
   rubrique: voyager-malin
 - requete: voyage août
   demande: 3.0
+  volume: null
   rubrique: destinations
 - requete: quand visiter vietnam
   demande: 3.0
+  volume: null
   rubrique: destinations
 - requete: partir en juillet
   demande: 2.9
+  volume: null
   rubrique: destinations
 - requete: ou partir octobre pas cher
   demande: 3.2
+  volume: null
   rubrique: voyager-malin
 - requete: partir en décembre au soleil
   demande: 2.7
+  volume: null
   rubrique: destinations
 - requete: week end en mai
   demande: 2.7
+  volume: null
   rubrique: destinations
 - requete: voyage entre amis
   demande: 2.7
+  volume: null
   rubrique: destinations
 - requete: voyage pas cher octobre
   demande: 3.0
+  volume: null
   rubrique: voyager-malin
 - requete: week end amoureux
   demande: 2.7
+  volume: null
   rubrique: destinations
 - requete: voyage en août pas cher
   demande: 2.9
+  volume: null
   rubrique: voyager-malin
 - requete: voyage en novembre pas cher
   demande: 2.9
+  volume: null
   rubrique: voyager-malin
 - requete: quand partir en juillet aout
   demande: 2.6
+  volume: null
   rubrique: destinations
 - requete: voyage en europe pas cher en famille
   demande: 2.8
+  volume: null
   rubrique: voyager-malin
 - requete: où partir au soleil au mois de novembre
   demande: 2.5
+  volume: null
   rubrique: destinations
 - requete: quand partir fevrier
   demande: 2.4
+  volume: null
   rubrique: destinations
 - requete: quand partir japon
   demande: 2.4
+  volume: null
   rubrique: destinations
 - requete: vacances pas cher juin
   demande: 2.7
+  volume: null
   rubrique: voyager-malin
 - requete: voyage en septembre
   demande: 2.4
+  volume: null
   rubrique: destinations
 - requete: ou partir juin
   demande: 2.4
+  volume: null
   rubrique: destinations
 - requete: quand partir janvier
   demande: 2.4
+  volume: null
   rubrique: destinations
 - requete: destination octobre
   demande: 2.3
+  volume: null
   rubrique: destinations
 - requete: voyage en janvier
   demande: 2.3
+  volume: null
   rubrique: destinations
 - requete: quand partir octobre
   demande: 2.3
+  volume: null
   rubrique: destinations
 - requete: partir en août pas cher
   demande: 2.5
+  volume: null
   rubrique: voyager-malin
 - requete: vacances pas cher novembre
   demande: 2.5
+  volume: null
   rubrique: voyager-malin
 - requete: ou partir novembre pas cher
   demande: 2.5
+  volume: null
   rubrique: voyager-malin
 - requete: voyage en octobre
   demande: 2.2
+  volume: null
   rubrique: destinations
 - requete: ou partir novembre europe
   demande: 2.2
+  volume: null
   rubrique: destinations
 - requete: voyage en famille decembre
   demande: 2.2
+  volume: null
   rubrique: destinations
 - requete: voyage en décembre pas cher
   demande: 2.4
+  volume: null
   rubrique: voyager-malin
 - requete: vacances pas cher fevrier
   demande: 2.4
+  volume: null
   rubrique: voyager-malin
 - requete: ou partir octobre france
   demande: 2.1
+  volume: null
   rubrique: destinations
 - requete: vacances pas cher en france tout compris
   demande: 2.4
+  volume: null
   rubrique: voyager-malin
 - requete: partir pas cher en septembre
   demande: 2.3
+  volume: null
   rubrique: voyager-malin
 - requete: voyage en novembre
   demande: 2.1
+  volume: null
   rubrique: destinations
 - requete: voyage en février pas cher
   demande: 2.3
+  volume: null
   rubrique: voyager-malin
 - requete: voyage en mars pas cher
   demande: 2.3
+  volume: null
   rubrique: voyager-malin
 - requete: quand partir novembre
   demande: 2.1
+  volume: null
   rubrique: destinations
 - requete: ou partir octobre europe
   demande: 2.1
+  volume: null
   rubrique: destinations
 - requete: partir en février
   demande: 2.0
+  volume: null
   rubrique: destinations
 - requete: ou partir mai
   demande: 2.0
+  volume: null
   rubrique: destinations
 - requete: vacances en février
   demande: 2.0
+  volume: null
   rubrique: destinations
 - requete: voyage en avril
   demande: 2.0
+  volume: null
   rubrique: destinations
 - requete: week end
   demande: 2.0
+  volume: null
   rubrique: destinations
 - requete: quand partir en mars
   demande: 2.0
+  volume: null
   rubrique: destinations
 - requete: quand partir en avril
   demande: 2.0
+  volume: null
   rubrique: destinations
 - requete: quand partir en mai
   demande: 2.0
+  volume: null
   rubrique: destinations
 - requete: quand partir en juin
   demande: 2.0
+  volume: null
   rubrique: destinations
 - requete: quand partir en juillet
   demande: 2.0
+  volume: null
   rubrique: destinations
 - requete: quand partir en août
   demande: 2.0
+  volume: null
   rubrique: destinations
 - requete: quand partir en septembre
   demande: 2.0
+  volume: null
   rubrique: destinations
 - requete: quand partir en décembre
   demande: 2.0
+  volume: null
   rubrique: destinations
 - requete: voyage en famille
   demande: 2.0
+  volume: null
   rubrique: destinations
 - requete: road trip
   demande: 2.0
+  volume: null
   rubrique: destinations
 - requete: quelle destination en octobre
   demande: 2.0
+  volume: null
   rubrique: destinations
 - requete: hors des sentiers battus
   demande: 2.0
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: destination europe novembre
   demande: 2.0
+  volume: null
   rubrique: destinations
 - requete: destination pas cher aout
   demande: 2.2
+  volume: null
   rubrique: voyager-malin
 - requete: où partir janvier
   demande: 2.0
+  volume: null
   rubrique: destinations
 - requete: destination pas cher decembre
   demande: 2.2
+  volume: null
   rubrique: voyager-malin
 - requete: ou partir novembre au soleil
   demande: 2.0
+  volume: null
   rubrique: destinations
 - requete: vacances pas cher decembre
   demande: 2.2
+  volume: null
   rubrique: voyager-malin
 - requete: destination novembre
   demande: 1.9
+  volume: null
   rubrique: destinations
 - requete: partir en août
   demande: 1.9
+  volume: null
   rubrique: destinations
 - requete: weekend en mai
   demande: 1.9
+  volume: null
   rubrique: destinations
 - requete: quand partir en europe du nord
   demande: 1.9
+  volume: null
   rubrique: destinations
 - requete: destination pas cher septembre
   demande: 2.1
+  volume: null
   rubrique: voyager-malin
 - requete: voyage en janvier pas cher
   demande: 2.1
+  volume: null
   rubrique: voyager-malin
 - requete: destination janvier soleil
   demande: 1.9
+  volume: null
   rubrique: destinations
 - requete: destination europe octobre
   demande: 1.8
+  volume: null
   rubrique: destinations
 - requete: vacances en famille quelle destination
   demande: 1.8
+  volume: null
   rubrique: destinations
 - requete: voyage entre amis france
   demande: 1.8
+  volume: null
   rubrique: destinations
 - requete: voyage en avril pas cher
   demande: 2.0
+  volume: null
   rubrique: voyager-malin
 - requete: voyage en mai pas cher
   demande: 2.0
+  volume: null
   rubrique: voyager-malin
 - requete: voyage en europe
   demande: 1.8
+  volume: null
   rubrique: destinations
 - requete: escapade en juin
   demande: 1.8
+  volume: null
   rubrique: destinations
 - requete: escapade en juillet
   demande: 1.8
+  volume: null
   rubrique: destinations
 - requete: quand partir en mars au soleil
   demande: 1.8
+  volume: null
   rubrique: destinations
 - requete: quand partir en thailande septembre
   demande: 1.8
+  volume: null
   rubrique: destinations
 - requete: quand partir en octobre au soleil
   demande: 1.8
+  volume: null
   rubrique: destinations
 - requete: quand partir en novembre au soleil
   demande: 1.8
+  volume: null
   rubrique: destinations
 - requete: voyage en famille en août
   demande: 1.8
+  volume: null
   rubrique: destinations
 - requete: vacances pas cher
   demande: 2.0
+  volume: null
   rubrique: voyager-malin
 - requete: quelle destination en novembre
   demande: 1.8
+  volume: null
   rubrique: destinations
 - requete: destination en mai
   demande: 1.8
+  volume: null
   rubrique: destinations
 - requete: vacances pas cher mai
   demande: 2.0
+  volume: null
   rubrique: voyager-malin
 - requete: week end ascension 2027
   demande: 1.8
+  volume: null
   rubrique: destinations
 - requete: voyage pas cher
   demande: 2.0
+  volume: null
   rubrique: voyager-malin
 - requete: vacances pas cher noel
   demande: 2.0
+  volume: null
   rubrique: voyager-malin
 - requete: ou partir mars soleil
   demande: 1.8
+  volume: null
   rubrique: destinations
 - requete: voyage pas cher tout compris
   demande: 1.9
+  volume: null
   rubrique: voyager-malin
 - requete: destination octobre soleil
   demande: 1.7
+  volume: null
   rubrique: destinations
 - requete: voyage en famille pas cher à l'étranger
   demande: 1.9
+  volume: null
   rubrique: voyager-malin
 - requete: week end octobre
   demande: 1.7
+  volume: null
   rubrique: destinations
 - requete: destination pas cher en novembre
   demande: 1.9
+  volume: null
   rubrique: voyager-malin
 - requete: voyage en juin pas cher
   demande: 1.9
+  volume: null
   rubrique: voyager-malin
 - requete: destination pas cher en juin
   demande: 1.9
+  volume: null
   rubrique: voyager-malin
 - requete: destination pas cher en juillet
   demande: 1.9
+  volume: null
   rubrique: voyager-malin
 - requete: destination voyage entre amis pas cher
   demande: 1.9
+  volume: null
   rubrique: voyager-malin
 - requete: voyage en famille destination
   demande: 1.7
+  volume: null
   rubrique: destinations
 - requete: road trip vietnam
   demande: 1.7
+  volume: null
   rubrique: destinations
 - requete: road trip wyoming
   demande: 1.7
+  volume: null
   rubrique: destinations
 - requete: road trip yellowstone
   demande: 1.7
+  volume: null
   rubrique: destinations
 - requete: road trip zanzibar
   demande: 1.7
+  volume: null
   rubrique: destinations
 - requete: destination europe
   demande: 1.7
+  volume: null
   rubrique: destinations
 - requete: hors des sentiers battus musique
   demande: 1.7
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: hors des sentiers battus rome
   demande: 1.7
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: hors des sentiers battus venise
   demande: 1.7
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: zanzibar hors des sentiers battus
   demande: 1.7
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: que voir islande
   demande: 1.7
+  volume: null
   rubrique: destinations
 - requete: que voir mont saint michel
   demande: 1.7
+  volume: null
   rubrique: destinations
 - requete: que voir irlande
   demande: 1.7
+  volume: null
   rubrique: destinations
 - requete: vacances entre amis pas cher
   demande: 1.9
+  volume: null
   rubrique: voyager-malin
 - requete: voyage canada
   demande: 1.7
+  volume: null
   rubrique: destinations
 - requete: week end pas cher europe
   demande: 1.9
+  volume: null
   rubrique: voyager-malin
 - requete: où partir en septembre au soleil
   demande: 1.7
+  volume: null
   rubrique: destinations
 - requete: week end bretagne
   demande: 1.7
+  volume: null
   rubrique: destinations
 - requete: road trip albanie
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: road trip guadeloupe 10 jours
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: road trip irlande
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: road trip kazakhstan
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: road trip nouvelle zelande
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: road trip thailande
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: road trip yucatan
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: guadeloupe hors des sentiers battus
   demande: 1.6
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: hors des sentiers battus thailande
   demande: 1.6
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: voyage combien de syllabes
   demande: 1.8
+  volume: null
   rubrique: voyager-malin
 - requete: destination pas cher en mars
   demande: 1.8
+  volume: null
   rubrique: voyager-malin
 - requete: voyage quand
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: quelle voyage faire en famille
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: voyage en décembre au soleil
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: voyage en france
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: quand partir en janvier au soleil
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: quand partir en thailande juillet
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: quand partir en europe de l'est
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: où partir en avril
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: partir en famille en avril
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: road trip autour de moi
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: quelle destination en avril
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: destination soleil fevrier
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: que voir cap vert
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: que visiter bali
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: que visiter nouvelle zelande
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: que voir grece continentale
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: que visiter costa rica
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: que faire new york 5 jours
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: vacances pas cher toussaint
   demande: 1.8
+  volume: null
   rubrique: voyager-malin
 - requete: escapade gourmande
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: escapade octobre
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: road trip france
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: road trip islande
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: road trip kenya
   demande: 1.6
+  volume: null
   rubrique: destinations
 - requete: grèce hors des sentiers battus
   demande: 1.6
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: itineraire hors des sentiers battus japon
   demande: 1.6
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: yucatan hors des sentiers battus blog
   demande: 1.6
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: voyage en famille pas cher tout compris
   demande: 1.7
+  volume: null
   rubrique: voyager-malin
 - requete: voyage en septembre pas cher
   demande: 1.7
+  volume: null
   rubrique: voyager-malin
 - requete: road trip pas cher europe
   demande: 1.7
+  volume: null
   rubrique: voyager-malin
 - requete: destination pas cher en mai
   demande: 1.7
+  volume: null
   rubrique: voyager-malin
 - requete: où partir quelques jours
   demande: 1.5
+  volume: null
   rubrique: destinations
 - requete: road trip bretagne 4 jours
   demande: 1.5
+  volume: null
   rubrique: destinations
 - requete: road trip quebec 2 semaines
   demande: 1.5
+  volume: null
   rubrique: destinations
 - requete: road trip wyoming montana
   demande: 1.5
+  volume: null
   rubrique: destinations
 - requete: vacances pas cher dernière minute
   demande: 1.7
+  volume: null
   rubrique: voyager-malin
 - requete: destination vacances entre amis france
   demande: 1.5
+  volume: null
   rubrique: destinations
 - requete: japon hors des sentiers battus blog
   demande: 1.5
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: week end en amoureux pas cher
   demande: 1.7
+  volume: null
   rubrique: voyager-malin
 - requete: voyage comment éviter les punaises de lit
   demande: 1.5
+  volume: null
   rubrique: destinations
 - requete: week end en novembre europe
   demande: 1.5
+  volume: null
   rubrique: destinations
 - requete: quand visiter venise
   demande: 1.5
+  volume: null
   rubrique: destinations
 - requete: road trip marseille italie
   demande: 1.5
+  volume: null
   rubrique: destinations
 - requete: road trip bretagne nord
   demande: 1.5
+  volume: null
   rubrique: destinations
 - requete: hors des sentiers battus amboise
   demande: 1.5
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: que voir vietnam
   demande: 1.5
+  volume: null
   rubrique: destinations
 - requete: que voir guadeloupe
   demande: 1.5
+  volume: null
   rubrique: destinations
 - requete: où partir quand avec des enfants lonely planet
   demande: 1.5
+  volume: null
   rubrique: destinations
 - requete: nouvelle zelande hors des sentiers battus
   demande: 1.5
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: voyage entre amies pas cher
   demande: 1.6
+  volume: null
   rubrique: voyager-malin
 - requete: voyage en famille en février
   demande: 1.5
+  volume: null
   rubrique: destinations
 - requete: week end derniere minute
   demande: 1.6
+  volume: null
   rubrique: voyager-malin
 - requete: week end pas cher
   demande: 1.6
+  volume: null
   rubrique: voyager-malin
 - requete: vacances pas cher quel pays
   demande: 1.6
+  volume: null
   rubrique: voyager-malin
 - requete: vacances pas cher en mars
   demande: 1.6
+  volume: null
   rubrique: voyager-malin
 - requete: destination pas cher
   demande: 1.6
+  volume: null
   rubrique: voyager-malin
 - requete: road trip nord italie
   demande: 1.5
+  volume: null
   rubrique: destinations
 - requete: road trip japon 3 semaines
   demande: 1.5
+  volume: null
   rubrique: destinations
 - requete: road trip yucatan 15 jours
   demande: 1.5
+  volume: null
   rubrique: destinations
 - requete: destination novembre soleil
   demande: 1.5
+  volume: null
   rubrique: destinations
 - requete: voyage week end pas cher
   demande: 1.6
+  volume: null
   rubrique: voyager-malin
 - requete: quand partir pas cher au maroc
   demande: 1.6
+  volume: null
   rubrique: voyager-malin
 - requete: road trip europe
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: road trip jordanie
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: road trip namibie
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: destination juillet
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: kenya hors des sentiers battus
   demande: 1.4
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: partir en juin au soleil
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: voyage en février au soleil
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: voyage quebec
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: week end en novembre france
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: endroits les plus mystérieux du monde
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: quand partir en thailande janvier
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: quand partir en crete octobre
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: quand partir en europe centrale
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: quand partir decembre janvier
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: où partir en septembre en france
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: où partir en novembre en france
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: vacances en famille quel pays
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: voyage famille mai 2026
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: road trip saint malo
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: quelle destination
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: destination en octobre en france
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: quoi visiter cap vert
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: que visiter bali crete
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: que faire new york quand il pleut
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: que voir irlande du nord
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: que voir irlande du sud
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: road trip grece 10 jours
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: road trip irlande 7 jours
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: road trip thailande 2 semaines
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: road trip vietnam 2 semaines
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: destination soleil decembre
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: ou partir juillet pas cher
   demande: 1.5
+  volume: null
   rubrique: voyager-malin
 - requete: quand visiter cap vert
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: où partir quelques jours en novembre
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: road trip sri lanka
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: vacances pas cher en france aout
   demande: 1.5
+  volume: null
   rubrique: voyager-malin
 - requete: vacances pas cher france septembre
   demande: 1.5
+  volume: null
   rubrique: voyager-malin
 - requete: destination juin
   demande: 1.4
+  volume: null
   rubrique: destinations
 - requete: hors des sentiers battus bali
   demande: 1.4
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: new york hors des sentiers battus
   demande: 1.4
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: vacances pas cher ou aller
   demande: 1.5
+  volume: null
   rubrique: voyager-malin
 - requete: week end halloween
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: endroits les plus beaux de paris
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: quand partir xian
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: quand partir xiamen
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: endroit les plus connu de new york
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: voyage en famille costa rica
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: road trip guadeloupe
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: road trip yellowstone 3 semaines
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: où partir pas cher
   demande: 1.5
+  volume: null
   rubrique: voyager-malin
 - requete: ou partir octobre famille
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: voyage quand partir
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: week end en janvier
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: week end en février
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: week end 15 août
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: week end en septembre
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: où partir en février europe
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: voyage famille mars 2026
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: road trip marseille nice
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: destination en août
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: que voir vietnam nord
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: que voir italie
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: que visiter autour du mont saint michel
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: voyage kenya
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: escapade rance et mer
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: week end thalasso bretagne
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: week end ferie en juin
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: week end en octobre france
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: quand voyage mars
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: voyage entre amis citation
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: que visiter italie
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: voyage republique dominicaine
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: road trip yucatan 10 jours
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: voyage en famille juin
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: road trip costa rica
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: vacances hors des sentiers battus en france
   demande: 1.3
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: italie hors des sentiers battus
   demande: 1.3
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: jordanie hors des sentiers battus
   demande: 1.3
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: norvege hors des sentiers battus
   demande: 1.3
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: vacances pas cher en europe
   demande: 1.4
+  volume: null
   rubrique: voyager-malin
 - requete: voyage pape france
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: escapade tour du parc
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: week end pas cher en france
   demande: 1.4
+  volume: null
   rubrique: voyager-malin
 - requete: partir pas cher en décembre au soleil
   demande: 1.4
+  volume: null
   rubrique: voyager-malin
 - requete: voyage en famille canada
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: destination pas cher en janvier
   demande: 1.4
+  volume: null
   rubrique: voyager-malin
 - requete: destination pas cher week end
   demande: 1.4
+  volume: null
   rubrique: voyager-malin
 - requete: escapade voyage
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: quand partir guadeloupe
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: voyage en famille vietnam
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: voyage en famille noel
   demande: 1.3
+  volume: null
   rubrique: destinations
 - requete: road trip canada 2 semaines
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: road trip ecosse 7 jours
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: road trip islande 7 jours
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: road trip zanzibar tanzanie
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: venise hors des sentiers battus blog
   demande: 1.2
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: quels sont les endroits les plus visités en france
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: road trip irlande 10 jours
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: road trip kyrgyzstan
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: voyage en famille novembre
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: road trip republique dominicaine
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: kirghizistan hors des.sentiers battus
   demande: 1.2
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: long week end en juin
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: vacances en famille en février
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: partir en famille en juillet
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: voyage en janvier au soleil
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: voyage en mars au soleil
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: voyage new york
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: endroit les plus touristique en france
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: quand partir en thailande octobre
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: où partir en mars en europe
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: où partir en avril en europe
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: quelle destination en février
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: destination en avril
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: destination en septembre europe
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: destination novembre en france
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: que visiter venise
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: que faire new york 1 semaine
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: escapade amoureux
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: week end rome
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: endroits les plus beaux de bretagne
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: endroits les plus effrayants du monde
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: road trip bretagne 3 jours
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: road trip cote ouest usa
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: road trip pouilles
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: voyage pas cher quel pays
   demande: 1.3
+  volume: null
   rubrique: voyager-malin
 - requete: où partir septembre
   demande: 1.2
+  volume: null
   rubrique: destinations
 - requete: visiter new york hors des sentiers battus
   demande: 1.2
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: voyage en juillet pas cher
   demande: 1.3
+  volume: null
   rubrique: voyager-malin
 - requete: partir pas cher en juin
   demande: 1.3
+  volume: null
   rubrique: voyager-malin
 - requete: partir pas cher en décembre
   demande: 1.3
+  volume: null
   rubrique: voyager-malin
 - requete: voyage quelques jours pas cher
   demande: 1.3
+  volume: null
   rubrique: voyager-malin
 - requete: week end europe
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: road trip xinjiang
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: islande hors des sentiers battus
   demande: 1.1
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: voyage gandon
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: endroits les plus beaux d europe
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: endroits les plus froids du monde
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: quand partir xinjiang
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: quand partir martinique
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: quand partir zanzibar
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: où partir quelques jours en décembre
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: où partir nouvel an
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: destination bretagne
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: week end pas cher octobre
   demande: 1.2
+  volume: null
   rubrique: voyager-malin
 - requete: destination vacances entre amis europe
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: road trip van france
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: thaïlande hors des sentiers battus blog
   demande: 1.1
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: vacances pas cher septembre all inclusive
   demande: 1.2
+  volume: null
   rubrique: voyager-malin
 - requete: vacances en france
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: week end en juin
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: quand visiter rome
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: road trip angleterre
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: road trip marseille monaco
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: quelle destination en aout
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: hors des sentiers battus nba 2k26
   demande: 1.1
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: que voir vietnam sud
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: road trip kenya tanzanie zanzibar
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: que voir italie du sud
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: que voir bretagne
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: que voir new york
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: ou partir juillet aout
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: partir pas cher en avril
   demande: 1.2
+  volume: null
   rubrique: voyager-malin
 - requete: vacances en famille france
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: road trip japon 15 jours
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: road trip vietnam 3 semaines
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: road trip yellowstone mt rushmore
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: partir en décembre
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: week end france
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: quand visiter l ile de brehat
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: destination septembre
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: destination decembre
   demande: 1.1
+  volume: null
   rubrique: destinations
 - requete: voyage hors des sentiers battus europe
   demande: 1.1
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: namibie hors des sentiers battus
   demande: 1.1
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: voyage croatie
   demande: 1.0
+  volume: null
   rubrique: destinations
 - requete: escapade amoureux week end
   demande: 1.0
+  volume: null
   rubrique: destinations
 - requete: week end famille
   demande: 1.0
+  volume: null
   rubrique: destinations
 - requete: endroit les plus beau en italie
   demande: 1.0
+  volume: null
   rubrique: destinations
 - requete: quand partir islande
   demande: 1.0
+  volume: null
   rubrique: destinations
 - requete: quand partir koh samui
   demande: 1.0
+  volume: null
   rubrique: destinations
 - requete: voyage en famille new york
   demande: 1.0
+  volume: null
   rubrique: destinations
 - requete: idée voyage entre amis
   demande: 1.0
+  volume: null
   rubrique: destinations
 - requete: voyage en voiture entre amis lego
   demande: 1.0
+  volume: null
   rubrique: destinations
 - requete: road trip yucatan 2 semaines
   demande: 1.0
+  volume: null
   rubrique: destinations
 - requete: quand visiter norvege
   demande: 1.0
+  volume: null
   rubrique: destinations
 - requete: france hors des sentiers battus
   demande: 1.0
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: vietnam hors des sentiers battus blog
   demande: 1.0
+  volume: null
   rubrique: hors-des-sentiers-battus
 - requete: voyage pas cher quel site
   demande: 1.1
+  volume: null
   rubrique: voyager-malin
 - requete: escapade du couesnon
   demande: 1.0
+  volume: null
   rubrique: destinations
 - requete: endroits les plus chauds de la planète
   demande: 1.0
+  volume: null
   rubrique: destinations
 - requete: road trip bretagne 7 jours
   demande: 1.0
+  volume: null
   rubrique: destinations
 - requete: ou partir janvier fevrier
   demande: 1.0
+  volume: null
   rubrique: destinations
 - requete: road trip france 1 semaine
   demande: 1.0
+  volume: null
   rubrique: destinations
 - requete: road trip canada 3 semaines
   demande: 1.0
+  volume: null
   rubrique: destinations

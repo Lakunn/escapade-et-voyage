@@ -6,59 +6,103 @@
 keywords: [voyage, voyageurs, vacances, touristes, tourisme, passeport, visa, esta, etias, eta, frontière, aéroport,
            compagnie aérienne, vol, low cost, train, interrail, bagage, grève, ceam, autorisation de sortie,
            indemnisation, retard, annulation, taxe de séjour, surtourisme, quotas]
+lang_defaut: fr
+days: 8
+history_days: 45
+keep_top: 15
+min_sources: 1
+stop_extra: [voyage, voyages, voyageurs, voyageur, travel, travellers, travelers]
+
 exclude: [immobilier, bourse, "titre de séjour", naturalisation, "intégration républicaine", tlscontact, "étrangers en france", "asylum", "asile"]
 
 feeds:
   # Formalités : ce qui change pour entrer dans un pays (articles ETA, CEAM, AST à mettre à jour)
   - name: "Actualités : formalités d'entrée (ETIAS, EES, ETA, ESTA, visas)"
+    weight: 1
+    type: media
     url: "https://news.google.com/rss/search?q=(ETIAS+OR+%22entry+exit+system%22+OR+%22EES%22+OR+ESTA+OR+%22ETA+Royaume-Uni%22)+voyageurs&hl=fr&gl=FR&ceid=FR:fr"
     filter: false
   - name: "Actualités : passeport, carte d'identité, autorisation de sortie du territoire"
+    weight: 1
+    type: media
     url: "https://news.google.com/rss/search?q=(passeport+OR+%22carte+d%27identit%C3%A9%22+OR+%22sortie+du+territoire%22)+d%C3%A9lai+OR+voyage&hl=fr&gl=FR&ceid=FR:fr"
     filter: false
   # Transports : grèves, droits des passagers, nouvelles lignes (articles retard avion, voyager malin)
   - name: "Actualités : grèves dans les transports"
+    weight: 1
+    type: media
     url: "https://news.google.com/rss/search?q=gr%C3%A8ve+(a%C3%A9roport+OR+%22contr%C3%B4leurs+a%C3%A9riens%22+OR+SNCF+OR+compagnie)+pr%C3%A9avis&hl=fr&gl=FR&ceid=FR:fr"
     filter: false
   - name: "Actualités : droits des passagers aériens"
+    weight: 1
+    type: media
     url: "https://news.google.com/rss/search?q=(%22droits+des+passagers%22+OR+%22r%C3%A8glement+261%22+OR+indemnisation+retard+vol)&hl=fr&gl=FR&ceid=FR:fr"
     filter: false
   - name: "Actualités : nouvelles lignes et bagage cabine"
+    weight: 1
+    type: media
     url: "https://news.google.com/rss/search?q=(%22nouvelle+ligne%22+OR+%22nouvelles+lignes%22+OR+%22bagage+cabine%22)+(a%C3%A9rien+OR+train+de+nuit+OR+low+cost)&hl=fr&gl=FR&ceid=FR:fr"
     filter: false
   # Destinations : règles locales qui changent un séjour (taxe, quotas, réservations obligatoires)
   - name: "Actualités : taxes touristiques, quotas et réservations obligatoires"
+    weight: 1
+    type: media
     url: "https://news.google.com/rss/search?q=(%22taxe+touristique%22+OR+%22taxe+de+s%C3%A9jour%22+OR+surtourisme+OR+quota+touristes+OR+%22r%C3%A9servation+obligatoire%22)&hl=fr&gl=FR&ceid=FR:fr"
     filter: false
   # Sources officielles avec flux RSS (testées le 18/11/2026)
   - name: "Royaume-Uni : ETA (gov.uk, pages mises à jour)"
+    lang: en
+    weight: 3
+    type: officiel
     url: "https://www.gov.uk/search/all.atom?keywords=electronic+travel+authorisation&order=updated-newest"
     keywords: ["electronic travel authorisation", "eta ", "(eta)", "visit the uk", "visitor visa"]
   - name: "Royaume-Uni : UK Visas and Immigration"
+    lang: en
+    weight: 3
+    type: officiel
     url: "https://www.gov.uk/government/organisations/uk-visas-and-immigration.atom"
     keywords: ["electronic travel authorisation", "eta ", "(eta)", "visitor", "visit visa", "european", "french", "france", "border"]
   - name: "États-Unis : CBP (ESTA, entrée sur le territoire)"
+    lang: en
+    weight: 3
+    type: officiel
     url: "https://www.cbp.gov/rss/newsroom/media-releases"
     keywords: ["esta ", "(esta)", "visa waiver", "travel authorization", "international travelers", "travelers entering", "social media"]
   - name: "Union européenne : DG Migration et affaires intérieures (EES, ETIAS, Schengen)"
+    lang: en
+    weight: 3
+    type: officiel
     url: "https://home-affairs.ec.europa.eu/node/2/rss_en"
     keywords: ["etias", "entry/exit", "entry-exit", "(ees)", "visa-free travel", "travel authorisation", "schengen area", "schengen borders code"]
   - name: "Douane française (voyageurs, franchises)"
+    weight: 3
+    type: officiel
     url: "https://www.douane.gouv.fr/rss.xml"
     keywords: [voyageur, franchise, bagage, vacances, "retour de voyage", "achats à l'étranger"]
   - name: "SchengenVisaInfo (actualité des visas, média spécialisé)"
+    lang: en
+    weight: 1
+    type: media
     url: "https://www.schengenvisainfo.com/news/feed/"
     keywords: ["etias", "entry/exit", "(ees)", "french citizens", "french travellers", "uk eta", "esta "]
   # Sources officielles sans flux ou qui bloquent les robots (403) : lues via Google Actualités filtré sur leur domaine
   - name: "Service-public.fr (via Google Actualités)"
+    weight: 3
+    type: officiel
     url: "https://news.google.com/rss/search?q=site:service-public.gouv.fr+(voyage+OR+passeport+OR+%22carte+d%27identit%C3%A9%22+OR+visa+OR+vacances)&hl=fr&gl=FR&ceid=FR:fr"
     keywords: [voyage, passeport, "carte d'identité", vacances, "sortie du territoire", ceam, "permis international", "à l'étranger", visa, "union européenne"]
   - name: "France Diplomatie, conseils aux voyageurs (via Google Actualités)"
+    weight: 3
+    type: officiel
     url: "https://news.google.com/rss/search?q=site:diplomatie.gouv.fr+%22conseils+aux+voyageurs%22&hl=fr&gl=FR&ceid=FR:fr"
     keywords: ["conseils aux voyageurs", "dernière minute", "- sécurité |", déconseillé, "formalités d'entrée", "entrée et séjour"]
   - name: "Ministère de l'Intérieur : passeport, frontières (via Google Actualités)"
+    weight: 3
+    type: officiel
     url: "https://news.google.com/rss/search?q=site:interieur.gouv.fr+(passeport+OR+%22carte+d%27identit%C3%A9%22+OR+fronti%C3%A8res+OR+EES)&hl=fr&gl=FR&ceid=FR:fr"
     keywords: [passeport, "carte d'identité", "frontières extérieures", "entrée/sortie", "entry/exit", etias]
   - name: "Travel to Europe, site officiel EES / ETIAS (via Google Actualités)"
+    weight: 3
+    type: officiel
     url: "https://news.google.com/rss/search?q=site:travel-europe.europa.eu&hl=fr&gl=FR&ceid=FR:fr"
     filter: false

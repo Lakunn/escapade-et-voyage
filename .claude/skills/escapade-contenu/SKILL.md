@@ -9,20 +9,14 @@ Site de conseils de voyage « on & off the road » : les **vrais incontournables
 
 Cycle en huit étapes, **dans l'ordre**, précédé de la carte des mots-clés. Valentin ne veut pas être sollicité à chaque étape : on choisit les sujets d'après la carte, on rédige, on contrôle, et on lui présente le lot terminé avant le push (le push publie).
 
-## 0. Carte des mots-clés et calendrier (une fois par mois)
+## 0. Carte des mots-clés, veille et volumes (commun aux 4 sites)
 
-Les sujets ne se choisissent pas à l'intuition : ils viennent de `config/keywords.yml`, produit par
-
-```bash
-PYTHONIOENCODING=utf-8 ../marketing-intelligence/.venv/Scripts/python.exe scripts/keyword_map.py --par-semaine 4 --semaines 10
-```
-
-- Découverte gratuite : les graines de `config/keyword_seeds.yml` (larges : « voyage », « week end », « quand partir », « voyage en famille »…) sont déclinées par les suggestions Google (+ a…z, mots interrogatifs, mois), puis les destinations repérées sont déclinées à leur tour (que faire, itinéraire, budget, hors des sentiers battus). Une requête suggérée tôt et sur plusieurs déclinaisons est très tapée : c'est l'indice de **demande** tant qu'on n'a pas de volumes (clé DataForSEO absente de l'outil ; dès qu'elle y est, le script prend les volumes réels).
-- SERP des meilleures requêtes (`serp_max`, 80 par défaut ; SerpAPI gratuit = 250 par mois **partagées avec les autres sites**, cache 14 jours) : « Autres questions » (PAA), recherches associées, **faisabilité** = part du top 10 tenue par des sites faibles (hors des 150 000 premiers domaines Tranco), des forums ou des plateformes, malus si des sites officiels tiennent le top 5 ou si une AI Overview s'affiche.
-- Regroupement : même SERP (4 URL communes sur 10), même mois (« où partir en avril », « vacances pas cher avril », « voyage en avril en famille » = un article), même sujet sans les mots d'habillage = **un seul article**. Les requêtes du groupe deviennent `keywords_secondaires`, les PAA deviennent H2 ou FAQ.
-- Calendrier : 3 à 4 articles par semaine, sujets saisonniers placés 3 à 10 semaines avant leur mois, un même gabarit (« quand partir… », « road trip… ») au plus une fois par semaine pour ne pas produire en série (`algoproof.md` § 3.5).
-- Le bruit se règle dans `config/keyword_seeds.yml` (`exclure_mots`) : prévisions météo, marques, titres d'œuvres, villes bretonnes remontées par le biais d'adresse IP de Google Suggest.
-- Lecture humaine : `keywords/calendrier.md`. Les PAA qui ouvrent d'autres sujets (`idees_paa`) nourrissent la carte suivante.
+- **Sujets de fond** : `config/keywords.yml` (calendrier lisible dans `keywords/calendrier.md`), régénéré le 1er du mois par le workflow « Carte des mots-clés » (`scripts/keyword_map.py`, identique dans les 4 dépôts ; graines, rubriques et exclusions dans `config/keyword_seeds.yml`). Prendre le prochain sujet du calendrier ; `statut: existe_peut_etre` = un article existant couvre peut-être déjà le sujet : vérifier et **mettre à jour** plutôt que créer.
+- **Volumes** : la carte prend, dans l'ordre, `config/volumes.yml` (relevés Keyword Surfer), DataForSEO, Bing, sinon l'indice Google Suggest (« à relever »). Pour relever : `python scripts/keyword_map.py --a-relever` donne la liste ; dans le Chrome de Valentin, recherche google.fr de chaque requête, lecture du tableau « Keyword ideas » de Surfer ; **au plus ~30 recherches d'affilée** (au-delà Google affiche un CAPTCHA, qu'on ne résout jamais) ; consigner la formulation la plus recherchée et ses variantes dans `config/volumes.yml`, puis relancer le script (gratuit grâce au cache).
+- **Actualité** : `veille/AAAA-MM-JJ.md` et `veille/plan.md` (workflow de veille, `scripts/veille.py` identique dans les 4 dépôts, flux dans `config/veille.yml`). Une règle, un prix ou une formalité qui change : mise à jour datée de l'article concerné avant tout nouvel article.
+- Renseigner `keyword` (requête principale de la carte) et `keywords_secondaires` dans le front matter de chaque nouvel article : la carte suivante le marque alors `programme` ou `publie`.
+- Récapitulatif chaque lundi par e-mail (n8n, `growww-site/deploy/n8n/`).
+- Spécifique à escapade : graines larges (« voyage », « week end », « quand partir », « voyage en famille »…), second niveau par destination, regroupement des « où partir en <mois> », sujets saisonniers placés 3 à 10 semaines avant leur mois, 4 articles par semaine. Biais d'adresse IP de Google Suggest en local (villes bretonnes exclues) ; dans GitHub Actions les suggestions viennent de serveurs hors de France avec `gl=fr`.
 
 ## 1. Choix du sujet et vérification de l'existant
 

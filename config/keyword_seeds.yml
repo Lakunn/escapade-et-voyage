@@ -144,8 +144,36 @@ exclure_mots:
   - brest
 
 # Second niveau : chaque destination repérée (« quand partir au Japon », « voyage Vietnam ») est déclinée ainsi.
-declinaisons_destination: ["que faire {d}", "que voir {d}", "itinéraire {d}", "road trip {d}", "budget voyage {d}", "{d} hors des sentiers battus"]
-destinations_max: 40
+second_niveau:
+  motif: '^(?:quand partir|quand visiter|voyage|road trip|visiter|partir)\s+(?:(?:en|au|aux|à|a|l''|le|la|les|à l''|a l'')\s+)?(.+)$'
+  gabarits: ["que faire {d}", "que voir {d}", "itinéraire {d}", "road trip {d}", "budget voyage {d}", "{d} hors des sentiers battus"]
+  max: 40
+  exclure_mots: [pas, cher, chere, famille, amis, ami, pote, potes, soleil, quel, quelle, ou, tout, compris, seul, seule, hiver, ete,
+                 printemps, automne, vacances, week, end, avion, train, bus, organise, groupe, couple, enfant, enfants, bebe, chien,
+                 derniere, minute, luxe, moins, plus, quand, comment, pour, avec, sans, agence, voyage, dans, linguistique, scolaire,
+                 noces, solo, europe, france, monde, etranger, mer, montagne, chaud, chaude, meilleur, meilleure, periode, mois,
+                 nouvel, an, usa, asie, afrique, amerique]
 
-volume_min: 50   # utilisé seulement si des volumes sont disponibles (clé DataForSEO dans l'outil)
-serp_max: 80     # SERP payées (SerpAPI gratuit : 250 par mois, partagées avec les autres sites)
+# Rubriques : première règle qui correspond (texte sans accents) ; adequation = poids dans le score (ligne éditoriale).
+rubriques:
+  - {slug: equipement-voyage, adequation: 0.75, motif: '\b(sac|valise|chaussures?|adaptateur|gourde|veste|tente|oreiller|trousse|cadenas|batterie|housse|sacoche|pochette|tenue|vetements?|liste)\b'}
+  - {slug: preparer-son-voyage, adequation: 0.7, motif: '\b(assurance|vaccins?|passeport|visa|esta|eta|etias|permis|carte bancaire|formalites?|papiers|douane|ceam|carte d identite|sortie de territoire|paludisme|enceinte|bebe)\b'}
+  - {slug: hors-des-sentiers-battus, adequation: 1.0, motif: '\b(meconnus?|meconnues?|insolites?|secrets?|peu touristiques?|hors des sentiers|sauvages?|preserves?|authentiques?|caches?)\b'}
+  - {slug: voyager-malin, adequation: 0.9, motif: '\b(pas cher|pas chere|pas chers|budget|low cost|astuces?|billets?|vols?|interrail|bagages?|derniere minute|prix|cout|combien|economiser)\b'}
+  - {slug: destinations, adequation: 1.0, motif: '\b(que faire|que voir|visiter|road ?trip|itineraire|voyage|week ?end|vacances|sejour|circuit|incontournables?|ou dormir|ou loger|quand partir|plages?|randonnees?|escapade|partir|destination|endroits?|villes?|iles?|pays)\b'}
+rubrique_defaut: {slug: a-classer, adequation: 0.4}
+rubriques_coeur: [destinations, hors-des-sentiers-battus]
+
+# Mots d'habillage : retirés pour reconnaître deux requêtes sur le même sujet (« où partir en avril » = « vacances pas
+# cher avril » ; « voyage entre potes où aller » = « voyage entre amis destination »).
+mots_habillage: [ou, pas, partir, aller, voyage, voyager, vacance, destination, escapade, quand, soleil, pa, cher, chere, quel,
+                 quelle, pay, chaud, chaleur, week, end, sejour, moi, visiter, debut, fin, europe, avoir, pour, il, fait, petit,
+                 budget, tout, compri]
+
+langue: fr
+pays: FR
+par_semaine: 4
+semaines: 10
+serp_max: 40     # SERP par mois (SerpAPI gratuit : 250 par mois pour les 4 sites ; DataForSEO dès que la clé est là)
+facteur_bing: 20 # recherches Google ≈ 20 × recherches Bing en France, recalculé dès 5 requêtes mesurées avec Surfer
+contenus: [content/posts]
