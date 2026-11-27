@@ -24,7 +24,7 @@ $vr_lead = new WP_Query(
 		<p class="ev-eyebrow"><?php echo esc_html( vr_config( 'brand.name' ) ); ?></p>
 		<p class="ev-hero-title">On &amp; off<br><em>the road trips.</em></p>
 		<p class="ev-hero-text">Pour ceux qui veulent voyager, pas juste partir. Les sites qui valent vraiment le détour, les routes que les cars ne prennent pas, et des adresses où l'on paie le juste prix.</p>
-		<p class="ev-hero-actions"><a class="btn" href="/category/destinations/">Trouver une destination</a> <a class="btn btn-ghost" href="/outils/">Préparer mon voyage</a></p>
+		<p class="ev-hero-actions"><?php if ( ! vr_category_is_empty( 'destinations' ) ) : ?><a class="btn" href="/category/destinations/">Trouver une destination</a> <a class="btn btn-ghost" href="/outils/">Préparer mon voyage</a><?php else : ?><a class="btn" href="/outils/">Préparer mon voyage</a> <a class="btn btn-ghost" href="#a-la-une">Nos derniers conseils</a><?php endif; ?></p>
 		<div class="ev-signs" aria-hidden="true">
 			<span class="ev-sign ev-sign-on"><b>On the road</b>Les grands classiques, au bon moment</span>
 			<span class="ev-sign ev-sign-off"><b>Off the road</b>Ce que les autres manquent</span>
@@ -37,12 +37,13 @@ $vr_lead = new WP_Query(
 	<h1 class="screen-reader-text"><?php echo esc_html( vr_config( 'home.h1', vr_config( 'brand.name' ) ) ); ?></h1>
 
 	<?php if ( $vr_lead->have_posts() ) : ?>
-	<section class="lead" aria-label="À la une">
+	<section class="lead" id="a-la-une" aria-label="À la une">
 		<div class="lead-main">
 			<?php
 			$vr_lead->the_post();
 			$vr_seen[] = get_the_ID();
-			get_template_part( 'template-parts/card', null, array( 'heading' => 'h2' ) );
+			// Sans photo, pas de grand aplat vide : la carte commence par le titre.
+			get_template_part( 'template-parts/card', null, array( 'heading' => 'h2', 'show_media' => has_post_thumbnail() ) );
 			?>
 		</div>
 		<div class="lead-side">
@@ -75,7 +76,7 @@ $vr_lead = new WP_Query(
 			<?php
 			$vr_i = 0;
 			foreach ( (array) vr_config( 'categories', array() ) as $vr_conf ) :
-				if ( empty( $vr_conf['on_home'] ) ) {
+				if ( empty( $vr_conf['on_home'] ) || vr_category_is_empty( $vr_conf['slug'] ) ) {
 					continue;
 				}
 				++$vr_i;

@@ -206,6 +206,10 @@ function vr_nav( $location = 'nav' ) {
 	$current = trailingslashit( strtok( home_url( add_query_arg( array() ) ), '?' ) );
 	echo '<ul>';
 	foreach ( $items as $item ) {
+		// Une rubrique sans article publié n'apparaît pas dans le menu (pas de page vide).
+		if ( isset( $item['url'] ) && preg_match( '#^/category/(?:[^/]+/)*([^/]+)/?$#', $item['url'], $m ) && vr_category_is_empty( $m[1] ) ) {
+			continue;
+		}
 		$url    = isset( $item['url'] ) ? home_url( $item['url'] ) : '#';
 		$active = trailingslashit( $url ) === $current;
 		printf(
@@ -217,6 +221,24 @@ function vr_nav( $location = 'nav' ) {
 		);
 	}
 	echo '</ul>';
+}
+
+/** Vrai si la rubrique n'existe pas ou n'a aucun article publié (sous-rubriques comprises). */
+function vr_category_is_empty( $slug ) {
+	$term = get_category_by_slug( $slug );
+	if ( ! $term ) {
+		return true;
+	}
+	if ( $term->count > 0 ) {
+		return false;
+	}
+	foreach ( get_term_children( $term->term_id, 'category' ) as $child_id ) {
+		$child = get_term( $child_id, 'category' );
+		if ( $child && ! is_wp_error( $child ) && $child->count > 0 ) {
+			return false;
+		}
+	}
+	return true;
 }
 
 /** Initiale décorative pour les cartes sans image. */
