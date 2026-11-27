@@ -112,6 +112,8 @@ hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
 /* ---------- Front page ---------- */
 .lead { display: grid; grid-template-columns: 1.65fr 1fr; gap: 2.5rem; padding: 2.5rem 0 3rem; border-bottom: 1px solid var(--rule); }
 .lead-main .card-title { font-size: clamp(1.8rem, 3.2vw, 2.6rem); }
+/* Une sans photo : le titre se centre face à la liste « Aussi à lire » au lieu de laisser un vide dessous. */
+.lead-main:not(:has(.card-media)) { align-self: center; }
 .lead-main .card-excerpt { font-size: 1.08rem; }
 .lead-side { display: flex; flex-direction: column; }
 .lead-side .card { padding: 1.1rem 0; border-top: 1px solid var(--rule); }
